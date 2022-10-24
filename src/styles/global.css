@@ -1,21 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
 @tailwind base;
-
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply border-b-2 border-blue-700;
-}
 
 @tailwind components;
 
 @tailwind utilities;
 
-.content p {
-  @apply my-6;
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-.content ul {
-  @apply my-6;
+:root {
+  --primary: #222222;
+  /* Your default theme */
+  --background: white;
+  --foreground: var(--primary);
 }
+
+[data-theme='dark'] {
+  --background: var(--primary);
+  --foreground: white;
+}
+
+
