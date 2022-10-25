@@ -6,20 +6,19 @@
 
 @tailwind utilities;
 
+
+
+:root {
+  --primary: #111827;
+}
+
 body {
   font-family: 'Inter', sans-serif;
 }
 
-:root {
-  --primary: #222222;
-  /* Your default theme */
-  --background: white;
-  --foreground: var(--primary);
+.text-shadow-sm {
+  text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
 }
-
-[data-theme='dark'] {
-  --background: var(--primary);
-  --foreground: white;
+.text-shadow-md {
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.15);
 }
-
-

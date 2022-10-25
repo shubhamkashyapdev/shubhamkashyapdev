@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import { Hero } from '@/components';
 import { Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 import useAuthStore from '@/store/authStore';
@@ -21,6 +22,7 @@ const Index = () => {
       }
     >
       <Header />
+      <Hero />
     </Main>
   );
 };

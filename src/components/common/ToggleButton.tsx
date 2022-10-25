@@ -10,7 +10,7 @@ const ToggleButton: FC = () => {
   return (
     <button
       onClick={handleToggle}
-      className="rounded-md border-primary-300  p-2 text-lg text-primary-300 shadow-md  hover:border-primary-300 hover:text-primary-300 focus:outline-none focus-visible:border-primary-300 focus-visible:text-primary-300 dark:border-gray-600 dark:text-white dark:hover:border-primary-300 dark:hover:text-primary-300 dark:focus-visible:border-primary-300 dark:focus-visible:text-primary-300 md:p-2.5 md:text-xl"
+      className="rounded-md border border-primary-700  p-2 text-lg text-primary-700 shadow-md  hover:border-primary-300 hover:text-primary-300 focus:outline-none focus-visible:border-primary-300 focus-visible:text-primary-300 dark:border-gray-600 dark:text-white dark:hover:border-primary-300 dark:hover:text-primary-300 dark:focus-visible:border-primary-300 dark:focus-visible:text-primary-300 md:p-2.5 md:text-xl"
     >
       {theme === 'dark' ? (
         <svg
