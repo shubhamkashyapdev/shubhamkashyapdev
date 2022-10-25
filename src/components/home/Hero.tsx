@@ -1,34 +1,96 @@
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
+import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
 
 import { HeroCTA } from '@/components';
-import { Hightlight, Parragraph } from '@/components/common';
+import { DownArrow, Hightlight, Parragraph } from '@/components/common';
+import { fadeDown } from '@/components/common/animation/variants';
 
 const Hero: FC = () => {
   return (
-    <div className="mt-6 flex h-[80vh] flex-col space-x-6 md:flex-row">
+    <div className="mt-6 flex h-[80vh] flex-col md:flex-row md:space-x-6">
       <div className="flex flex-[6] items-center ">
         <div>
-          <h1 className=" text-shadow-md text-center text-[56px] font-bold leading-[1.1em] text-primary-700 antialiased dark:text-white md:text-left">
+          <motion.h1
+            variants={fadeDown}
+            initial="initial"
+            animate="animate"
+            transition={{ ease: 'easeIn', duration: 0.4 }}
+            className=" text-shadow-md text-center text-[56px] font-bold leading-[1.1em] text-primary-700 antialiased dark:text-white md:text-left"
+          >
             Hello, i am Shubham Kashyap.
-          </h1>
-          <h4 className="text-shadow-sm mt-2 text-center text-2xl font-semibold text-primary-700 dark:text-white md:text-left">
+          </motion.h1>
+          <motion.h4
+            variants={fadeDown}
+            initial="initial"
+            animate="animate"
+            transition={{ ease: 'easeIn', duration: 0.6 }}
+            className="text-shadow-sm mt-2 text-center text-2xl font-semibold text-primary-700 dark:text-white md:text-left"
+          >
             MERN Developer
-          </h4>
-          <Parragraph justified className="mt-8">
-            I am a full stack javascript developer located in Chandigarh, India.
-            I currenlty work for saffron chariot technologies as a senior
-            developer, located in Chandigarh, India. I am well versed in MERN
-            stack technology to build robust software solutions applications.
-          </Parragraph>
-          <HeroCTA />
+          </motion.h4>
+          <motion.div
+            variants={fadeDown}
+            initial="initial"
+            animate="animate"
+            transition={{ ease: 'easeIn', duration: 0.8 }}
+          >
+            <Parragraph justified className="mt-6">
+              I am a full stack javascript developer located in Chandigarh,
+              India. I currenlty work for saffron chariot technologies as a
+              senior developer, located in Chandigarh, India. I am experienced
+              in developing full stack application with MERN stack technology.
+            </Parragraph>
+          </motion.div>
+          <motion.div
+            variants={fadeDown}
+            initial="initial"
+            animate="animate"
+            transition={{ ease: 'easeIn', duration: 0.8 }}
+          >
+            <HeroCTA />
+          </motion.div>
+          {/* resume cta */}
+          <motion.div
+            variants={fadeDown}
+            initial="initial"
+            animate="animate"
+            transition={{ ease: 'easeIn', duration: 0.8 }}
+            className="mt-4 flex items-center justify-center space-x-4 text-sm font-medium text-gray-800 dark:text-gray-600 md:justify-start"
+          >
+            <Link href="/">
+              <p className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300">
+                <FileAnalytics />
+                Resume
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300">
+                <BrandGithub /> @shubhamwebdesign
+              </p>
+            </Link>
+          </motion.div>
         </div>
       </div>
-      <div className="mt-8 flex-[5]">
-        <h4 className="text-shadow-sm w-fit border-primary-700 text-lg font-medium tracking-wide text-gray-800  dark:text-gray-100">
+      <div className="mt-8  flex-1 md:flex-[5]">
+        <motion.h4
+          variants={fadeDown}
+          initial="initial"
+          animate="animate"
+          transition={{ ease: 'easeIn', duration: 0.6 }}
+          className="text-shadow-sm w-fit border-primary-700 text-lg font-medium tracking-wide text-gray-800  dark:text-gray-100"
+        >
           Highlights
-        </h4>
-        <div className="mt-4 flex flex-col space-y-4">
+        </motion.h4>
+        <motion.div
+          variants={fadeDown}
+          initial="initial"
+          animate="animate"
+          transition={{ ease: 'easeIn', duration: 0.8 }}
+          className="mt-4 flex flex-col space-y-4"
+        >
           <Hightlight
             title="NFT Marketplace"
             subTitle="Web3, Solidity, Typescript"
@@ -49,8 +111,10 @@ const Hero: FC = () => {
             tempora ducimus aliquid. Magnam minus architecto at aliquam
             obcaecati quibusdam tenetur!
           </Hightlight>
-        </div>
+        </motion.div>
       </div>
+      {/* Down Arrow */}
+      <DownArrow />
     </div>
   );
 };

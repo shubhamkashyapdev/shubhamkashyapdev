@@ -30,11 +30,12 @@ const Navbar: FC = () => {
   return (
     <nav className="text-primary-700 dark:text-white">
       <ul className="flex items-center space-x-3">
-        {navLinks.map((item) => (
+        {navLinks.map((item, index) => (
           <NavItem
             key={`navlink-${item.route}-${item.label}`}
             label={item.label}
             route={item.route}
+            index={index}
           />
         ))}
       </ul>

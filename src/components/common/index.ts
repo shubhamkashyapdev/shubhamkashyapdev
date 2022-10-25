@@ -1,5 +1,7 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
+export { default as FadeUpDown } from './animation/FadeUpDown';
 export { default as Hightlight } from './cards/Highlight';
+export { default as DownArrow } from './elements/DownArrow';
 export { default as DateInputComponent } from './form/DateInputComponent';
 export { default as DropzoneComponent } from './form/DropzoneComponent';
 export { default as FAQRepeaterComponent } from './form/FAQRepeaterComponent';

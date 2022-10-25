@@ -16,9 +16,30 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+@layer components {
+  ::selection {
+    @apply bg-primary-300 dark:bg-primary-300/75 ;
+  }
+  .fadedown {
+    animation: fadeUp 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+}
+
 .text-shadow-sm {
   text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
 }
 .text-shadow-md {
   text-shadow: 0px 0px 3px rgba(0,0,0,0.15);
 }
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
