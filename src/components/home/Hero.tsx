@@ -95,7 +95,7 @@ const Hero: FC = () => {
           initial="initial"
           animate="animate"
           transition={{ ease: 'easeIn', duration: 0.6 }}
-          className="text-shadow-sm w-fit border-primary-700 text-lg font-medium tracking-wide text-gray-800  dark:text-gray-100"
+          className="text-shadow-sm text-gradient w-fit border-primary-700 text-lg font-semibold uppercase  tracking-wide"
         >
           Highlights
         </motion.h4>

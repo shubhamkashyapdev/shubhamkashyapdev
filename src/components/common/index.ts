@@ -16,7 +16,9 @@ export { default as ToggleButton } from './ToggleButton';
 // typography
 export { default as Parragraph } from './typography/Parragraph';
 export { default as PrimaryHeading } from './typography/PrimaryHeading';
+export { default as SecondaryHeading } from './typography/SecondaryHeading';
 
 // sections
 export { default as Clients } from './sections/Clients';
 export { default as ProblemSolver } from './sections/ProblemSolver';
+export { default as TechStack } from './sections/TechStack';

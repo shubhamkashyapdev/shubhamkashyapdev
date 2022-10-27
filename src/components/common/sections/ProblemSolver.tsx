@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FadeUpDown, Parragraph, PrimaryHeading } from '@/components/common';
+import { FadeUpDown, Parragraph, SecondaryHeading } from '@/components/common';
 
 const experiences = [
   {
@@ -15,7 +15,7 @@ const experiences = [
 
 const ProblemSolver = () => {
   return (
-    <section className="section mt-20 flex flex-col md:flex-row md:space-x-10">
+    <section className="section flex flex-col md:flex-row md:space-x-10">
       <div className="relative flex flex-[4] items-center justify-start sm:justify-center">
         {/* box 1 */}
         {experiences.map((item, index) => (
@@ -39,10 +39,10 @@ const ProblemSolver = () => {
           <h4 className="subtitle">/ &nbsp; Problem Solving</h4>
         </FadeUpDown>
         <FadeUpDown delay={0.4}>
-          <PrimaryHeading>
+          <SecondaryHeading>
             I enjoy solving problems with clean and scalable solutions. I have a
             genuine passion for software application design.
-          </PrimaryHeading>
+          </SecondaryHeading>
         </FadeUpDown>
         <FadeUpDown delay={0.8}>
           <Parragraph>

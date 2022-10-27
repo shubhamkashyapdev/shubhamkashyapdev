@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import { Hero } from '@/components';
-import { Clients, ProblemSolver } from '@/components/common';
+import { Hero, Loader } from '@/components';
+import { Clients, ProblemSolver, TechStack } from '@/components/common';
 import { Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 import useAuthStore from '@/store/authStore';
@@ -9,10 +9,19 @@ import { Main } from '@/templates/Main';
 
 const Index = () => {
   const authStore = useAuthStore((state) => state);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
     authStore.setUserDetails({ name: 'Sanjeet Mishra' });
+    const timeout = setTimeout(() => {
+      setMounted(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
   }, []);
+
+  if (!mounted) {
+    return <Loader />;
+  }
   return (
     <Main
       meta={
@@ -26,6 +35,7 @@ const Index = () => {
       <Hero />
       <ProblemSolver />
       <Clients />
+      <TechStack />
     </Main>
   );
 };
