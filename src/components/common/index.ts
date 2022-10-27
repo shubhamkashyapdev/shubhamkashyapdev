@@ -9,5 +9,14 @@ export { default as NumberInputComponent } from './form/NumberInputComponent';
 export { default as SelectComponent } from './form/SelectComponent';
 export { default as TextAreaComponent } from './form/TextAreaComponent';
 export { default as TextInputComponent } from './form/TextInputComponent';
+
+// elements
 export { default as ToggleButton } from './ToggleButton';
+
+// typography
 export { default as Parragraph } from './typography/Parragraph';
+export { default as PrimaryHeading } from './typography/PrimaryHeading';
+
+// sections
+export { default as Clients } from './sections/Clients';
+export { default as ProblemSolver } from './sections/ProblemSolver';

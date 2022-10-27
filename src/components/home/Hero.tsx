@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
 import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
+import TypewriterComponent from 'typewriter-effect';
 
 import { HeroCTA } from '@/components';
 import { DownArrow, Hightlight, Parragraph } from '@/components/common';
@@ -10,7 +11,7 @@ import { fadeDown } from '@/components/common/animation/variants';
 
 const Hero: FC = () => {
   return (
-    <div className="mt-6 flex h-[80vh] flex-col md:flex-row md:space-x-6">
+    <div className="relative mt-6 mb-16 flex flex-col md:flex-row md:space-x-6">
       <div className="flex flex-[6] items-center ">
         <div>
           <motion.h1
@@ -18,7 +19,7 @@ const Hero: FC = () => {
             initial="initial"
             animate="animate"
             transition={{ ease: 'easeIn', duration: 0.4 }}
-            className=" text-shadow-md text-center text-[56px] font-bold leading-[1.1em] text-primary-700 antialiased dark:text-white md:text-left"
+            className=" text-shadow-md dark:text-gradient text-center text-[56px] font-bold leading-[1.1em] text-primary-700 antialiased md:text-left"
           >
             Hello, i am Shubham Kashyap.
           </motion.h1>
@@ -29,7 +30,21 @@ const Hero: FC = () => {
             transition={{ ease: 'easeIn', duration: 0.6 }}
             className="text-shadow-sm mt-2 text-center text-2xl font-semibold text-primary-700 dark:text-white md:text-left"
           >
-            MERN Developer
+            <TypewriterComponent
+              options={{ loop: true }}
+              onInit={(typewirter) => {
+                typewirter
+                  .typeString('MERN Developer')
+                  .pauseFor(2400)
+                  .deleteAll()
+                  .typeString('UI Designer')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .typeString('Web3 Developer')
+                  .pauseFor(2500)
+                  .start();
+              }}
+            />
           </motion.h4>
           <motion.div
             variants={fadeDown}
@@ -40,8 +55,8 @@ const Hero: FC = () => {
             <Parragraph justified className="mt-6">
               I am a full stack javascript developer located in Chandigarh,
               India. I currenlty work for saffron chariot technologies as a
-              senior developer, located in Chandigarh, India. I am experienced
-              in developing full stack application with MERN stack technology.
+              developer, located in Chandigarh, India. I am experienced in
+              developing full stack application with MERN stack technology.
             </Parragraph>
           </motion.div>
           <motion.div
@@ -97,9 +112,10 @@ const Hero: FC = () => {
             tag="@nftmarketplace"
             route={'www.github.com/nft-marketplace'}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-            tempora ducimus aliquid. Magnam minus architecto at aliquam
-            obcaecati quibusdam tenetur!
+            Next.js NFt Marketplace built with ethere.js and metamask. The smart
+            contract is developed in solidity using the truffle framework. The
+            project has a production grade setup with typescript and
+            tailwindCSS, and custom react hooks.
           </Hightlight>
           <Hightlight
             title="Solana Minesweeper"
@@ -107,9 +123,11 @@ const Hero: FC = () => {
             tag="@solanaminesweeper"
             route={'www.github.com/solana-minesweeper'}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-            tempora ducimus aliquid. Magnam minus architecto at aliquam
-            obcaecati quibusdam tenetur!
+            Solana minesweeper game built with Next.js, solana wallet adapter
+            and PiXi.js 2d animation library. The project uses the solana wallet
+            adapter to handle the on chain transactions and the backend in built
+            on Node.js + Express + Typescript and uses the socket.IO to handle
+            the real time interactions.
           </Hightlight>
         </motion.div>
       </div>

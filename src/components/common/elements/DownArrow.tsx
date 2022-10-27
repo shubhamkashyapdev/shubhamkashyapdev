@@ -10,7 +10,7 @@ const DownArrow = () => {
       initial="initial"
       animate="animate"
       transition={{ ease: 'easeIn', duration: 0.8 }}
-      className="absolute bottom-2 left-1/2 -translate-x-1/2 cursor-pointer rounded-md text-gray-800 transition-colors hover:text-primary-300 focus-visible:text-primary-300 dark:text-gray-300 hover:dark:text-primary-300 md:bottom-10"
+      className="absolute top-[102%] left-[46%] -translate-x-1/2 cursor-pointer rounded-md text-gray-800 transition-colors hover:text-primary-300 focus-visible:text-primary-300 dark:text-gray-300 hover:dark:text-primary-300 md:top-[100%] md:bottom-10"
     >
       <svg
         stroke="currentColor"

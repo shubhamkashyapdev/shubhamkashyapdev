@@ -42,7 +42,8 @@
       "@/components": ["./src/components"],
       "@/components/*": ["./src/components/*"],
       "@/layouts": ["./src/layouts"],
-      "@/types": ["./src/types/*"]
+      "@/types": ["./src/types/*"],
+      "@/svg": ["./src/assets/images/svg"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "**/*.cy.ts"],
