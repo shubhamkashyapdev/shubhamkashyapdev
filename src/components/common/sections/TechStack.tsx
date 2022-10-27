@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { FadeUpDown, PrimaryHeading } from '@/components/common';
 import type { TechStackItem } from '@/types/component.types';
@@ -25,13 +25,16 @@ const TechStack = () => {
   const [activeTech, setActiveTech] = useState<TechStacks>(TechStacks.BACKEND);
   const [filteredTechs, setFilteredTechs] = useState<TechStackItem[]>([]);
 
-  const handleFilterItems = (activeItem: TechStacks) => {
-    const filteredTechItems = technologies.filter(
-      (item) => item.category === activeItem
-    );
-    console.log({ filteredTechItems });
-    setFilteredTechs(filteredTechItems);
-  };
+  const handleFilterItems = useCallback(
+    (activeItem: TechStacks) => {
+      const filteredTechItems = technologies.filter(
+        (item) => item.category === activeItem
+      );
+      console.log({ filteredTechItems });
+      setFilteredTechs(filteredTechItems);
+    },
+    [activeTech]
+  );
   console.log({ filteredTechs });
   useEffect(() => {
     handleFilterItems(activeTech);
@@ -47,6 +50,9 @@ const TechStack = () => {
           <a
             key={`technology-${item.label}`}
             onClick={() => {
+              if (activeTech === item.category) {
+                return;
+              }
               handleFilterItems(item.category);
               setActiveTech(item.category);
             }}
@@ -63,7 +69,7 @@ const TechStack = () => {
       </nav>
       {/* technologies  */}
 
-      <div className="mt-2 flex flex-wrap gap-4 py-8">
+      <div className="mt-2 flex min-h-[100px] w-[90%] max-w-[700px] flex-wrap gap-4 py-8">
         {filteredTechs.map((item, index) => (
           <motion.span
             variants={variants}
@@ -76,7 +82,7 @@ const TechStack = () => {
               delay: 0.2 + index * 0.05,
             }}
             key={`technology-item-${item.label}-${item.category}`}
-            className="h-fit w-fit rounded-md bg-gray-700 px-2 py-1 text-sm text-white dark:bg-gray-600"
+            className="h-fit w-fit rounded-md bg-gray-800 px-2 py-1 text-sm text-white drop-shadow-md dark:bg-gray-800 dark:shadow-gray-300"
           >
             {item.label}
           </motion.span>

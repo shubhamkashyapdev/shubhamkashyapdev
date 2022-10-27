@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Hero, Loader } from '@/components';
-import { Clients, ProblemSolver, TechStack } from '@/components/common';
+import { Clients, ProblemSolver, TechStack, Work } from '@/components/common';
 import { Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 import useAuthStore from '@/store/authStore';
@@ -36,6 +36,7 @@ const Index = () => {
       <ProblemSolver />
       <Clients />
       <TechStack />
+      <Work />
     </Main>
   );
 };
