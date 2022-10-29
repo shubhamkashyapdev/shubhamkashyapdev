@@ -2,7 +2,13 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import { Hero, Loader } from '@/components';
-import { Clients, ProblemSolver, TechStack, Work } from '@/components/common';
+import {
+  Blogs,
+  Clients,
+  ProblemSolver,
+  TechStack,
+  Work,
+} from '@/components/common';
 import { Footer, Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 import useAuthStore from '@/store/authStore';
@@ -38,6 +44,7 @@ const Index: NextPage = () => {
       <Clients />
       <TechStack />
       <Work />
+      <Blogs />
       <Footer />
     </Main>
   );

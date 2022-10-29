@@ -26,3 +26,17 @@ export type SocialIconProps = {
   route: string;
   icon: React.ReactNode;
 };
+
+export type TagType = {
+  tag: string;
+};
+
+export type BlogCardType = {
+  image: string;
+  title: string;
+  readTime: number;
+  viewes: number;
+  tags: TagType[];
+  createdAt: string;
+  excerpt: string;
+};

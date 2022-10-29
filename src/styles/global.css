@@ -53,8 +53,17 @@ body {
   .h-2px {
     height: 2px;
   }
+  .bg-300 {
+    background-color: #00e887;
+  }
+  .bg-200 {
+    background-color: #dbff00;
+  }
   .animated-border {
-    @apply absolute left-0 -bottom-0 h-2px w-full origin-left scale-x-0 rounded-sm bg-primary-300 shadow-sm duration-150 ease-in-out group-hover:scale-x-100 dark:bg-primary-200;
+    @apply absolute left-0 -bottom-0 h-2px w-full origin-left scale-x-0 rounded-sm shadow-sm duration-150 ease-in-out group-hover:scale-x-100 bg-primary-300;
+  }
+  .card-border {
+    @apply border border-gray-300 dark:border-gray-600;
   }
 }
 

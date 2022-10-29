@@ -27,7 +27,7 @@ const NavItem: FC<NavItemProps> = ({ label, route, index }) => {
               route === activeRoute
                 ? 'bg-primary-300/75 dark:text-primary-300'
                 : ''
-            } text-base  font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent hover:dark:text-primary-300 focus:dark:text-primary-300`}
+            } text-base font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
           >
             {label}
           </a>

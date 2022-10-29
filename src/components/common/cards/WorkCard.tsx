@@ -12,7 +12,7 @@ type WorkCardProps = {
 
 const WorkCard: FC<WorkCardProps> = ({ label, route, image, excerpt }) => {
   return (
-    <div className="group flex h-[300px] w-[220px] flex-col rounded-lg bg-gray-900 p-4 drop-shadow-lg duration-300 ease-in-out hover:h-[340px] hover:scale-105 dark:shadow-gray-300">
+    <div className="group card-border flex h-[300px] w-[220px] flex-col rounded-lg bg-gray-900 p-4 drop-shadow-lg duration-300 ease-in-out hover:h-[340px] hover:scale-105 dark:shadow-gray-300">
       {/* top section */}
       <div>
         <Image

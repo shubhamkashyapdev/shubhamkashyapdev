@@ -10,6 +10,7 @@ export { default as TextAreaComponent } from './form/TextAreaComponent';
 export { default as TextInputComponent } from './form/TextInputComponent';
 
 // cards
+export { default as BlogCard } from './cards/BlogCard';
 export { default as Hightlight } from './cards/Highlight';
 export { default as WorkCard } from './cards/WorkCard';
 
@@ -22,6 +23,7 @@ export { default as PrimaryHeading } from './typography/PrimaryHeading';
 export { default as SecondaryHeading } from './typography/SecondaryHeading';
 
 // sections
+export { default as Blogs } from './sections/Blogs';
 export { default as Clients } from './sections/Clients';
 export { default as ProblemSolver } from './sections/ProblemSolver';
 export { default as TechStack } from './sections/TechStack';

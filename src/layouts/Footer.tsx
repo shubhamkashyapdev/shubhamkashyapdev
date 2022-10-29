@@ -71,7 +71,7 @@ const Footer: FC = () => {
         <div className="mt-2 flex justify-center">
           <SocialIcons socialLinks={socialLinks} />
         </div>
-        <p className="mt-6 flex flex-col items-center justify-center space-x-2 text-base md:flex-row">
+        <p className="mt-6 flex flex-col items-center justify-center space-x-2 text-base text-gray-900 dark:text-gray-200 md:flex-row">
           <div className="flex items-center space-x-1">
             <Copyright size={16} /> <span>shubhamwebdesign</span>
           </div>
