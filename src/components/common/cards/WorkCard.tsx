@@ -3,8 +3,6 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
 
-import Parragraph from '../typography/Parragraph';
-
 type WorkCardProps = {
   label: string;
   route: string;
@@ -28,14 +26,14 @@ const WorkCard: FC<WorkCardProps> = ({ label, route, image, excerpt }) => {
       </div>
       {/* bottom section */}
       <div className="py-2">
-        <h6 className="text-sm font-semibold uppercase text-gray-300 ">
+        <h6 className="text-[0.7rem] font-semibold uppercase text-gray-300 ">
           {label}
         </h6>
-        <Parragraph className="mt-[8px] text-[0.9rem] leading-snug text-gray-400">
+        <h4 className="mt-[8px] text-[1.05rem] leading-[1.2em] text-gray-200">
           {`${excerpt}`.substring(0, 90)}
-        </Parragraph>
+        </h4>
         <Link href={route}>
-          <a className="text-shadow-sm bottom-2 mt-4 inline-block w-fit rounded-md bg-gray-800 py-1 px-2 text-left text-sm text-gray-300 opacity-0 shadow-sm duration-150 ease-in-out hover:scale-95 group-hover:bottom-0 group-hover:opacity-100 group-hover:delay-100 dark:shadow-gray-700">
+          <a className="bottom-2 mt-4 inline-block w-fit rounded-md bg-gray-800 py-1 px-2 text-left text-sm text-gray-300 opacity-0 shadow-sm duration-150 ease-in-out hover:scale-95 group-hover:bottom-0 group-hover:opacity-100 group-hover:delay-100 dark:shadow-sm dark:shadow-gray-800 dark:hover:shadow-md">
             Read More
           </a>
         </Link>

@@ -20,6 +20,7 @@
 body {
   font-family: 'Inter', sans-serif;
   text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  scroll-behavior: smooth;
 }
 
 @layer components {
@@ -36,7 +37,7 @@ body {
     @apply bg-gradient-to-tr from-primary-300 to-primary-500 drop-shadow-sm bg-clip-text text-transparent;
   }
   .subtitle {
-    @apply text-sm font-medium uppercase text-gradient-subtitle mb-1 w-fit;
+    @apply text-sm font-medium uppercase text-gradient-subtitle mb-1 w-full md:w-fit;
   }
   
   .section {
@@ -44,7 +45,16 @@ body {
   }
 
   .animated-border {
-    @apply absolute bottom-0 left-0 h-[1.5px] w-full origin-left scale-0 rounded-md bg-primary-700 dark:bg-white duration-200 ease-in-out group-hover:scale-100;
+    @apply absolute bottom-0 left-0 h-[1.5px] w-full origin-left scale-x-0 rounded-md bg-primary-700 dark:bg-white duration-200 ease-in-out group-hover:scale-x-100;
+  }
+  .centered {
+    @apply text-center md:text-left;
+  }
+  .h-2px {
+    height: 2px;
+  }
+  .animated-border {
+    @apply absolute left-0 -bottom-0 h-2px w-full origin-left scale-x-0 rounded-sm bg-primary-300 shadow-sm duration-150 ease-in-out group-hover:scale-x-100 dark:bg-primary-200;
   }
 }
 

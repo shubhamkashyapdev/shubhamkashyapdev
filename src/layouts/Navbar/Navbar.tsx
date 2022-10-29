@@ -1,35 +1,20 @@
 import type { FC } from 'react';
 import React from 'react';
 
+import type { NavItemProps } from '@/types/component.types';
+
 import NavItem from './NavItem';
 
-const navLinks = [
-  {
-    label: 'Home',
-    route: '/',
-  },
-  {
-    label: 'Blog',
-    route: '/blog',
-  },
-  {
-    label: 'Projects',
-    route: '/projects',
-  },
-  {
-    label: 'Library',
-    route: '/library',
-  },
-  {
-    label: 'About',
-    route: '/about',
-  },
-];
+type NavbarProps = {
+  navLinks: NavItemProps[];
+  className?: string;
+  navClassName?: string;
+};
 
-const Navbar: FC = () => {
+const Navbar: FC<NavbarProps> = ({ navLinks, className, navClassName }) => {
   return (
-    <nav className="text-primary-700 dark:text-white">
-      <ul className="flex items-center space-x-3">
+    <nav className={`flex justify-center text-primary-700 ${navClassName}`}>
+      <ul className={`flex items-center space-x-3 ${className}`}>
         {navLinks.map((item, index) => (
           <NavItem
             key={`navlink-${item.route}-${item.label}`}

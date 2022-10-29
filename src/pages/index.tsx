@@ -1,13 +1,14 @@
+import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import { Hero, Loader } from '@/components';
 import { Clients, ProblemSolver, TechStack, Work } from '@/components/common';
-import { Header } from '@/layouts';
+import { Footer, Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 import useAuthStore from '@/store/authStore';
 import { Main } from '@/templates/Main';
 
-const Index = () => {
+const Index: NextPage = () => {
   const authStore = useAuthStore((state) => state);
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -37,6 +38,7 @@ const Index = () => {
       <Clients />
       <TechStack />
       <Work />
+      <Footer />
     </Main>
   );
 };

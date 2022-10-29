@@ -31,7 +31,7 @@ const NavItem: FC<NavItemProps> = ({ label, route, index }) => {
           >
             {label}
           </a>
-          <span className="absolute left-0 -bottom-0 h-[2px] w-full origin-left scale-0 rounded-sm bg-primary-300 shadow-sm duration-150 ease-in-out group-hover:scale-100 dark:bg-primary-200"></span>
+          <span className="animated-border"></span>
         </li>
       </Link>
     </motion.div>

@@ -34,9 +34,9 @@ const clients = [
 const Clients: FC = () => {
   return (
     <section className="section flex flex-col overflow-hidden md:flex-row md:space-x-10">
-      <div className="flex-1 ">
-        <FadeUpDown>
-          <h5 className="subtitle">/ &nbsp; Clients</h5>
+      <div className="centered flex-1">
+        <FadeUpDown className="centered">
+          <h5 className="subtitle w-full">/ &nbsp; Clients</h5>
         </FadeUpDown>
         <FadeUpDown>
           <PrimaryHeading className="xl:text-5xl">Clients</PrimaryHeading>
@@ -54,7 +54,7 @@ const Clients: FC = () => {
         {clients.map((item, index) => (
           <Fragment key={`client-logo-${index}`}>
             <FadeUpDown
-              className="flex min-w-[130px] flex-1 flex-col items-center"
+              className="flex min-w-[140px] flex-1 flex-col items-center"
               delay={0.2 + index * 0.2}
             >
               {item.logo}

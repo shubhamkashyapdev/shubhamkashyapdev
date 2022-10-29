@@ -52,7 +52,7 @@ const Hero: FC = () => {
             animate="animate"
             transition={{ ease: 'easeIn', duration: 0.8 }}
           >
-            <Parragraph justified className="mt-6">
+            <Parragraph className="centered mt-6">
               I am a full stack javascript developer located in Chandigarh,
               India. I currenlty work for saffron chariot technologies as a
               developer, located in Chandigarh, India. I am experienced in
@@ -89,7 +89,7 @@ const Hero: FC = () => {
           </motion.div>
         </div>
       </div>
-      <div className="mt-8  flex-1 md:flex-[5]">
+      <div className="mt-16 flex-1  md:mt-8 md:flex-[5]">
         <motion.h4
           variants={fadeDown}
           initial="initial"

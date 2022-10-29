@@ -2,22 +2,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
-import { BrandLinkedin, BrandTwitter } from 'tabler-icons-react';
 
 import { fadeDown } from '@/components/common/animation/variants';
+import type { SocialIconProps } from '@/types/component.types';
 
-const socialLinks = [
-  {
-    route: 'www.twitter.com',
-    icon: <BrandTwitter />,
-  },
-  {
-    route: 'www.linkedin.com',
-    icon: <BrandLinkedin />,
-  },
-];
+type SocialIconsProps = {
+  socialLinks: SocialIconProps[];
+};
 
-const SocialIcons: FC = () => {
+const SocialIcons: FC<SocialIconsProps> = ({ socialLinks }) => {
   return (
     <div className="flex space-x-2">
       {socialLinks.map((item, index) => (

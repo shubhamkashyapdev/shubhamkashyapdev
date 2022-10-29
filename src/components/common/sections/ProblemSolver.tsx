@@ -15,11 +15,17 @@ const experiences = [
 
 const ProblemSolver = () => {
   return (
-    <section className="section flex flex-col md:flex-row md:space-x-10">
-      <div className="relative flex flex-[4] items-center justify-start sm:justify-center">
+    <section
+      id="problemSolver"
+      className="section flex flex-col md:flex-row md:space-x-10"
+    >
+      <div className="relative order-2 mt-6 flex flex-[4] items-center justify-evenly md:order-1">
         {/* box 1 */}
         {experiences.map((item, index) => (
-          <div key={`experience-${index}`} className="w-[160px] md:p-4">
+          <div
+            key={`experience-${index}`}
+            className="centered w-[160px] md:p-4"
+          >
             <h5 className="text-gradient text-5xl font-bold md:text-6xl">
               {item.title}
             </h5>
@@ -34,18 +40,18 @@ const ProblemSolver = () => {
           Experience
         </span>
       </div>
-      <div className="mt-8 flex-[5] md:p-4 md:pl-0">
-        <FadeUpDown>
+      <div className="order-1 mt-8 flex-[5] md:order-2 md:p-4 md:pl-0">
+        <FadeUpDown className="centered">
           <h4 className="subtitle">/ &nbsp; Problem Solving</h4>
         </FadeUpDown>
-        <FadeUpDown delay={0.4}>
+        <FadeUpDown delay={0.4} className="centered">
           <SecondaryHeading>
             I enjoy solving problems with clean and scalable solutions. I have a
             genuine passion for software application design.
           </SecondaryHeading>
         </FadeUpDown>
         <FadeUpDown delay={0.8}>
-          <Parragraph>
+          <Parragraph className="centered">
             I have a solid background in developing web applications, mobile
             apps, and UI/UX designs. I also have a passion for curating
             large-scale applications with scalable architecture, understanding
