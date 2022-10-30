@@ -12,7 +12,7 @@ type WorkCardProps = {
 
 const WorkCard: FC<WorkCardProps> = ({ label, route, image, excerpt }) => {
   return (
-    <div className="group card-border flex h-[300px] w-[220px] flex-col rounded-lg bg-gray-900 p-4 drop-shadow-lg duration-300 ease-in-out hover:h-[340px] hover:scale-105 dark:shadow-gray-300">
+    <div className="group card-border flex h-[300px] w-[220px] flex-col rounded-lg p-3 drop-shadow-lg duration-300 ease-in-out hover:h-[340px] hover:scale-105 dark:bg-gray-800 dark:shadow-gray-300">
       {/* top section */}
       <div>
         <Image
@@ -26,10 +26,10 @@ const WorkCard: FC<WorkCardProps> = ({ label, route, image, excerpt }) => {
       </div>
       {/* bottom section */}
       <div className="py-2">
-        <h6 className="text-[0.7rem] font-semibold uppercase text-gray-300 ">
+        <h6 className="text-[0.7rem] font-semibold uppercase text-gray-600 dark:text-gray-300 ">
           {label}
         </h6>
-        <h4 className="mt-[8px] text-[1.05rem] leading-[1.2em] text-gray-200">
+        <h4 className="mt-[8px] text-[1.05rem] leading-[1.2em] text-gray-800 dark:text-gray-300">
           {`${excerpt}`.substring(0, 90)}
         </h4>
         <Link href={route}>

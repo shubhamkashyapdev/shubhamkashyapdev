@@ -11,7 +11,7 @@ import { fadeDown } from '@/components/common/animation/variants';
 
 const Hero: FC = () => {
   return (
-    <div className="relative mt-6 mb-16 flex flex-col md:flex-row md:space-x-6">
+    <div className="relative mt-6 mb-16 flex flex-col md:flex-row md:space-x-10">
       <div className="flex flex-[6] items-center ">
         <div>
           <motion.h1
@@ -19,9 +19,9 @@ const Hero: FC = () => {
             initial="initial"
             animate="animate"
             transition={{ ease: 'easeIn', duration: 0.4 }}
-            className=" text-shadow-md dark:text-gradient text-center text-[56px] font-bold leading-[1.1em] text-primary-700 antialiased md:text-left"
+            className=" text-shadow-md dark:text-gradient text-center text-[60px] font-bold leading-[1.1em] text-primary-700 antialiased md:text-left"
           >
-            Hello, i am Shubham Kashyap.
+            Hello, i am <br /> Shubham Kashyap.
           </motion.h1>
           <motion.h4
             variants={fadeDown}

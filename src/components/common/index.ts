@@ -11,9 +11,9 @@ export { default as TextInputComponent } from './form/TextInputComponent';
 
 // cards
 export { default as BlogCard } from './cards/BlogCard';
+export { default as FeaturedProjectCard } from './cards/FeaturedProjectCard';
 export { default as Hightlight } from './cards/Highlight';
 export { default as WorkCard } from './cards/WorkCard';
-
 // elements
 export { default as ToggleButton } from './ToggleButton';
 
@@ -25,6 +25,7 @@ export { default as SecondaryHeading } from './typography/SecondaryHeading';
 // sections
 export { default as Blogs } from './sections/Blogs';
 export { default as Clients } from './sections/Clients';
+export { default as FeaturedProjects } from './sections/FeaturedProjects';
 export { default as ProblemSolver } from './sections/ProblemSolver';
 export { default as TechStack } from './sections/TechStack';
 export { default as Work } from './sections/Work';

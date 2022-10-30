@@ -12,6 +12,6 @@ module.exports = withBundleAnalyzer({
   basePath: '',
   reactStrictMode: true,
   images: {
-    domains: ['shorturl.at'],
+    domains: ['shorturl.at', 'res.cloudinary.com'],
   },
 });

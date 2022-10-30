@@ -5,6 +5,7 @@ import { Hero, Loader } from '@/components';
 import {
   Blogs,
   Clients,
+  FeaturedProjects,
   ProblemSolver,
   TechStack,
   Work,
@@ -45,6 +46,7 @@ const Index: NextPage = () => {
       <TechStack />
       <Work />
       <Blogs />
+      <FeaturedProjects />
       <Footer />
     </Main>
   );

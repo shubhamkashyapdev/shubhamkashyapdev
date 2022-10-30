@@ -17,12 +17,18 @@ const BlogCard: FC<BlogCardType> = ({
   viewes,
 }) => {
   return (
-    <li className="w-full scale-100 cursor-pointer rounded-md border border-gray-300 bg-white transition  duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 dark:border-gray-600 dark:bg-primary-700">
-      <a className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
-        <div className="relative -mt-6 h-[150px]">
+    <div className="w-full scale-100 cursor-pointer overflow-hidden rounded-md border border-gray-400 bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 dark:border-gray-600 dark:bg-primary-700">
+      <div className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
+        <div className="relative h-[150px]">
           {/* image */}
           <div className="h-full w-full ">
-            <Image src={image} layout="fill" objectFit="cover" alt="" />
+            <Image
+              src={image}
+              className="rounded-t-lg"
+              layout="fill"
+              objectFit="cover"
+              alt=""
+            />
           </div>
           {/* tags */}
           <div className="absolute bottom-0 mt-2 flex w-full flex-wrap justify-end gap-y-1 gap-x-2 px-4 py-2 text-sm text-black dark:text-gray-100">
@@ -46,7 +52,7 @@ const BlogCard: FC<BlogCardType> = ({
               <svg
                 stroke="currentColor"
                 fill="none"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 24 24"
                 className="inline-block text-base"
                 height="1em"
@@ -54,9 +60,9 @@ const BlogCard: FC<BlogCardType> = ({
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 ></path>
               </svg>
@@ -68,7 +74,7 @@ const BlogCard: FC<BlogCardType> = ({
               <svg
                 stroke="currentColor"
                 fill="none"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 24 24"
                 className="inline-block text-base"
                 height="1em"
@@ -76,15 +82,15 @@ const BlogCard: FC<BlogCardType> = ({
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                 ></path>
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                 ></path>
               </svg>
@@ -103,8 +109,8 @@ const BlogCard: FC<BlogCardType> = ({
             {excerpt.length > 120 ? '...' : ''}
           </p>
         </div>
-      </a>
-    </li>
+      </div>
+    </div>
   );
 };
 

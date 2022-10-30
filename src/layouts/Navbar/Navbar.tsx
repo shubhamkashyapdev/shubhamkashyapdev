@@ -17,7 +17,7 @@ const Navbar: FC<NavbarProps> = ({ navLinks, className, navClassName }) => {
       <ul className={`flex items-center space-x-3 ${className}`}>
         {navLinks.map((item, index) => (
           <NavItem
-            key={`navlink-${item.route}-${item.label}`}
+            key={`navlink-${item.route}-${item.label}-${index}`}
             label={item.label}
             route={item.route}
             index={index}
