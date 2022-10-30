@@ -2,26 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import Parragraph from '../typography/Parragraph';
+import { tags } from '@/utils/data';
 
-const tags = [
-  {
-    label: 'Notion API',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114429/vmn6yvtjyyk5rsxoacmn.svg',
-  },
-  {
-    label: 'Node.js',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114390/lhcvo0mhuhuxdl7zxfih.svg',
-  },
-  {
-    label: 'Next.js',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114437/lnc28fpalel9zzcg8gph.svg',
-  },
-  {
-    label: 'Tailwind',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114434/f7q0lurtscdasirsi4wi.svg',
-  },
-];
+import Parragraph from '../typography/Parragraph';
 
 const FeaturedProjectCard = () => {
   return (

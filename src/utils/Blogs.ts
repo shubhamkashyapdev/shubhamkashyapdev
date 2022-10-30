@@ -7,7 +7,10 @@ export const blogs: BlogCardType[] = [
       'Increase your efficiency by using the preconfigured starter repositories with rich features and automations',
     image: `https://shorturl.at/ILPWX`,
     readTime: 12,
-    tags: [{ tag: 'Next.js' }, { tag: 'Tailwind' }],
+    tags: [
+      { label: 'Next.js', icon: '' },
+      { label: 'Tailwind', icon: '' },
+    ],
     title:
       'One stop starter for maximize efficiency on Next.js and TailwindCSS',
     viewes: 4290,
@@ -18,7 +21,10 @@ export const blogs: BlogCardType[] = [
       'Complete configuration and seutp for storybook in Next.js application',
     image: `https://shorturl.at/ILPWX`,
     readTime: 8,
-    tags: [{ tag: 'Next.js' }, { tag: 'Stroybook' }],
+    tags: [
+      { label: 'Next.js', icon: '' },
+      { label: 'Stroybook', icon: '' },
+    ],
     title: 'How to setup Storybook with Next.js',
     viewes: 2040,
   },

@@ -65,6 +65,9 @@ body {
   .card-border {
     @apply border border-gray-300 dark:border-gray-600;
   }
+  .card-title {
+    @apply text-gray-700 dark:text-gray-300;
+  }
   /* #region  /**=========== Animate Shadow =========== */
   .animate-shadow {
     @apply after:absolute after:inset-0 after:z-[-1] after:opacity-0 after:transition-opacity hover:after:opacity-100;

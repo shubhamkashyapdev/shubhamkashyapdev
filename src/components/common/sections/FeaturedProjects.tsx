@@ -4,6 +4,7 @@ import {
   FeaturedProjectCard,
   Parragraph,
   PrimaryHeading,
+  SeeMoreButton,
 } from '@/components/common';
 
 const FeaturedProjects = () => {
@@ -16,6 +17,7 @@ const FeaturedProjects = () => {
         <FeaturedProjectCard />
         <FeaturedProjectCard />
       </div>
+      <SeeMoreButton route="/project">See more projects</SeeMoreButton>
     </section>
   );
 };
