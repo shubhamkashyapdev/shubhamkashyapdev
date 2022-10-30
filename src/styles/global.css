@@ -6,26 +6,24 @@
 
 @tailwind utilities;
 
-
-
 :root {
   --primary: #111827;
   --primary-color: #fff;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary-color: var(--primary);
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
   scroll-behavior: smooth;
 }
 
 @layer components {
   ::selection {
-    @apply bg-primary-300 dark:bg-primary-300/75 ;
+    @apply bg-primary-300 dark:bg-primary-300/75;
   }
   .fadedown {
     animation: fadeUp 1s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -39,7 +37,7 @@ body {
   .subtitle {
     @apply text-sm font-medium uppercase text-gradient-subtitle mb-1 w-full md:w-fit;
   }
-  
+
   .section {
     @apply my-32;
   }
@@ -79,16 +77,12 @@ body {
   }
 }
 
-
-
 .text-shadow-sm {
-  text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
 .text-shadow-md {
-  text-shadow: 0px 0px 3px rgba(0,0,0,0.15);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }
-
-
 
 @keyframes fadeUp {
   from {
@@ -101,26 +95,57 @@ body {
 
 /* Loader Animation */
 
-.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /*change these sizes to fit into your project*/
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
 }
-.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
 
-.load :first-child{background:#19A68C;animation-delay:-1.5s}
-.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
-.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
-.load :last-child{background:#193B48}
+.load :first-child {
+  background: #19a68c;
+  animation-delay: -1.5s;
+}
+.load :nth-child(2) {
+  background: #f63d3a;
+  animation-delay: -1s;
+}
+.load :nth-child(3) {
+  background: #fda543;
+  animation-delay: -0.5s;
+}
+.load :last-child {
+  background: #193b48;
+}
 
-@keyframes spin{
-  0%,100%{transform:translate(0)}
-  25%{transform:translate(160%)}
-  50%{transform:translate(160%, 160%)}
-  75%{transform:translate(0, 160%)}
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
 }
 /* Loader Animation Ends */
-
 
 /* background animation */
 
@@ -150,7 +175,8 @@ body {
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(104em, 0, 0);
-  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+    tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
 }
 @media screen and (max-width: 750px) {
   .star {
@@ -457,9 +483,10 @@ body {
   --fall-duration: 10.722s;
   --fall-delay: 1.141s;
 }
-.star::before, .star::after {
+.star::before,
+.star::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: calc(var(--star-width) / -2);
   width: var(--star-width);
@@ -481,11 +508,13 @@ body {
   }
 }
 @keyframes tail-fade {
-  0%, 50% {
+  0%,
+  50% {
     width: var(--star-tail-length);
     opacity: 1;
   }
-  70%, 80% {
+  70%,
+  80% {
     width: 0;
     opacity: 0.4;
   }
