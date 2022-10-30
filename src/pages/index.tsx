@@ -9,7 +9,6 @@ import {
   FeaturedProjects,
   ProblemSolver,
   TechStack,
-  Work,
 } from '@/components/common';
 import { Footer, Header } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
@@ -45,7 +44,6 @@ const Index: NextPage = () => {
       <ProblemSolver />
       <Clients />
       <TechStack />
-      <Work />
       <Blogs />
       <FeaturedProjects />
       <CodeSnippets />

@@ -29,7 +29,7 @@ const FadeUpDown: FC<FadeUpDownProps> = ({
 }) => {
   const [itemRef, itemInView] = useInView({
     triggerOnce: true,
-    rootMargin: '-100px 0px',
+    rootMargin: '100px 0px',
   });
   return (
     <motion.div
