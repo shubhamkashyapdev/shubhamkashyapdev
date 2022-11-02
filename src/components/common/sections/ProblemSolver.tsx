@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FadeUpDown, Parragraph, SecondaryHeading } from '@/components/common';
+import { Parragraph, SecondaryHeading } from '@/components/common';
 
 const experiences = [
   {
@@ -41,23 +41,21 @@ const ProblemSolver = () => {
         </span>
       </div>
       <div className="order-1 mt-8 flex-[5] md:order-2 md:p-4 md:pl-0">
-        <FadeUpDown className="centered">
+        <div className="centered">
           <h4 className="subtitle">/ &nbsp; Problem Solving</h4>
-        </FadeUpDown>
-        <FadeUpDown delay={0.4} className="centered">
+        </div>
+        <div className="centered">
           <SecondaryHeading>
             I enjoy solving problems with clean and scalable solutions. I have a
             genuine passion for software application design.
           </SecondaryHeading>
-        </FadeUpDown>
-        <FadeUpDown delay={0.8}>
-          <Parragraph className="centered">
-            I have a solid background in developing web applications, mobile
-            apps, and UI/UX designs. I also have a passion for curating
-            large-scale applications with scalable architecture, understanding
-            the problems, and coming up with creative solutions.
-          </Parragraph>
-        </FadeUpDown>
+        </div>
+        <Parragraph className="centered">
+          I have a solid background in developing web applications, mobile apps,
+          and UI/UX designs. I also have a passion for curating large-scale
+          applications with scalable architecture, understanding the problems,
+          and coming up with creative solutions.
+        </Parragraph>
       </div>
     </section>
   );

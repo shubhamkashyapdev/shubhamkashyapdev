@@ -12,7 +12,6 @@ export { default as WorkCard } from './cards/WorkCard';
 // elements
 export { default as Tags } from './elements/Tags';
 export { default as ToggleButton } from './elements/ToggleButton';
-
 // typography
 export { default as Parragraph } from './typography/Parragraph';
 export { default as PrimaryHeading } from './typography/PrimaryHeading';

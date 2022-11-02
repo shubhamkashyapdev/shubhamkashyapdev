@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import React, { Fragment } from 'react';
 
 import { AppleSVG } from '@/assets/svg';
-import { FadeUpDown, Parragraph, PrimaryHeading } from '@/components/common';
+import { Parragraph, PrimaryHeading } from '@/components/common';
 
 const clients = [
   {
@@ -35,31 +35,26 @@ const Clients: FC = () => {
   return (
     <section className="section flex flex-col overflow-hidden md:flex-row md:space-x-10">
       <div className="centered flex-1">
-        <FadeUpDown className="centered">
+        <div className="centered">
           <h5 className="subtitle w-full">/ &nbsp; Clients</h5>
-        </FadeUpDown>
-        <FadeUpDown>
-          <PrimaryHeading className="xl:text-5xl">Clients</PrimaryHeading>
-        </FadeUpDown>
-        <FadeUpDown>
-          <Parragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maxime
-            incidunt possimus? Vero aliquam unde consectetur ex enim culpa
-            explicabo maxime. Rerum hic ex voluptas, amet cupiditate veritatis
-            dolor atque.
-          </Parragraph>
-        </FadeUpDown>
+        </div>
+
+        <PrimaryHeading className="xl:text-5xl">Clients</PrimaryHeading>
+
+        <Parragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maxime
+          incidunt possimus? Vero aliquam unde consectetur ex enim culpa
+          explicabo maxime. Rerum hic ex voluptas, amet cupiditate veritatis
+          dolor atque.
+        </Parragraph>
       </div>
       <div className="mt-8 flex flex-1 flex-wrap gap-1 gap-y-6 md:mt-2">
         {clients.map((item, index) => (
           <Fragment key={`client-logo-${index}`}>
-            <FadeUpDown
-              className="flex min-w-[140px] flex-1 flex-col items-center"
-              delay={0.2 + index * 0.2}
-            >
+            <div className="flex min-w-[140px] flex-1 flex-col items-center">
               {item.logo}
               <Parragraph>{item.label}</Parragraph>
-            </FadeUpDown>
+            </div>
           </Fragment>
         ))}
       </div>

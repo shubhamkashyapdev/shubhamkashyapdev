@@ -15,7 +15,7 @@ const Parragraph: FC<ParragraphProps> = ({
 }) => {
   return (
     <p
-      className={`text-shadow-sm mt-4 text-base text-gray-900 antialiased dark:text-gray-100 ${className}  ${
+      className={`text-shadow-sm mt-4 text-base text-gray-700 antialiased dark:text-gray-300 ${className}  ${
         justified ? 'text-justify' : ''
       }`}
     >

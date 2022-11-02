@@ -17,7 +17,7 @@ const BlogCard: FC<BlogCardType> = ({
   viewes,
 }) => {
   return (
-    <div className="w-full scale-100 cursor-pointer overflow-hidden rounded-md border border-gray-400 bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 dark:border-gray-600 dark:bg-primary-700">
+    <div className="card-border w-full scale-100 cursor-pointer overflow-hidden rounded-md  bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100  dark:bg-primary-700">
       <div className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
         <div className="relative h-[150px]">
           {/* image */}

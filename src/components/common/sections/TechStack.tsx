@@ -78,8 +78,8 @@ const TechStack = () => {
             exit="exit"
             transition={{
               ease: 'easeInOut',
-              duration: 0.4,
-              delay: 0.2 + index * 0.05,
+              duration: 0.2,
+              delay: 0.1 + index * 0.01,
             }}
             key={`technology-item-${item.label}-${item.category}`}
             className="h-fit w-fit rounded-md bg-gray-800 px-2 py-1 text-sm text-white drop-shadow-md dark:bg-gray-800 dark:shadow-gray-300"
