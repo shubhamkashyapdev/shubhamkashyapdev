@@ -8,14 +8,13 @@ import { CodeSnippetCards } from '../Library';
 
 type CodeSnippetProps = {
   snippets: CodeSnippetCardType[];
-  isLoading: boolean;
 };
 
-const CodeSnippetsSection: FC<CodeSnippetProps> = ({ snippets, isLoading }) => {
+const CodeSnippetsSection: FC<CodeSnippetProps> = ({ snippets }) => {
   return (
     <section className="section">
       <PrimaryHeading>Library of code snippets</PrimaryHeading>
-      <CodeSnippetCards snippets={snippets} isLoading={isLoading} />
+      <CodeSnippetCards snippets={snippets} />
       <SeeMoreButton route="/library">See more snippets</SeeMoreButton>
     </section>
   );

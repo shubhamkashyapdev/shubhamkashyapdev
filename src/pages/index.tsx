@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import useSWR from 'swr';
 
 import { Hero } from '@/components';
 import {
@@ -10,16 +9,17 @@ import {
   ProblemSolver,
   TechStack,
 } from '@/components/common';
-import { fetcher } from '@/graphql';
 import { getSnippetsForHome } from '@/graphql/Library';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
+import type { CodeSnippetCardType } from '@/types/component.types';
+import { axiosGrapQL } from '@/utils/axios';
 
-const Index: NextPage = () => {
-  const { data, isValidating } = useSWR(getSnippetsForHome, fetcher);
+type IndexType = {
+  docs: CodeSnippetCardType[];
+};
 
-  const snippets = data?.Libraries?.docs;
-
+const Index: NextPage<IndexType> = ({ docs }) => {
   return (
     <Main
       meta={
@@ -35,9 +35,21 @@ const Index: NextPage = () => {
       <TechStack />
       <Blogs />
       <FeaturedProjects />
-      <CodeSnippets snippets={snippets} isLoading={isValidating} />
+      <CodeSnippets snippets={docs} />
     </Main>
   );
+};
+
+export const getServerSideProps = async () => {
+  const res = await axiosGrapQL.post(`/`, {
+    query: getSnippetsForHome,
+  });
+  const data = res.data?.data?.Libraries?.docs;
+  return {
+    props: {
+      docs: data,
+    },
+  };
 };
 
 export default Index;

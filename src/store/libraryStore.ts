@@ -1,17 +1,34 @@
 import create from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 
-export const authStore = () => ({
-  snippets: false,
-  activeSnippetId: null,
+import type { CodeSnippetCardType } from '@/types/component.types';
+
+type LibraryStateType = {
+  snippets: CodeSnippetCardType[];
+  filteredSnippets: CodeSnippetCardType[];
+};
+
+export const libraryStore = (set: any) => ({
+  snippets: [],
+  filteredSnippets: [],
+  setSnippets: (snippets: CodeSnippetCardType[]) =>
+    set((prevState: LibraryStateType) => ({
+      ...prevState,
+      snippets,
+    })),
+  setFilteredSnippets: (filteredSnippets: CodeSnippetCardType[]) =>
+    set((prevState: LibraryStateType) => ({
+      ...prevState,
+      filteredSnippets,
+    })),
 });
 
-const useAuthStore = create(
+const useLibraryStore = create(
   devtools(
-    persist(authStore, {
-      name: 'auth',
+    persist(libraryStore, {
+      name: 'library',
     })
   )
 );
 
-export default useAuthStore;
+export default useLibraryStore;

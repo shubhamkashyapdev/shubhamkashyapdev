@@ -1,6 +1,7 @@
 export const getSnippetsForHome = `{
   Libraries(limit: 8) {
     docs {
+      id
      title
       views
       tagline
@@ -16,6 +17,7 @@ export const getSnippetsForHome = `{
 export const getSnippetsForLibrary = `{
   Libraries {
     docs {
+      id
      title
       views
       tagline

@@ -43,6 +43,7 @@ export type BlogCardType = {
 };
 
 export type CodeSnippetCardType = {
+  id: string;
   title: string;
   views: number;
   tags: TagType[];
