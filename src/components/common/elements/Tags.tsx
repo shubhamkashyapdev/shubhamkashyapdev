@@ -19,7 +19,7 @@ const Tags: FC<TagsProps> = ({ tags }) => {
           height={20}
           width={20}
           objectFit="cover"
-          alt={`${item.label} SVG Icon`}
+          alt={`${item.title} SVG Icon`}
         />
       ))}
     </div>

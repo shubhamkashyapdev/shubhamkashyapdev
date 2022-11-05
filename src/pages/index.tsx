@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 
-import { Hero, Loader } from '@/components';
+import { Hero } from '@/components';
 import {
   Blogs,
   Clients,
@@ -10,26 +10,16 @@ import {
   ProblemSolver,
   TechStack,
 } from '@/components/common';
-import { Footer, Header } from '@/layouts';
+import { fetcher } from '@/graphql';
+import { getSnippetsForHome } from '@/graphql/Library';
 import { Meta } from '@/layouts/Meta';
-import useAuthStore from '@/store/authStore';
 import { Main } from '@/templates/Main';
 
 const Index: NextPage = () => {
-  const authStore = useAuthStore((state) => state);
-  const [mounted, setMounted] = useState<boolean>(false);
+  const { data, isValidating } = useSWR(getSnippetsForHome, fetcher);
 
-  useEffect(() => {
-    authStore.setUserDetails({ name: 'Sanjeet Mishra' });
-    const timeout = setTimeout(() => {
-      setMounted(true);
-    }, 2000);
-    return () => clearTimeout(timeout);
-  }, []);
+  const snippets = data?.Libraries?.docs;
 
-  if (!mounted) {
-    return <Loader />;
-  }
   return (
     <Main
       meta={
@@ -39,15 +29,13 @@ const Index: NextPage = () => {
         />
       }
     >
-      <Header />
       <Hero />
       <ProblemSolver />
       <Clients />
       <TechStack />
       <Blogs />
       <FeaturedProjects />
-      <CodeSnippets />
-      <Footer />
+      <CodeSnippets snippets={snippets} isLoading={isValidating} />
     </Main>
   );
 };

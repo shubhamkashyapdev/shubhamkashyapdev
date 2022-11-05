@@ -28,7 +28,7 @@ export type SocialIconProps = {
 };
 
 export type TagType = {
-  label: string;
+  title: string;
   icon: string;
 };
 
@@ -42,9 +42,9 @@ export type BlogCardType = {
   excerpt: string;
 };
 
-export type CodeSnippetCardProps = {
+export type CodeSnippetCardType = {
   title: string;
-  likes: number;
+  views: number;
   tags: TagType[];
-  excerpt: string;
+  tagline: string;
 };

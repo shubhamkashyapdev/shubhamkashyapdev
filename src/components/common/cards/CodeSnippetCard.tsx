@@ -6,8 +6,8 @@ import { Parragraph, Tags } from '@/components/common';
 import type { CodeSnippetCardProps } from '@/types/component.types';
 
 const CodeSnippetCard: FC<CodeSnippetCardProps> = ({
-  excerpt,
-  likes,
+  tagline,
+  views,
   tags,
   title,
 }) => {
@@ -22,13 +22,13 @@ const CodeSnippetCard: FC<CodeSnippetCardProps> = ({
             <span>
               <Heartbeat />
             </span>
-            <span>{likes}</span>
+            <span>{views}</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
             <Tags tags={tags} />
           </div>
         </div>
-        <Parragraph className="mt-2 text-[0.85rem]">{excerpt}</Parragraph>
+        <Parragraph className="mt-2 text-[0.85rem]">{tagline}</Parragraph>
       </div>
     </div>
   );

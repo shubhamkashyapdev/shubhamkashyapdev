@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+export const axiosGrapQL = axios.create({
+  baseURL: process.env.GRAPHQL_URL,
+});
+
 export const doPost = (url: string, data: any) => {
   return axios.post((process.env.NEXT_PUBLIC_BASE_URL as string) + url, {
     data,
