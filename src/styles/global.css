@@ -72,6 +72,9 @@ body {
   .project-card:focus-visible .animated-underline {
     background-size: 0 2px, 100% 2px;
   }
+  .text-color {
+    @apply text-gray-700 dark:text-gray-300;
+  }
 }
 
 .text-shadow-sm {

@@ -28,6 +28,7 @@ export type SocialIconProps = {
 };
 
 export type TagType = {
+  id: string;
   title: string;
   icon: string;
 };

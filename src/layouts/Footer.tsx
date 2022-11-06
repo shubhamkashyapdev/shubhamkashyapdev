@@ -27,8 +27,8 @@ const navLinks: NavItemProps[] = [
     route: '/starter-templates',
   },
   {
-    label: 'Library',
-    route: '/library',
+    label: 'Projects',
+    route: '/project',
   },
   {
     label: 'About',

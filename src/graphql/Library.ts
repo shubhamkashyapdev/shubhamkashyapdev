@@ -29,3 +29,10 @@ export const getSnippetsForLibrary = `{
     }
   }
 }`;
+
+export const getSnippetDataForPage = `query($id: String!) {
+  Library(id: $id) {
+    id
+    title
+  }
+}`;

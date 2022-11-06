@@ -10,7 +10,7 @@ type TagsProps = {
 
 const Tags: FC<TagsProps> = ({ tags }) => {
   return (
-    <div className="mt-2 flex gap-2">
+    <div className="mt-2 -mt-[1px] flex gap-2">
       {tags.map((item, index) => (
         <Image
           className="dark:rounded-sm dark:bg-white"

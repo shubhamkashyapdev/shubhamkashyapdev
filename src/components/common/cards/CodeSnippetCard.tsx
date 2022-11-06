@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import React from 'react';
-import { Heartbeat } from 'tabler-icons-react';
 
-import { Parragraph, Tags } from '@/components/common';
+import { Parragraph } from '@/components/common';
+import { CardMeta } from '@/components/common/elements';
 import type { CodeSnippetCardType } from '@/types/component.types';
 
 const CodeSnippetCard: FC<CodeSnippetCardType> = ({
@@ -23,17 +23,7 @@ const CodeSnippetCard: FC<CodeSnippetCardType> = ({
         <h3 className="text-base font-semibold text-gray-800 dark:text-gray-300">
           {title}
         </h3>
-        <div className="flex items-baseline gap-4">
-          <div className="flex items-center gap-3 text-sm text-gray-800 dark:text-gray-300">
-            <span>
-              <Heartbeat />
-            </span>
-            <span>{views}</span>
-          </div>
-          <div className="flex items-center gap-3 text-sm">
-            <Tags tags={tags} />
-          </div>
-        </div>
+        <CardMeta views={views} tags={tags} />
         <Parragraph className="mt-2 text-[0.85rem]">{tagline}</Parragraph>
       </div>
     </div>
