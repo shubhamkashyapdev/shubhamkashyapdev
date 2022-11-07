@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { ArrowRight } from 'tabler-icons-react';
@@ -15,9 +15,12 @@ import { getSnippetDataForPage } from '@/graphql/Library';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { axiosGrapQL } from '@/utils/axios';
-import { snippet } from '@/utils/data';
 
-const CodeSnippetPage: NextPage = () => {
+type CodeSnippetPageType = {
+  snippet: any;
+};
+
+const CodeSnippetPage: NextPage<CodeSnippetPageType> = ({ snippet }) => {
   return (
     <Main
       meta={
@@ -35,7 +38,7 @@ const CodeSnippetPage: NextPage = () => {
       {/* Blocks */}
       <div className="mb-20 flex flex-col md:flex-row">
         <div className="w-[70%]">
-          {snippet?.blocks?.map((item) => {
+          {snippet?.blocks?.map((item: any) => {
             if (item.blockType === 'primary-heading') {
               return (
                 <PrimaryHeadingBlock
@@ -49,16 +52,17 @@ const CodeSnippetPage: NextPage = () => {
             if (item.blockType === 'secondary-heading') {
               return (
                 <PrimaryHeadingBlock key={`block-heading-${item.id}`}>
-                  {item.text}
+                  {item.secondaryHeading}
                 </PrimaryHeadingBlock>
               );
             }
             if (item.blockType === 'parragraph') {
               return (
                 <React.Fragment key={`block-parragraph-${item.id}`}>
-                  {item.text.map((childrens: any[]) => {
+                  {item.parragraph.map((childrens: any[]) => {
+                    // @ts-ignore
                     return childrens.children.map(
-                      (parra: { text: string }, index: number) => (
+                      (parra: any, index: number) => (
                         <div
                           key={`block-parragraph-${index}-${item.id}`}
                           className="flex space-x-4"
@@ -99,6 +103,7 @@ const CodeSnippetPage: NextPage = () => {
               return (
                 <React.Fragment key={`block-parragraph-${item.id}`}>
                   {item.code.map((childrens: any[]) => {
+                    // @ts-ignore
                     return childrens.children.map(
                       (codebox: { text: string }, index: number) => (
                         <CodeBlock
@@ -113,6 +118,7 @@ const CodeSnippetPage: NextPage = () => {
                 </React.Fragment>
               );
             }
+            return <></>;
           })}
         </div>
         <div className="w-[30%]"></div>
@@ -121,15 +127,15 @@ const CodeSnippetPage: NextPage = () => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const { id } = query;
   const res = await axiosGrapQL.post(`/`, {
     query: getSnippetDataForPage,
     variables: {
-      id: '63629ea40dd9524341ec8eff',
+      id,
     },
   });
   const data = res?.data?.data?.Library;
-  console.log({ data });
   return {
     props: {
       snippet: data,

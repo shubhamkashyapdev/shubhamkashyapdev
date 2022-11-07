@@ -34,5 +34,37 @@ export const getSnippetDataForPage = `query($id: String!) {
   Library(id: $id) {
     id
     title
+    views
+    tagline
+    subTagline
+    tags {
+      id
+      title
+      icon
+    }
+    blocks {
+      ...on PrimaryHeading {
+        id
+        text
+        blockType
+      }
+      ... on SecondaryHeading {
+        id
+        secondaryHeading
+        blockType
+      }
+      ...on Parragraph {
+        id
+        parragraph
+        blockType
+      }
+     ...on Code {
+      id
+      code
+      language
+      showLineNumbers
+      blockType
+    }
+    }
   }
 }`;
