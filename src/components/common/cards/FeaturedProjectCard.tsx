@@ -26,14 +26,14 @@ const FeaturedProjectCard = () => {
               height={20}
               width={20}
               objectFit="cover"
-              alt={`${item.label} SVG Icon`}
+              alt={`${item.title} SVG Icon`}
             />
           ))}
         </div>
         <div className="mt-4 h-[150px] w-full">
           <Image
             className="rounded-md"
-            src={`https://shorturl.at/glJT3`}
+            src={`https://res.cloudinary.com/hexdev/image/upload/v1667844619/shubhamwebdesign/ct5omajmm9z1qc0mpdo4.jpg`}
             height={150}
             width={350}
             objectFit="cover"

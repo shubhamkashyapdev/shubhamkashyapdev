@@ -58,7 +58,7 @@ const socialLinks: SocialIconProps[] = [
 const Footer: FC = () => {
   return (
     <footer className="mt-10 mb-4">
-      <hr className="dark:gray-800 h-[2px] bg-primary-700" />
+      <hr className="h-[2px] bg-primary-700 dark:bg-gray-800" />
       <Navbar
         navLinks={navLinks}
         navClassName="justify-center mt-4"

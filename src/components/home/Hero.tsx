@@ -5,11 +5,7 @@ import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
 import TypewriterComponent from 'typewriter-effect';
 
 import { HeroCTA } from '@/components';
-import {
-  DownArrow,
-  Hightlight,
-  Parragraph,
-} from '@/components/common';
+import { DownArrow, Hightlight, Parragraph } from '@/components/common';
 
 const Hero: FC = () => {
   return (

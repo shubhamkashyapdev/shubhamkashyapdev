@@ -21,7 +21,7 @@ const NavItem: FC<NavItemProps> = ({ label, route, index }) => {
       transition={{ ease: 'easeInOut', duration: 0.4 + index * 0.1 }}
     >
       <Link href={route} key={`nav-item-${label}-${route}-${index}`}>
-        <li className="group fadedown relative cursor-pointer">
+        <li className="group relative cursor-pointer">
           <a
             className={`${
               route === activeRoute

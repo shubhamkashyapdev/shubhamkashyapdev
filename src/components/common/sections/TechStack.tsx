@@ -30,12 +30,10 @@ const TechStack = () => {
       const filteredTechItems = technologies.filter(
         (item) => item.category === activeItem
       );
-      console.log({ filteredTechItems });
       setFilteredTechs(filteredTechItems);
     },
     [activeTech]
   );
-  console.log({ filteredTechs });
   useEffect(() => {
     handleFilterItems(activeTech);
   }, []);
