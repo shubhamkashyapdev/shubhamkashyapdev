@@ -6,7 +6,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="mt-8 min-h-screen">{props.children}</div>
+  <div className="mt-14 min-h-screen">{props.children}</div>
 );
 
 export { Main };

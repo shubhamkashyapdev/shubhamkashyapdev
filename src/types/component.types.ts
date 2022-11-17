@@ -50,3 +50,25 @@ export type CodeSnippetCardType = {
   tags: TagType[];
   tagline: string;
 };
+
+export type TagItemType = {
+  tag: {
+    id: string;
+    url: string;
+    filename: string;
+  };
+};
+
+export type ProjectCardType = {
+  id: string;
+  title: string;
+  tagline: string;
+  tags: TagItemType[];
+  featuredImage: {
+    sizes: {
+      thumbnail: {
+        url: string;
+      };
+    };
+  };
+};

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const axiosGrapQL = axios.create({
+export const axiosGraphQL = axios.create({
   baseURL: process.env.GRAPHQL_URL,
 });
 

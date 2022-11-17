@@ -14,7 +14,7 @@ import { Blockquote, CardMeta, PageTitle } from '@/components/common/elements';
 import { getSnippetDataForPage } from '@/graphql/Library';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
-import { axiosGrapQL } from '@/utils/axios';
+import { axiosGraphQL } from '@/utils/axios';
 
 type CodeSnippetPageType = {
   snippet: any;
@@ -129,7 +129,7 @@ const CodeSnippetPage: NextPage<CodeSnippetPageType> = ({ snippet }) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { id } = query;
-  const res = await axiosGrapQL.post(`/`, {
+  const res = await axiosGraphQL.post(`/`, {
     query: getSnippetDataForPage,
     variables: {
       id,

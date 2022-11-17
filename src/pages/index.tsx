@@ -10,16 +10,21 @@ import {
   TechStack,
 } from '@/components/common';
 import { getSnippetsForHome } from '@/graphql/Library';
+import { getProjectsForHome } from '@/graphql/Project';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
-import type { CodeSnippetCardType } from '@/types/component.types';
-import { axiosGrapQL } from '@/utils/axios';
+import type {
+  CodeSnippetCardType,
+  ProjectCardType,
+} from '@/types/component.types';
+import { axiosGraphQL } from '@/utils/axios';
 
 type IndexType = {
-  docs: CodeSnippetCardType[];
+  snippets: CodeSnippetCardType[];
+  projects: ProjectCardType[];
 };
 
-const Index: NextPage<IndexType> = ({ docs }) => {
+const Index: NextPage<IndexType> = ({ snippets, projects }) => {
   return (
     <Main
       meta={
@@ -34,20 +39,25 @@ const Index: NextPage<IndexType> = ({ docs }) => {
       <Clients />
       <TechStack />
       <Blogs />
-      <FeaturedProjects />
-      <CodeSnippets snippets={docs} />
+      <FeaturedProjects projects={projects} />
+      <CodeSnippets snippets={snippets} />
     </Main>
   );
 };
 
 export const getServerSideProps = async () => {
-  const res = await axiosGrapQL.post(`/`, {
+  const snippetsRes = await axiosGraphQL.post(`/`, {
     query: getSnippetsForHome,
   });
-  const data = res.data?.data?.Libraries?.docs;
+  const projectsRes = await axiosGraphQL.post(`/`, {
+    query: getProjectsForHome,
+  });
+  const snippets = snippetsRes.data?.data?.Libraries?.docs;
+  const projects = projectsRes.data?.data?.Projects?.docs;
   return {
     props: {
-      docs: data,
+      snippets,
+      projects,
     },
   };
 };

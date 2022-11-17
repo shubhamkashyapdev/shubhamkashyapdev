@@ -5,7 +5,7 @@ export { default as DownArrow } from './elements/DownArrow';
 // cards
 export { default as BlogCard } from './cards/BlogCard';
 export { default as CodeSnippetCard } from './cards/CodeSnippetCard';
-export { default as FeaturedProjectCard } from './cards/FeaturedProjectCard';
+export { default as ProjectCard } from './cards/FeaturedProjectCard';
 export { default as Hightlight } from './cards/Highlight';
 export { default as WorkCard } from './cards/WorkCard';
 
