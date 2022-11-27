@@ -1,4 +1,5 @@
 /* eslint-disable import/no-cycle */
+export { default as Blocks } from './Blocks';
 export { default as CardMeta } from './CardMeta';
 export { default as Blockquote } from './components/Blockquote';
 export { default as DownArrow } from './DownArrow';

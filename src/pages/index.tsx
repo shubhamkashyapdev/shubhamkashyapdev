@@ -2,18 +2,20 @@ import type { NextPage } from 'next';
 
 import { Hero } from '@/components';
 import {
-  Blogs,
   Clients,
   CodeSnippets,
   FeaturedProjects,
   ProblemSolver,
   TechStack,
 } from '@/components/common';
+import Blogs from '@/components/common/sections/Blogs';
+import { getBlogsForHome } from '@/graphql/Blogs';
 import { getSnippetsForHome } from '@/graphql/Library';
 import { getProjectsForHome } from '@/graphql/Project';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import type {
+  BlogCardType,
   CodeSnippetCardType,
   ProjectCardType,
 } from '@/types/component.types';
@@ -22,9 +24,10 @@ import { axiosGraphQL } from '@/utils/axios';
 type IndexType = {
   snippets: CodeSnippetCardType[];
   projects: ProjectCardType[];
+  blogs: BlogCardType[];
 };
 
-const Index: NextPage<IndexType> = ({ snippets, projects }) => {
+const Index: NextPage<IndexType> = ({ snippets, projects, blogs }) => {
   return (
     <Main
       meta={
@@ -38,7 +41,7 @@ const Index: NextPage<IndexType> = ({ snippets, projects }) => {
       <ProblemSolver />
       <Clients />
       <TechStack />
-      <Blogs />
+      <Blogs blogs={blogs} />
       <FeaturedProjects projects={projects} />
       <CodeSnippets snippets={snippets} />
     </Main>
@@ -52,12 +55,17 @@ export const getServerSideProps = async () => {
   const projectsRes = await axiosGraphQL.post(`/`, {
     query: getProjectsForHome,
   });
+  const blogsRes = await axiosGraphQL.post(`/`, {
+    query: getBlogsForHome,
+  });
   const snippets = snippetsRes.data?.data?.Libraries?.docs;
   const projects = projectsRes.data?.data?.Projects?.docs;
+  const blogs = blogsRes.data?.data?.Posts?.docs;
   return {
     props: {
       snippets,
       projects,
+      blogs,
     },
   };
 };

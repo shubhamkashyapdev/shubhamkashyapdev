@@ -10,7 +10,7 @@ import { Meta } from '@/layouts/Meta';
 import useLibraryStore from '@/store/libraryStore';
 import { Main } from '@/templates/Main';
 import type { CodeSnippetCardType, TagType } from '@/types/component.types';
-import { axiosGrapQL } from '@/utils/axios';
+import { axiosGraphQL } from '@/utils/axios';
 
 type LibraryType = {
   docs: CodeSnippetCardType[];
@@ -73,7 +73,7 @@ const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await axiosGrapQL.post(`/`, {
+  const res = await axiosGraphQL.post(`/`, {
     query: getSnippetsForLibrary,
   });
   const data = res.data?.data?.Libraries?.docs;

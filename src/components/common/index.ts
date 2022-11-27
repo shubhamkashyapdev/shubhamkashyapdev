@@ -20,7 +20,7 @@ export { default as SecondaryHeading } from './typography/SecondaryHeading';
 export { default as SeeMoreButton } from './typography/buttons/SeeMore';
 
 // sections
-export { default as Blogs } from './sections/Blogs';
+export { default as BlogList } from './sections/Blogs';
 export { default as Clients } from './sections/Clients';
 export { default as CodeSnippets } from './sections/CodeSnippets';
 export { default as FeaturedProjects } from './sections/FeaturedProjects';

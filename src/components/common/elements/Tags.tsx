@@ -15,7 +15,7 @@ const Tags: FC<TagsProps> = ({ tags }) => {
         <Image
           className="dark:rounded-sm dark:bg-white"
           key={`tag-icon-${item.icon}-${index}`}
-          src={item.icon}
+          src={item.icon.url || ''}
           height={20}
           width={20}
           objectFit="cover"

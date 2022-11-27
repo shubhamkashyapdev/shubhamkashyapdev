@@ -9,7 +9,7 @@ type SearchBarType = {
 const SearchBar: FC<SearchBarType> = ({ value, setValue }) => {
   return (
     <input
-      className="mt-4 w-full rounded-md border border-gray-500 focus:border-primary-300 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-primary-700 dark:focus:border-primary-300"
+      className="text-color mt-4 w-full rounded-md border border-gray-500 focus:border-primary-300 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-primary-700 dark:focus:border-primary-300"
       data-fade="2"
       placeholder="Search..."
       value={value}

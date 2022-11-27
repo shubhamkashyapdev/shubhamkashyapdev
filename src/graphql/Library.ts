@@ -7,8 +7,11 @@ export const getSnippetsForHome = `{
       tagline
       tags {
         id
-        icon
         title
+        icon {
+          id
+          url
+				}
       }
     }
   }
@@ -23,8 +26,11 @@ export const getSnippetsForLibrary = `{
       tagline
       tags {
         id
-        icon
         title
+        icon {
+          id
+          url
+				}
       }
     }
   }
@@ -40,7 +46,10 @@ export const getSnippetDataForPage = `query($id: String!) {
     tags {
       id
       title
-      icon
+      icon {
+        id
+        url
+      }
     }
     blocks {
       ...on PrimaryHeading {

@@ -2,32 +2,41 @@
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import React from 'react';
 
 import type { BlogCardType } from '@/types/component.types';
 
 const BlogCard: FC<BlogCardType> = ({
+  id,
   createdAt,
   excerpt,
-  image,
+  featuredImage,
   readTime,
   tags,
   title,
   viewes,
 }) => {
+  const router = useRouter();
+  const handleNavigate = () => {
+    router.push(`/blogs/${id}`);
+  };
   return (
-    <div className="card-border w-full scale-100 cursor-pointer overflow-hidden rounded-md  bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100  dark:bg-primary-700">
+    <div
+      onClick={handleNavigate}
+      className="card-border w-full scale-100 cursor-pointer overflow-hidden rounded-md  bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100  dark:bg-primary-700"
+    >
       <div className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
         <div className="relative h-[150px]">
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={image}
+              src={featuredImage.url}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"
-              alt=""
+              alt={title}
             />
           </div>
           {/* tags */}

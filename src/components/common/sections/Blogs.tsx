@@ -1,14 +1,19 @@
+import type { FC } from 'react';
 import React from 'react';
 
 import { BlogCard, PrimaryHeading, SeeMoreButton } from '@/components/common';
-import { blogs } from '@/utils/Blogs';
+import type { BlogCardType } from '@/types/component.types';
 
-const Blogs = () => {
+type BlogsType = {
+  blogs: BlogCardType[];
+};
+
+const Blogs: FC<BlogsType> = ({ blogs }) => {
   return (
     <section className="section">
       <PrimaryHeading>Featured Posts</PrimaryHeading>
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {blogs.map((item, index) => (
+        {blogs?.map((item, index) => (
           <BlogCard key={`blogs-${index}`} {...item} />
         ))}
       </div>

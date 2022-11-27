@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     label: 'Blog',
-    route: '/blog',
+    route: '/blogs',
   },
   {
     label: 'Projects',

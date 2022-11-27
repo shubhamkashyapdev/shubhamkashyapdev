@@ -1,73 +1,84 @@
-export const getProjectsForHome = `
-query {
-  Projects(limit: 3) {
+export const getBlogsForHome = `
+query  {
+  Posts(limit:6) {
     docs {
       id
       title
-      tagline
+      slug
+      readTime
+      featuredImage {
+        id
+        url
+      }
+      views
       tags {
         id
-        title
-        slug
+        title 
         icon {
           id 
           url
         }
       }
-      featuredImage {
-        sizes {
-          thumbnail {
-            url
-          }
-        }
-      }
+      excerpt
+      publishedDate
+      createdAt
     }
   }
 }
 `;
-export const getAllProjectsForCards = `
-query {
-  Projects {
+export const getAllBlogsForCards = `
+query  {
+  Posts(limit:6) {
     docs {
       id
       title
-      tagline
+      slug
+      readTime
+      featuredImage {
+        id
+        url
+      }
+      views
       tags {
         id
-        title
-        slug
+        title 
         icon {
           id 
           url
         }
       }
-      featuredImage {
-        sizes {
-          thumbnail {
-            url
-          }
-        }
-      }
+      excerpt
+      publishedDate
+      createdAt
     }
   }
 }
 `;
 
-export const getProjectDataForPage = `
-query($id: String!) {
-  Project(id: $id) {
-    id
-    title
-    views
-    tagline
-    subTagline
-    createdAt
-    featuredImage {
-      id
-      url
-    }
-    projectType
-    blocks {
+export const getBlogDataForPage = `
+query($id: String!)  {
+  Post(id: $id) {
+        id
+      title
+      slug
+      readTime
+      featuredImage {
+        id
+        url
+      }
+      views
+      tags {
+        id
+        title 
+        icon {
+          id 
+          url
+        }
+      }
+      excerpt
+      publishedDate
+      createdAt
+         blocks {
       ... on SecondaryHeading {
         id
         secondaryHeading
@@ -106,12 +117,17 @@ query($id: String!) {
           }
         }
       }
+      ...on PrimaryHeading {
+            id
+            blockType
+            text
+          }
       ...on Parragraph {
         id
         parragraph
         blockType
-      }
+         }
+        }
     }
   }
-}
 `;

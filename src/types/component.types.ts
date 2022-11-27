@@ -30,17 +30,26 @@ export type SocialIconProps = {
 export type TagType = {
   id: string;
   title: string;
-  icon: string;
+  icon: {
+    id: string;
+    url: string;
+  };
 };
 
 export type BlogCardType = {
-  image: string;
+  id: string;
+  featuredImage: {
+    id: string;
+    url: string;
+  };
+  slug: string;
   title: string;
   readTime: number;
   viewes: number;
   tags: TagType[];
   createdAt: string;
   excerpt: string;
+  publishedDate: string;
 };
 
 export type CodeSnippetCardType = {
@@ -51,19 +60,11 @@ export type CodeSnippetCardType = {
   tagline: string;
 };
 
-export type TagItemType = {
-  tag: {
-    id: string;
-    url: string;
-    filename: string;
-  };
-};
-
 export type ProjectCardType = {
   id: string;
   title: string;
   tagline: string;
-  tags: TagItemType[];
+  tags: TagType[];
   featuredImage: {
     sizes: {
       thumbnail: {

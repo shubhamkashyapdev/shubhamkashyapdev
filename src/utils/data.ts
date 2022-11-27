@@ -4,22 +4,34 @@ export const tags: TagType[] = [
   {
     id: '1',
     title: 'Notion API',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114429/vmn6yvtjyyk5rsxoacmn.svg',
+    icon: {
+      id: '1',
+      url: 'https://res.cloudinary.com/hexdev/image/upload/v1667114429/vmn6yvtjyyk5rsxoacmn.svg',
+    },
   },
   {
     id: '2',
     title: 'Node.js',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114390/lhcvo0mhuhuxdl7zxfih.svg',
+    icon: {
+      id: '2',
+      url: 'https://res.cloudinary.com/hexdev/image/upload/v1667114390/lhcvo0mhuhuxdl7zxfih.svg',
+    },
   },
   {
     id: '3',
     title: 'Next.js',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114437/lnc28fpalel9zzcg8gph.svg',
+    icon: {
+      id: '3',
+      url: 'https://res.cloudinary.com/hexdev/image/upload/v1667114437/lnc28fpalel9zzcg8gph.svg',
+    },
   },
   {
     id: '4',
     title: 'Tailwind',
-    icon: 'https://res.cloudinary.com/hexdev/image/upload/v1667114434/f7q0lurtscdasirsi4wi.svg',
+    icon: {
+      id: '4',
+      url: 'https://res.cloudinary.com/hexdev/image/upload/v1667114434/f7q0lurtscdasirsi4wi.svg',
+    },
   },
 ];
 

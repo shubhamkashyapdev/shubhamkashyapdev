@@ -26,12 +26,12 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
           {project.tags.map((item) => (
             <Image
               className="dark:rounded-sm dark:bg-white"
-              key={item.tag.id}
-              src={item.tag.url}
+              key={item.icon.id}
+              src={item.icon.url}
               height={20}
               width={20}
               objectFit="cover"
-              alt={`${item.tag.filename} SVG Icon`}
+              alt={`${item.title} SVG Icon`}
             />
           ))}
         </div>
