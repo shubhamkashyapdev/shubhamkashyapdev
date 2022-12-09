@@ -22,7 +22,7 @@ const variants = {
 };
 
 const TechStack = () => {
-  const [activeTech, setActiveTech] = useState<TechStacks>(TechStacks.BACKEND);
+  const [activeTech, setActiveTech] = useState<TechStacks>(TechStacks.FRONTEND);
   const [filteredTechs, setFilteredTechs] = useState<TechStackItem[]>([]);
 
   const handleFilterItems = useCallback(
@@ -54,12 +54,12 @@ const TechStack = () => {
               handleFilterItems(item.category);
               setActiveTech(item.category);
             }}
-            className="group relative cursor-pointer "
+            className="text-gradient font-bold group relative cursor-pointer "
           >
             {item.label}
             <span
-              className={`animated-border ${
-                activeTech === item.category ? 'scale-100' : null
+              className={`animated-border border-[1px] origin-left hover:origin-right ${
+                activeTech === item.category ? 'scale-x-100' : null
               }`}
             ></span>
           </a>

@@ -17,17 +17,15 @@ type BlocksType = {
   blocks: any;
 };
 const Blocks: FC<BlocksType> = ({ blocks }) => {
-  const pBlocks = blocks.filter((item: any) => item.blockType === 'parragraph');
-  console.log({ ParragraphBlock: pBlocks });
   return (
     <section className="mb-20 flex flex-col md:flex-row">
       <div className="w-full md:w-[70%]">
-        {blocks.map((item: any) => {
+        {blocks.map((item: any, blockIndex: number) => {
           if (item.blockType === 'primary-heading') {
             return (
               <PrimaryHeadingBlock
                 variant="PRIMARY"
-                key={`block-heading-${item.id}`}
+                key={`block-${item.blockType}-${item.id}-${blockIndex}`}
               >
                 {item.text}
               </PrimaryHeadingBlock>
@@ -37,7 +35,7 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
             return (
               <PrimaryHeadingBlock
                 className="mb-1 mt-12"
-                key={`block-heading-${item.id}`}
+                key={`block-${item.blockType}-${item.id}-${blockIndex}`}
               >
                 {item.secondaryHeading}
               </PrimaryHeadingBlock>
@@ -45,7 +43,9 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
           }
           if (item.blockType === 'code') {
             return (
-              <React.Fragment key={`block-parragraph-${item?.id}`}>
+              <React.Fragment
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+              >
                 {item.code.map((childrens: any[]) => {
                   // @ts-ignore
                   return childrens.children.map(
@@ -65,27 +65,47 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
             );
           }
           if (item.blockType === 'blockquote') {
-            return <BlockquoteBlock key={item.id} subTagline={item.title} />;
+            return (
+              <BlockquoteBlock
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+                subTagline={item.title}
+              />
+            );
           }
           if (item.blockType === 'imageblock') {
-            return <ImageBlock key={item.id} image={item.image} />;
+            return (
+              <ImageBlock
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+                image={item.image}
+              />
+            );
           }
           if (item.blockType === 'featureslist') {
-            return <FeaturesListBlock key={item.id} features={item.features} />;
+            return (
+              <FeaturesListBlock
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+                features={item.features}
+              />
+            );
           }
 
           if (item.blockType === 'parragraph') {
             return (
-              <React.Fragment key={`block-parragraph-${item.id}`}>
+              <React.Fragment
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+              >
                 {item.parragraph.map((items: any, pIndex: number) => {
                   if (items.type === 'ul') {
                     return (
-                      <ul className="my-4 flex flex-col gap-1" key={items.id}>
+                      <ul
+                        className="my-4 flex flex-col gap-1"
+                        key={`ul-${item.id}`}
+                      >
                         {items.children.map((pItem: any, index: number) =>
                           pItem.children.map((subItem: { text: string }) => (
                             <li
                               className="text-color flex gap-6"
-                              key={`sub-item-${index}`}
+                              key={`sub-item-${index}-${item.id}`}
                             >
                               <span className="">{index + 1}.</span>
                               <span>{subItem.text}</span>
@@ -135,7 +155,12 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
             );
           }
           if (item.blockType === 'imageGridBlock') {
-            return <ImageGridBlock key={item.id} imageGrid={item.imageGrid} />;
+            return (
+              <ImageGridBlock
+                key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
+                imageGrid={item.imageGrid}
+              />
+            );
           }
           return null;
         })}

@@ -3,31 +3,32 @@ import { TechStacks } from '@/types/component.types';
 
 export const technologiesLabels: TechStackItem[] = [
   {
-    category: TechStacks.BACKEND,
-    label: 'Back-End',
-  },
-  {
     category: TechStacks.FRONTEND,
     label: 'Front-End',
   },
   {
-    category: TechStacks.TOOLS,
-    label: 'Infrastructure & Tools',
+    category: TechStacks.BACKEND,
+    label: 'Back-End',
   },
   {
-    category: TechStacks.TESTING,
-    label: 'Testing',
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'Infrastructure & Tools',
   },
+  
 ];
 
 export const technologies = [
   {
     category: TechStacks.BACKEND,
-    label: 'Nest.js',
+    label: 'Node.js',
   },
   {
     category: TechStacks.BACKEND,
-    label: 'Node.js',
+    label: 'Express.js',
+  },
+  {
+    category: TechStacks.BACKEND,
+    label: 'Nest.js',
   },
   {
     category: TechStacks.BACKEND,
@@ -35,12 +36,22 @@ export const technologies = [
   },
   {
     category: TechStacks.BACKEND,
-    label: 'Mongoose',
+    label: 'TypeORM',
+  },
+  
+  {
+    category: TechStacks.BACKEND,
+    label: 'Payload CMS',
   },
   {
     category: TechStacks.BACKEND,
-    label: 'TypeORM',
+    label: 'Appwrite CMS',
   },
+  {
+    category: TechStacks.BACKEND,
+    label: 'Mongoose',
+  },
+  
   {
     category: TechStacks.BACKEND,
     label: 'PostgreSQL',
@@ -56,6 +67,18 @@ export const technologies = [
   {
     category: TechStacks.FRONTEND,
     label: 'SCSS',
+  },
+  {
+    category: TechStacks.FRONTEND,
+    label: "Figma"
+  },
+  {
+    category: TechStacks.FRONTEND,
+    label: 'React.js',
+  },
+  {
+    category: TechStacks.FRONTEND,
+    label: 'Next.js',
   },
   {
     category: TechStacks.FRONTEND,
@@ -75,16 +98,25 @@ export const technologies = [
   },
   {
     category: TechStacks.FRONTEND,
+    label: 'React Native',
+  },
+  {
+    category: TechStacks.FRONTEND,
+    label: 'Expo',
+  },
+  {
+    category: TechStacks.FRONTEND,
+    label: 'Nativebase',
+  },
+  {
+    category: TechStacks.FRONTEND,
     label: 'SWR',
   },
   {
     category: TechStacks.FRONTEND,
     label: 'Reach Query',
   },
-  {
-    category: TechStacks.FRONTEND,
-    label: 'Next.js',
-  },
+  
   {
     category: TechStacks.FRONTEND,
     label: 'Framer Motion',
@@ -97,4 +129,34 @@ export const technologies = [
     category: TechStacks.FRONTEND,
     label: 'Zustand',
   },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: "VS Code"
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: "Docker"
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'Kubernetes'
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'Jenkins'
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'GIT & Github'
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'Kafka / MQTT',
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: "AWS",
+  }
+  
+  
 ];

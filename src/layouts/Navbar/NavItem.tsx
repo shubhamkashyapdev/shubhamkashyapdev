@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -24,7 +25,9 @@ const NavItem: FC<NavItemProps> = ({ label, route, index }) => {
         <li className="group relative cursor-pointer">
           <a
             className={`${
-              route === activeRoute
+              route === '/'
+                ? ''
+                : activeRoute.includes(route)
                 ? 'bg-primary-300/75 dark:text-primary-300'
                 : ''
             } text-base font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}

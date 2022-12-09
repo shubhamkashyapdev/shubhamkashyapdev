@@ -14,6 +14,7 @@ export enum TechStacks {
   FRONTEND,
   TOOLS,
   TESTING,
+  INFRASTRUCTURE,
 }
 
 export type TechStackItem = { category: TechStacks; label: string };

@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  font-size: 1.1rem;
+}
+
 @layer components {
   ::selection {
     @apply bg-primary-300 dark:bg-primary-300/75;
@@ -74,6 +78,9 @@ body {
   }
   .text-color {
     @apply text-gray-700 dark:text-gray-300;
+  }
+  .link {
+    @apply text-gradient border-b-[2px] border-dotted;
   }
 }
 

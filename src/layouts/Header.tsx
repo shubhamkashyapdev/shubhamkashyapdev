@@ -33,11 +33,11 @@ const navLinks = [
 
 const socialLinks: SocialIconProps[] = [
   {
-    route: 'www.twitter.com',
+    route: 'https://www.twitter.com',
     icon: <BrandTwitter />,
   },
   {
-    route: 'www.linkedin.com',
+    route: 'https://www.linkedin.com',
     icon: <BrandLinkedin />,
   },
 ];
