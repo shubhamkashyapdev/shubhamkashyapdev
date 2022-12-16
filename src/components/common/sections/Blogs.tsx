@@ -17,7 +17,7 @@ const Blogs: FC<BlogsType> = ({ blogs }) => {
           <BlogCard key={`blogs-${index}`} {...item} />
         ))}
       </div>
-      <SeeMoreButton route="/blog">See more post</SeeMoreButton>
+      <SeeMoreButton route="/blogs">See more post</SeeMoreButton>
     </section>
   );
 };

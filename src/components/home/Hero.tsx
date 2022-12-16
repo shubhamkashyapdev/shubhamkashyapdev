@@ -42,17 +42,16 @@ const Hero: FC = () => {
           <HeroCTA />
           {/* resume cta */}
           <div className="mt-4 flex items-center justify-center space-x-4 text-sm font-medium text-gray-800 dark:text-gray-600 md:justify-start">
-            <Link href="/">
-              <p className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300">
+            
+              <a href="" className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300">
                 <FileAnalytics />
                 Resume
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300">
+              </a>
+           
+              <a href="https://github.com/shubhamwebdesign" target="_blank" className="flex cursor-pointer items-center space-x-2 hover:text-primary-300">
                 <BrandGithub /> @shubhamwebdesign
-              </p>
-            </Link>
+              </a>
+           
           </div>
         </div>
       </div>
@@ -65,7 +64,7 @@ const Hero: FC = () => {
             title="NFT Marketplace"
             subTitle="Web3, Solidity, Typescript"
             tag="@nftmarketplace"
-            route={'www.github.com/nft-marketplace'}
+            route={'https://github.com/shubhamwebdesign/nft-marketplace-solidity-typescript'}
           >
             Next.js NFt Marketplace built with ethere.js and metamask. The smart
             contract is developed in solidity using the truffle framework. The
@@ -76,7 +75,7 @@ const Hero: FC = () => {
             title="Solana Minesweeper"
             subTitle="Anchor, Solana, Typescript"
             tag="@solanaminesweeper"
-            route={'www.github.com/solana-minesweeper'}
+            route={'https://github.com/shubhamwebdesign/solana-minesweeper-frontend'}
           >
             Solana minesweeper game built with Next.js, solana wallet adapter
             and PiXi.js 2d animation library. The project uses the solana wallet

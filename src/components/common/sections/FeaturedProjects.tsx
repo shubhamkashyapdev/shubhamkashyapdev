@@ -23,7 +23,7 @@ const FeaturedProjects: FC<FeaturedProjectsType> = ({ projects }) => {
           <ProjectCard key={item.id} project={item} />
         ))}
       </div>
-      <SeeMoreButton route="/project">See more projects</SeeMoreButton>
+      <SeeMoreButton route="/projects">See more projects</SeeMoreButton>
     </section>
   );
 };

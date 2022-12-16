@@ -1,8 +1,6 @@
-import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
 import {
-  BrandDribbble,
   BrandGithub,
   BrandLinkedin,
   BrandTwitter,
@@ -16,7 +14,7 @@ import type { NavItemProps, SocialIconProps } from '@/types/component.types';
 const navLinks: NavItemProps[] = [
   {
     label: 'Source Code',
-    route: '/source-code',
+    route: 'https://github.com/shubhamwebdesign/shubhamwebdesign',
   },
   {
     label: 'Library',
@@ -24,11 +22,11 @@ const navLinks: NavItemProps[] = [
   },
   {
     label: 'Starter Templates',
-    route: '/starter-templates',
+    route: 'https://github.com/stars/shubhamwebdesign/lists/starter-templates',
   },
   {
     label: 'Projects',
-    route: '/project',
+    route: '/projects',
   },
   {
     label: 'About',
@@ -38,21 +36,17 @@ const navLinks: NavItemProps[] = [
 
 const socialLinks: SocialIconProps[] = [
   {
-    route: 'www.twitter.com',
+    route: 'https://twitter.com/Shubham56940033',
     icon: <BrandTwitter />,
   },
   {
-    route: 'www.linkedin.com',
+    route: 'https://www.linkedin.com/in/shubham-kashyap-018448203/',
     icon: <BrandLinkedin />,
   },
   {
-    route: 'www.github.com',
+    route: 'https://github.com/shubhamwebdesign',
     icon: <BrandGithub />,
-  },
-  {
-    route: 'www.dribble.com',
-    icon: <BrandDribbble />,
-  },
+  }
 ];
 
 const Footer: FC = () => {
@@ -75,9 +69,9 @@ const Footer: FC = () => {
           <div className="flex items-center space-x-1">
             <Copyright size={16} /> <span>shubhamwebdesign</span>
           </div>
-          <Link href="/">
+          {/* <Link href="/">
             <a className="font-medium">Please provide your feedback!</a>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>

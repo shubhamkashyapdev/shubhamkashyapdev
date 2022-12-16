@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 
 import { Hero } from '@/components';
 import {
-  Clients,
   CodeSnippets,
   FeaturedProjects,
   ProblemSolver,
@@ -39,7 +38,6 @@ const Index: NextPage<IndexType> = ({ snippets, projects, blogs }) => {
     >
       <Hero />
       <ProblemSolver />
-      <Clients />
       <TechStack />
       <Blogs blogs={blogs} />
       <FeaturedProjects projects={projects} />

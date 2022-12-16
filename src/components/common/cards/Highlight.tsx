@@ -31,11 +31,11 @@ const Highlight: FC<HightlightCardProps> = ({
       <Parragraph className="mt-[8px] text-[14px] font-normal text-gray-700 dark:text-gray-300 ">
         {children}
       </Parragraph>
-      <Link href={route}>
-        <a className="flex items-center pt-2 text-sm text-gray-700 hover:text-primary-300  dark:text-gray-300">
+      
+        <a href={route} target="_blank" className="flex items-center pt-2 text-sm text-gray-700 hover:text-primary-300  dark:text-gray-300">
           <BrandGithub /> {tag}
         </a>
-      </Link>
+      
     </div>
   );
 };
