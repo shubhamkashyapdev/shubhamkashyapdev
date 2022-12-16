@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
 
+import { About } from '@/components';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
-import {About} from '@/components'
-
-
 
 const AboutPage: NextPage = () => {
   return (
@@ -16,7 +14,7 @@ const AboutPage: NextPage = () => {
         />
       }
     >
-     <About />
+      <About />
     </Main>
   );
 };

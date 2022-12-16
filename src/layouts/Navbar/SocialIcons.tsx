@@ -20,16 +20,14 @@ const SocialIcons: FC<SocialIconsProps> = ({ socialLinks }) => {
           animate="animate"
           transition={{ ease: 'easeIn', duration: 0.4 + index * 0.2 }}
         >
-          
-            <a
-              href={item.route}
-              target="_blank"
-              rel="noopener noreferer"
-              className="cursor-pointer text-gray-700 duration-150 ease-in-out hover:text-primary-300 dark:text-gray-400 hover:dark:text-primary-200"
-            >
-              {item.icon}
-            </a>
-          
+          <a
+            href={item.route}
+            target="_blank"
+            rel="noopener noreferer noreferrer"
+            className="cursor-pointer text-gray-700 duration-150 ease-in-out hover:text-primary-300 dark:text-gray-400 hover:dark:text-primary-200"
+          >
+            {item.icon}
+          </a>
         </motion.div>
       ))}
     </div>

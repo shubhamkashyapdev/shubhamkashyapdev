@@ -46,7 +46,7 @@ const socialLinks: SocialIconProps[] = [
   {
     route: 'https://github.com/shubhamwebdesign',
     icon: <BrandGithub />,
-  }
+  },
 ];
 
 const Footer: FC = () => {

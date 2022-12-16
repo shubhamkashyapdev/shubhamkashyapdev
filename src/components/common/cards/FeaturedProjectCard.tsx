@@ -1,24 +1,27 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import React from 'react';
 
 import type { ProjectCardType } from '@/types/component.types';
 
 import Parragraph from '../typography/Parragraph';
-import { useRouter } from 'next/router';
 
 type ProjectCardComponentType = {
   project: ProjectCardType;
 };
 
 const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
-  const router = useRouter()
+  const router = useRouter();
   const handleNavigate = () => {
-    router.push(`/projects/${project.id}`)
-  }
+    router.push(`/projects/${project.id}`);
+  };
   return (
-    <div onClick={handleNavigate} className="cursor-pointer project-card animate-shadow card-border scale-100 rounded-md transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 md:w-full">
+    <div
+      onClick={handleNavigate}
+      className="project-card animate-shadow card-border scale-100 cursor-pointer rounded-md transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 md:w-full"
+    >
       <div className="flex h-full flex-col items-start rounded-md p-4 focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
         <h3 className="font-semibold text-primary-700 dark:text-gray-300">
           {project.title}

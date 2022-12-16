@@ -14,7 +14,6 @@ export const technologiesLabels: TechStackItem[] = [
     category: TechStacks.INFRASTRUCTURE,
     label: 'Infrastructure & Tools',
   },
-  
 ];
 
 export const technologies = [
@@ -38,7 +37,7 @@ export const technologies = [
     category: TechStacks.BACKEND,
     label: 'TypeORM',
   },
-  
+
   {
     category: TechStacks.BACKEND,
     label: 'Payload CMS',
@@ -51,7 +50,7 @@ export const technologies = [
     category: TechStacks.BACKEND,
     label: 'Mongoose',
   },
-  
+
   {
     category: TechStacks.BACKEND,
     label: 'PostgreSQL',
@@ -70,7 +69,7 @@ export const technologies = [
   },
   {
     category: TechStacks.FRONTEND,
-    label: "Figma"
+    label: 'Figma',
   },
   {
     category: TechStacks.FRONTEND,
@@ -116,7 +115,7 @@ export const technologies = [
     category: TechStacks.FRONTEND,
     label: 'Reach Query',
   },
-  
+
   {
     category: TechStacks.FRONTEND,
     label: 'Framer Motion',
@@ -131,23 +130,23 @@ export const technologies = [
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: "VS Code"
+    label: 'VS Code',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: "Docker"
+    label: 'Docker',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: 'Kubernetes'
+    label: 'Kubernetes',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: 'Jenkins'
+    label: 'Jenkins',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: 'GIT & Github'
+    label: 'GIT & Github',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
@@ -155,8 +154,6 @@ export const technologies = [
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: "AWS",
-  }
-  
-  
+    label: 'AWS',
+  },
 ];

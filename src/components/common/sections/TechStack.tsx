@@ -54,11 +54,11 @@ const TechStack = () => {
               handleFilterItems(item.category);
               setActiveTech(item.category);
             }}
-            className="text-gradient font-bold group relative cursor-pointer "
+            className="text-gradient group relative cursor-pointer font-bold "
           >
             {item.label}
             <span
-              className={`animated-border border-[1px] origin-left hover:origin-right ${
+              className={`animated-border origin-left border-[1px] hover:origin-right ${
                 activeTech === item.category ? 'scale-x-100' : null
               }`}
             ></span>

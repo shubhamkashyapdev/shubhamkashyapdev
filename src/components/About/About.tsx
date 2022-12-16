@@ -1,12 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
-import {TechnologyItem,technologies} from '@/utils/tech-stack'
+import React from 'react';
+
+import type { TechnologyItem } from '@/utils/tech-stack';
+import { technologies } from '@/utils/tech-stack';
+
 const About = () => {
   return (
     <>
-      <section className="my-20  ">
+      <section className="my-20">
         <h2 className="text-color text-3xl font-bold">About</h2>
-        <h3 className="text-gradient text-3xl font-bold mb-4">
+        <h3 className="text-gradient mb-4 text-3xl font-bold">
           Shubham Kashyap
         </h3>
         <article className="flex flex-col md:flex-row md:gap-10">
@@ -17,15 +20,16 @@ const About = () => {
               width={250}
               objectFit="cover"
               className=""
+              alt=""
             />
           </span>
-          <div className="md:order-1 mt-8 md:mt-0 md:w-[70%]">
+          <div className="mt-8 md:order-1 md:mt-0 md:w-[70%]">
             <p className="text-color">
-              Hello! I'm Shubham. I started learning web development around May
+              {`Hello! I'm Shubham. I started learning web development around May
               2020, which is the start of the pandemic. I have nothing much to
               do so I decided to learn web development from a udemy course, then
               started watching a bunch of youtube videos to explore more about
-              web development especially full stack javascript development.
+              web development especially full stack javascript development.`}
             </p>
             <p className="text-color my-4">
               I chose MERN stack as my web development stack and larning from
@@ -34,6 +38,7 @@ const About = () => {
                 className="link"
                 href="https://www.traversymedia.com/"
                 target={'_blank'}
+                rel="noreferrer"
               >
                 Brad Traversy
               </a>
@@ -42,6 +47,7 @@ const About = () => {
                 className="link"
                 href="https://codingheroes.io/"
                 target={'_blank'}
+                rel="noreferrer"
               >
                 Jonas Schmedtmann
               </a>
@@ -50,6 +56,7 @@ const About = () => {
                 className="link"
                 href="https://www.kevinpowell.co/"
                 target="_blank"
+                rel="noreferrer"
               >
                 Kevin Powell
               </a>{' '}
@@ -70,11 +77,11 @@ const About = () => {
           </div>
         </article>
       </section>
-      <section className="flex flex-wrap gap-8 justify-center">
+      <section className="flex flex-wrap justify-center gap-8">
         {technologies.map((item: TechnologyItem, index: number) => (
           <div
             key={`about-${item.name}-${index}`}
-            className="w-20 h-20 relative shadow-sm hover:shadow-lg hover:-translate-y-1 bg-white ease-in-out duration-150 grid place-content-center rounded-sm"
+            className="relative grid h-20 w-20 place-content-center rounded-sm bg-white shadow-sm duration-150 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
               src={item.imageURL}
