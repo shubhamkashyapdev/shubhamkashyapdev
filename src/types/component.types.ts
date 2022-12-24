@@ -34,7 +34,7 @@ export type TagType = {
   icon: {
     id: string;
     url: string;
-  };
+  } | null;
 };
 
 export type BlogCardType = {

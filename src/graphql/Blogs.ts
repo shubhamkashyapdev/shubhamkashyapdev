@@ -1,29 +1,29 @@
 export const getBlogsForHome = `
 query  {
-  Posts(limit:6) {
-    docs {
-      id
-      title
-      slug
-      readTime
-      featuredImage {
+    Posts(limit:6) {
+      docs {
         id
-        url
-      }
-      views
-      tags {
-        id
-        title 
-        icon {
-          id 
+        title
+        slug
+        readTime
+        featuredImage {
+          id
           url
         }
+        views
+        tags {
+          id
+          title 
+          icon {
+            id 
+            url
+          }
+        }
+        excerpt
+        publishedDate
+        createdAt
       }
-      excerpt
-      publishedDate
-      createdAt
     }
-  }
 }
 `;
 export const getAllBlogsForCards = `

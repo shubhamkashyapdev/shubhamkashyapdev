@@ -99,13 +99,13 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
                     return (
                       <ul
                         className="my-4 flex flex-col gap-1"
-                        key={`ul-${item.id}`}
+                        key={`ul-${item.id}-${pIndex}`}
                       >
                         {items.children.map((pItem: any, index: number) =>
                           pItem.children.map((subItem: { text: string }) => (
                             <li
                               className="text-color flex gap-6"
-                              key={`sub-item-${index}-${item.id}`}
+                              key={`sub-item-${index}-${pIndex}-${item.id}`}
                             >
                               <span className="">{index + 1}.</span>
                               <span>{subItem.text}</span>

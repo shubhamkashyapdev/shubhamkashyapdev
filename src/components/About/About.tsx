@@ -1,10 +1,13 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { FC } from 'react';
 
-import type { TechnologyItem } from '@/utils/tech-stack';
-import { technologies } from '@/utils/tech-stack';
+import { TagType } from '@/types/component.types';
 
-const About = () => {
+type AboutType = {
+  tags: TagType[]
+}
+
+const About: FC<AboutType> = ({tags}) => {
   return (
     <>
       <section className="my-20">
@@ -78,14 +81,14 @@ const About = () => {
         </article>
       </section>
       <section className="flex flex-wrap justify-center gap-8">
-        {technologies.map((item: TechnologyItem, index: number) => (
+        {tags.map((item: TagType, index: number) => (
           <div
-            key={`about-${item.name}-${index}`}
+            key={`about-${item.title}-${index}`}
             className="relative grid h-20 w-20 place-content-center rounded-sm bg-white shadow-sm duration-150 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
-              src={item.imageURL}
-              alt={item.name}
+              src={item.icon?.url || ''}
+              alt={item.title}
               height={65}
               width={65}
               objectFit="contain"
@@ -96,5 +99,7 @@ const About = () => {
     </>
   );
 };
+
+
 
 export default About;

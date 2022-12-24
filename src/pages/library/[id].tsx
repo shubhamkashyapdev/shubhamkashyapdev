@@ -30,7 +30,7 @@ const CodeSnippetPage: NextPage<CodeSnippetPageType> = ({ snippet }) => {
     >
       <PageTitle>{snippet?.title}</PageTitle>
       <Parragraph className="mt-1">{snippet?.tagline}</Parragraph>
-      <CardMeta className="mt-2" views={2320} tags={snippet?.tags} />
+      <CardMeta className="mt-2" views={snippet?.views || 0} tags={snippet?.tags} />
       <hr className="mb-6 mt-4 h-[1.5px] w-full border-gray-300 dark:border-gray-700" />
       <Blockquote subTagline="Absolute Import is a great way to clean up your imports" />
       {/* Blocks */}

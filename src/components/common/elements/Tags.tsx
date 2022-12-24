@@ -12,15 +12,16 @@ const Tags: FC<TagsProps> = ({ tags }) => {
   return (
     <div className="flex gap-2">
       {tags.map((item, index) => (
-        <Image
-          className="dark:rounded-sm dark:bg-white"
-          key={`tag-icon-${item.icon}-${index}`}
-          src={item.icon.url || ''}
-          height={20}
-          width={20}
-          objectFit="cover"
+        <span key={item.id} className='dark:bg-white h-[25px] w-[25px] relative rounded-sm'>
+          <Image
+          className="dark:rounded-sm "
+          key={`tag-icon-${item?.icon}-${index}`}
+          src={item?.icon ? item.icon.url : ''}
+          layout='fill'
+          objectFit="contain"
           alt={`${item.title} SVG Icon`}
         />
+        </span>
       ))}
     </div>
   );

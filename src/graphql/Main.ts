@@ -1,0 +1,87 @@
+import { getBlogsForHome } from "./Blogs";
+import { getSnippetsForHome } from "./Library";
+import { getProjectsForHome } from "./Project";
+
+export const getDataForHomePage = `
+query {
+  Libraries(limit: 8) {
+    docs {
+      id
+     title
+      views
+      tagline
+      tags {
+        id
+        title
+        icon {
+          id
+          url
+				}
+      }
+    }
+  }
+  Projects(limit: 3) {
+    docs {
+      id
+      title
+      tagline
+      tags {
+        id
+        title
+        slug
+        icon {
+          id 
+          url
+        }
+      }
+      featuredImage {
+        sizes {
+          thumbnail {
+            url
+          }
+        }
+      }
+    }
+  }
+  Posts(limit:6) {
+    docs {
+      id
+      title
+      slug
+      readTime
+      featuredImage {
+        id
+        url
+      }
+      views
+      tags {
+        id
+        title 
+        icon {
+          id 
+          url
+        }
+      }
+      excerpt
+      publishedDate
+      createdAt
+    }
+  }
+}
+
+`
+export const getAllTags = `
+query {
+  Tags(limit:100) {
+    docs {
+      id 
+      slug 
+      title 
+      icon {
+        id 
+        url
+      }
+    }
+  }
+}
+`
