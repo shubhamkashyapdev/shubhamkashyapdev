@@ -1,13 +1,14 @@
 import Image from 'next/image';
-import React, { FC } from 'react';
+import type { FC } from 'react';
+import React from 'react';
 
-import { TagType } from '@/types/component.types';
+import type { TagType } from '@/types/component.types';
 
 type AboutType = {
-  tags: TagType[]
-}
+  tags: TagType[];
+};
 
-const About: FC<AboutType> = ({tags}) => {
+const About: FC<AboutType> = ({ tags }) => {
   return (
     <>
       <section className="my-20">
@@ -99,7 +100,5 @@ const About: FC<AboutType> = ({tags}) => {
     </>
   );
 };
-
-
 
 export default About;

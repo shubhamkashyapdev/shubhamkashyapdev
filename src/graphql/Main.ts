@@ -1,7 +1,3 @@
-import { getBlogsForHome } from "./Blogs";
-import { getSnippetsForHome } from "./Library";
-import { getProjectsForHome } from "./Project";
-
 export const getDataForHomePage = `
 query {
   Libraries(limit: 8) {
@@ -69,7 +65,7 @@ query {
   }
 }
 
-`
+`;
 export const getAllTags = `
 query {
   Tags(limit:100) {
@@ -84,4 +80,4 @@ query {
     }
   }
 }
-`
+`;

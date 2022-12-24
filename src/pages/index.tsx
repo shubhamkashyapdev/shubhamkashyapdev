@@ -8,6 +8,7 @@ import {
   TechStack,
 } from '@/components/common';
 import Blogs from '@/components/common/sections/Blogs';
+import { getDataForHomePage } from '@/graphql/Main';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import type {
@@ -16,7 +17,6 @@ import type {
   ProjectCardType,
 } from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
-import { getDataForHomePage } from '@/graphql/Main';
 
 type IndexType = {
   snippets: CodeSnippetCardType[];
@@ -51,7 +51,7 @@ export const getServerSideProps = async () => {
   const snippets = res.data?.data?.Libraries?.docs;
   const projects = res.data?.data?.Projects?.docs;
   const blogs = res.data?.data?.Posts?.docs;
-  
+
   return {
     props: {
       snippets,

@@ -34,8 +34,8 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
           {project.tags.map((item) => (
             <Image
               className="dark:rounded-sm dark:bg-white"
-              key={item.icon.id}
-              src={item.icon.url}
+              key={item?.icon ? item.icon.id : ''}
+              src={item?.icon ? item.icon.url : ''}
               height={20}
               width={20}
               objectFit="cover"
