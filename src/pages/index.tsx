@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 
 import { Hero } from '@/components';
 import {
+  Boilerplates,
   CodeSnippets,
   FeaturedProjects,
   ProblemSolver,
@@ -13,6 +14,7 @@ import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import type {
   BlogCardType,
+  BoilerplateCardType,
   CodeSnippetCardType,
   ProjectCardType,
 } from '@/types/component.types';
@@ -22,9 +24,15 @@ type IndexType = {
   snippets: CodeSnippetCardType[];
   projects: ProjectCardType[];
   blogs: BlogCardType[];
+  boilerplates: BoilerplateCardType[];
 };
 
-const Index: NextPage<IndexType> = ({ snippets, projects, blogs }) => {
+const Index: NextPage<IndexType> = ({
+  snippets,
+  projects,
+  blogs,
+  boilerplates,
+}) => {
   return (
     <Main
       meta={
@@ -37,6 +45,7 @@ const Index: NextPage<IndexType> = ({ snippets, projects, blogs }) => {
       <Hero />
       <ProblemSolver />
       <TechStack />
+      <Boilerplates boilerplates={boilerplates} />
       <Blogs blogs={blogs} />
       <FeaturedProjects projects={projects} />
       <CodeSnippets snippets={snippets} />
@@ -51,12 +60,14 @@ export const getServerSideProps = async () => {
   const snippets = res.data?.data?.Libraries?.docs;
   const projects = res.data?.data?.Projects?.docs;
   const blogs = res.data?.data?.Posts?.docs;
+  const boilerplates = res.data?.data?.Boilerplates?.docs;
 
   return {
     props: {
       snippets,
       projects,
       blogs,
+      boilerplates,
     },
   };
 };

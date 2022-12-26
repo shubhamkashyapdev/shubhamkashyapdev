@@ -50,14 +50,12 @@ const Blocks: FC<BlocksType> = ({ blocks }) => {
                   // @ts-ignore
                   return childrens.children.map(
                     (codebox: { text: string }, index: number) => (
-                      <>
-                        <CodeBlock
-                          key={`block-parragraph-item-${item.id}-${index}`}
-                          code={`${codebox.text || ''}`.trim()}
-                          language={item.language}
-                          showLineNumbers={item.showLineNumbers}
-                        />
-                      </>
+                      <CodeBlock
+                        key={`block-parragraph-item-${item.id}-${index}`}
+                        code={`${codebox.text || ''}`.trim()}
+                        language={item.language}
+                        showLineNumbers={item.showLineNumbers}
+                      />
                     )
                   );
                 })}

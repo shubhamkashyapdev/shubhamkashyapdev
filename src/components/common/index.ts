@@ -4,6 +4,7 @@ export { default as DownArrow } from './elements/DownArrow';
 
 // cards
 export { default as BlogCard } from './cards/BlogCard';
+export { default as BoilerplateCard } from './cards/BoilerplateCard';
 export { default as CodeSnippetCard } from './cards/CodeSnippetCard';
 export { default as ProjectCard } from './cards/FeaturedProjectCard';
 export { default as Hightlight } from './cards/Highlight';
@@ -21,6 +22,7 @@ export { default as SeeMoreButton } from './typography/buttons/SeeMore';
 
 // sections
 export { default as BlogList } from './sections/Blogs';
+export { default as Boilerplates } from './sections/Boilerplates';
 export { default as Clients } from './sections/Clients';
 export { default as CodeSnippets } from './sections/CodeSnippets';
 export { default as FeaturedProjects } from './sections/FeaturedProjects';

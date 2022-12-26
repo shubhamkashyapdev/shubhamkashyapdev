@@ -74,3 +74,18 @@ export type ProjectCardType = {
     };
   };
 };
+
+export type BoilerplateCardType = {
+  id: string;
+  title: string;
+  slug: string;
+  views: number;
+  tagline: string;
+  githubURL: string;
+  description: string;
+  image: {
+    id: string;
+    url: string;
+  };
+  tags: TagType[];
+};

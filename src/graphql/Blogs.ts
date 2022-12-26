@@ -117,6 +117,13 @@ query($id: String!)  {
           }
         }
       }
+      ...on Code {
+        id
+        code
+        language
+        showLineNumbers
+        blockType
+      }
       ...on PrimaryHeading {
             id
             blockType

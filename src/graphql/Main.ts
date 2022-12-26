@@ -63,6 +63,29 @@ query {
       createdAt
     }
   }
+  Boilerplates {
+    docs {
+     id
+     title
+     slug
+     views 
+     tagline 
+     githubURL 
+     description
+     image {
+       id 
+       url
+     }
+     tags {
+       id 
+       title
+       icon {
+         id 
+         url 
+       }
+     }
+   }
+ }
 }
 
 `;
