@@ -31,6 +31,8 @@ query {
         }
       }
       featuredImage {
+        id 
+        url
         sizes {
           thumbnail {
             url

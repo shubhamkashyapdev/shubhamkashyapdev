@@ -67,6 +67,8 @@ export type ProjectCardType = {
   tagline: string;
   tags: TagType[];
   featuredImage: {
+    id: string;
+    url: string;
     sizes: {
       thumbnail: {
         url: string;

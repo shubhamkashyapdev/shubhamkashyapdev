@@ -46,15 +46,15 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
         <div className="mt-4 h-[150px] w-full">
           <Image
             className="rounded-md"
-            src={project.featuredImage.sizes.thumbnail.url}
-            height={150}
+            src={project.featuredImage.url}
+            height={170}
             width={350}
             objectFit="cover"
             alt=""
           />
         </div>
         <Link href={`/projects/${project.id}`}>
-          <a className="group relative mt-3 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white">
+          <a className="group relative mt-4 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white">
             See More
             <span className="animated-border"></span>
           </a>

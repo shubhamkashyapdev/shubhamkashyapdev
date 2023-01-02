@@ -1,11 +1,7 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import {
-  BoilerplateCard,
-  PrimaryHeading,
-  SeeMoreButton,
-} from '@/components/common';
+import { BoilerplateCard, PrimaryHeading } from '@/components/common';
 import type { BoilerplateCardType } from '@/types/component.types';
 
 type BoilerplateType = {
@@ -21,7 +17,6 @@ const Blogs: FC<BoilerplateType> = ({ boilerplates }) => {
           <BoilerplateCard key={`blogs-${index}-${item.id}`} {...item} />
         ))}
       </div>
-      <SeeMoreButton route="/blogs">See more post</SeeMoreButton>
     </section>
   );
 };
