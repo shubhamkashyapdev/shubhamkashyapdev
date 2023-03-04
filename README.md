@@ -2,6 +2,9 @@
 
 [portfolio](/assets/app.png)
 
+Bakend URL:
+dev.solminesweepers.com
+
 I am a full stack javascript developer located in Chandigarh, India. I currenlty work for Equartis Technologies as a Senior Developer, located in Chandigarh, India. I am experienced in developing full stack application with MERN stack technology.
 
 I wanted to build out some features that i would use on daily basis. Instead of creating a seperate application for those i decided to create a portfolio where i can implement all those features.
