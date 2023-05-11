@@ -19,7 +19,7 @@ const About: FC<AboutType> = ({ tags }) => {
         <article className="flex flex-col md:flex-row md:gap-10">
           <span className="md:order-2 md:w-[30%] md:px-4">
             <Image
-              src="https://res.cloudinary.com/hexdev/image/upload/v1670609144/shubhamwebdesign/mebggyy7ai5t7t0jcg31.jpg"
+              src="https://res.cloudinary.com/hexdev/image/upload/v1670609144/shubhamkashyapdev/mebggyy7ai5t7t0jcg31.jpg"
               height={280}
               width={250}
               objectFit="cover"

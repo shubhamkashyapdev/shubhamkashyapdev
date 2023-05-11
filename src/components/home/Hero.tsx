@@ -50,12 +50,12 @@ const Hero: FC = () => {
             </a>
 
             <a
-              href="https://github.com/shubhamwebdesign"
+              href="https://github.com/shubhamkashyapdev"
               target="_blank"
               className="flex cursor-pointer items-center space-x-2 hover:text-primary-300"
               rel="noreferrer"
             >
-              <BrandGithub /> @shubhamwebdesign
+              <BrandGithub /> @shubhamkashyapdev
             </a>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Hero: FC = () => {
             subTitle="Web3, Solidity, Typescript"
             tag="@nftmarketplace"
             route={
-              'https://github.com/shubhamwebdesign/nft-marketplace-solidity-typescript'
+              'https://github.com/shubhamkashyapdev/nft-marketplace-solidity-typescript'
             }
           >
             Next.js NFt Marketplace built with ethere.js and metamask. The smart
@@ -83,7 +83,7 @@ const Hero: FC = () => {
             subTitle="Anchor, Solana, Typescript"
             tag="@solanaminesweeper"
             route={
-              'https://github.com/shubhamwebdesign/solana-minesweeper-frontend'
+              'https://github.com/shubhamkashyapdev/solana-minesweeper-frontend'
             }
           >
             Solana minesweeper game built with Next.js, solana wallet adapter

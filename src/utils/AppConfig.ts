@@ -1,6 +1,6 @@
 export const AppConfig = {
   site_name: 'dev1800',
-  title: 'shubhamwebdesign',
+  title: 'shubhamkashyapdev',
   description: 'Full stack javascript developer',
   locale: 'en',
 };

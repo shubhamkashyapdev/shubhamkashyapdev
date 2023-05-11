@@ -35,7 +35,15 @@ export const technologies = [
   },
   {
     category: TechStacks.BACKEND,
+    label: 'ZOD',
+  },
+  {
+    category: TechStacks.BACKEND,
     label: 'TypeORM',
+  },
+  {
+    category: TechStacks.BACKEND,
+    label: 'Prisma',
   },
 
   {
@@ -44,11 +52,15 @@ export const technologies = [
   },
   {
     category: TechStacks.BACKEND,
-    label: 'Appwrite CMS',
+    label: 'Mongoose',
   },
   {
     category: TechStacks.BACKEND,
-    label: 'Mongoose',
+    label: 'Python (FastAPI)',
+  },
+  {
+    category: TechStacks.BACKEND,
+    label: 'JAVA (SpringBoot 3)',
   },
 
   {
@@ -138,19 +150,7 @@ export const technologies = [
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: 'Kubernetes',
-  },
-  {
-    category: TechStacks.INFRASTRUCTURE,
-    label: 'Jenkins',
-  },
-  {
-    category: TechStacks.INFRASTRUCTURE,
     label: 'GIT & Github',
-  },
-  {
-    category: TechStacks.INFRASTRUCTURE,
-    label: 'Kafka / MQTT',
   },
   {
     category: TechStacks.INFRASTRUCTURE,

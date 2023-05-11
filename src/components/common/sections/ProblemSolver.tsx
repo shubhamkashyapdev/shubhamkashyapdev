@@ -4,7 +4,7 @@ import { Parragraph, SecondaryHeading } from '@/components/common';
 
 const experiences = [
   {
-    title: '4+',
+    title: '3+',
     subTitle: 'Years of experience',
   },
   {

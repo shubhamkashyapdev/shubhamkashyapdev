@@ -14,7 +14,7 @@ import type { NavItemProps, SocialIconProps } from '@/types/component.types';
 const navLinks: NavItemProps[] = [
   {
     label: 'Source Code',
-    route: 'https://github.com/shubhamwebdesign/shubhamwebdesign',
+    route: 'https://github.com/shubhamkashyapdev/shubhamkashyapdev',
   },
   {
     label: 'Library',
@@ -22,7 +22,7 @@ const navLinks: NavItemProps[] = [
   },
   {
     label: 'Starter Templates',
-    route: 'https://github.com/stars/shubhamwebdesign/lists/starter-templates',
+    route: 'https://github.com/stars/shubhamkashyapdev/lists/starter-templates',
   },
   {
     label: 'Projects',
@@ -44,7 +44,7 @@ const socialLinks: SocialIconProps[] = [
     icon: <BrandLinkedin />,
   },
   {
-    route: 'https://github.com/shubhamwebdesign',
+    route: 'https://github.com/shubhamkashyapdev',
     icon: <BrandGithub />,
   },
 ];
@@ -67,7 +67,7 @@ const Footer: FC = () => {
         </div>
         <div className="mt-6 flex flex-col items-center justify-center space-x-2 text-base text-gray-900 dark:text-gray-200 md:flex-row">
           <div className="flex items-center space-x-1">
-            <Copyright size={16} /> <span>shubhamwebdesign</span>
+            <Copyright size={16} /> <span>shubhamkashyapdev</span>
           </div>
           {/* <Link href="/">
             <a className="font-medium">Please provide your feedback!</a>

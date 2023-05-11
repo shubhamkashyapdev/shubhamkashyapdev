@@ -46,7 +46,7 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
         <div className="mt-4 h-[150px] w-full">
           <Image
             className="rounded-md"
-            src={project.featuredImage.url}
+            src={project?.featuredImage.url}
             height={170}
             width={350}
             objectFit="cover"
