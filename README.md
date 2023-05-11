@@ -2,9 +2,12 @@
 
 [portfolio](/assets/app.png)
 
-I am a full stack javascript developer located in Chandigarh, India. I currenlty work for saffron chariot technologies as a developer, located in Chandigarh, India. I am experienced in developing full stack application with MERN stack technology.
+Bakend URL:
+dev.solminesweepers.com
 
-I wanted to build out some features that i would use on daily basis. Instead of creating a seperate application for those i decided to create a portflio where i will implement all those features.
+I am a full stack javascript developer located in Chandigarh, India. I currenlty work for Equartis Technologies as a Software Developer, located in Chandigarh, India. I am experienced in developing full stack application with MERN stack technology.
+
+I wanted to build out some features that i would use on daily basis. Instead of creating a seperate application for those i decided to create a portfolio where i can implement all those features.
 
 I had the inspiration from [theodorusclarence](https://theodorusclarence.com)'s portfolio website.
 
