@@ -16,11 +16,21 @@ const Topic: FC<TopicType> = ({ handleClick, topics }) => {
     >
       <span className="font-medium">Choose topic:</span>
       {topics.map((item: string, index: number) => (
-        <Label
-          key={`code-snippet-${item}-${index}`}
-          handleClick={handleClick}
-          topic={item}
-        />
+        <>
+          {item === '' ? (
+            <Label
+              key={`code-snippet-${item}-${index}`}
+              handleClick={() => handleClick('')}
+              topic={'All'}
+            />
+          ) : (
+            <Label
+              key={`code-snippet-${item}-${index}`}
+              handleClick={() => handleClick(item)}
+              topic={item}
+            />
+          )}
+        </>
       ))}
 
       <div id="skip-tags" className="hidden"></div>

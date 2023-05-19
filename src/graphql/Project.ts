@@ -42,11 +42,8 @@ query {
         }
       }
       featuredImage {
-        sizes {
-          thumbnail {
-            url
-          }
-        }
+        id
+        url
       }
     }
   }

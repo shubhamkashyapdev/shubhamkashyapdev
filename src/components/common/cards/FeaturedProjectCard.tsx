@@ -17,6 +17,7 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
   const handleNavigate = () => {
     router.push(`/projects/${project.id}`);
   };
+
   return (
     <div
       onClick={handleNavigate}
@@ -50,12 +51,12 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
             height={170}
             width={350}
             objectFit="cover"
-            alt=""
+            alt="project image"
           />
         </div>
         <Link href={`/projects/${project.id}`}>
-          <a className="group relative mt-4 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white">
-            See More
+          <a className="group relative mt-6 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white">
+            View Project
             <span className="animated-border"></span>
           </a>
         </Link>

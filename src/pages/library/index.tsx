@@ -32,6 +32,9 @@ const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
   };
 
   const handleClick = (topic: string) => {
+    if (topic === '') {
+      setFilteredSnippets(snippets);
+    }
     setFilteredSnippets(
       snippets.filter((item: CodeSnippetCardType) => {
         const { tags } = item;
@@ -66,7 +69,7 @@ const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
         to reuse!
       </Parragraph>
       <SearchBar value={value} setValue={setValue} />
-      <Topic handleClick={handleClick} topics={['Next.js', 'React.js']} />
+      <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} />
       <CodeSnippetCards snippets={filteredSnippets} />
     </Main>
   );

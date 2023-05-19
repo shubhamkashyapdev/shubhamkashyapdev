@@ -4,6 +4,7 @@ import {
   BrandGithub,
   BrandLinkedin,
   BrandTwitter,
+  BrandUpwork,
   Copyright,
 } from 'tabler-icons-react';
 
@@ -46,6 +47,11 @@ const socialLinks: SocialIconProps[] = [
   {
     route: 'https://github.com/shubhamkashyapdev',
     icon: <BrandGithub />,
+  },
+  {
+    route:
+      'https://www.upwork.com/freelancers/~016892b2e096ca585d?referrer_url_path=%2Fab%2Fprofiles%2Fsearch%2Fdetails%2F~016892b2e096ca585d%2Fprofile',
+    icon: <BrandUpwork />,
   },
 ];
 
