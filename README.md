@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Shubham Kashyap</h1>
-<h3 align="center">A passionate MERN developer from India</h3>
+<h3 align="center">A passionate MERN & Next.js developer from India</h3>
 
 <div align="center">
 <img src="https://res.cloudinary.com/hexdev/image/upload/v1684124756/shubhamwebdesign/x5xpxilrackbznbkjlgp.gif" alt="coding web developer" />
