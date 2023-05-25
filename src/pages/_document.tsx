@@ -9,6 +9,11 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
+        <meta
+          name="keywords"
+          content="freelancer in chandigarh, website developer in chandigarh, website designer in chandigarh, freelance developer in chandigarh"
+        />
+        <meta name="author" content="Shubham Kashyap" />
         <body>
           <Main />
           <NextScript />

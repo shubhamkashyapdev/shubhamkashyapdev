@@ -1,3 +1,4 @@
+import { IconGlobe } from '@tabler/icons';
 import type { FC } from 'react';
 import React from 'react';
 import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
@@ -16,26 +17,30 @@ const Hero: FC = () => {
           </h1>
           <h4 className="text-shadow-sm mt-2 text-center text-xl font-semibold text-primary-700 dark:text-white md:text-left md:text-2xl">
             <TypewriterComponent
-              options={{ loop: true }}
+              options={{ loop: true, deleteSpeed: 750 }}
               onInit={(typewirter) => {
                 typewirter
-                  .typeString('MERN Developer')
+                  .typeString('MERN / React Native Developer')
                   .pauseFor(2400)
                   .deleteAll()
-                  .typeString('UI Designer')
+                  .typeString('Angular / Ionic Developer')
                   .pauseFor(2500)
                   .deleteAll()
-                  .typeString('Web3 Developer')
+                  .typeString('Full Stack Next.js With TailwindCSS')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .typeString('AWS / CI-CD & Docker Experience')
                   .pauseFor(2500)
                   .start();
               }}
             />
           </h4>
           <Parragraph className="centered mt-6">
-            I am a full stack javascript developer located in Chandigarh, India.
-            I currenlty work for saffron chariot technologies as a developer,
-            located in Chandigarh, India. I am experienced in developing full
-            stack application with MERN stack technology.
+            I am a full stack MERN developer with 3+ years of experience in web
+            development and i have worked on projects from website design with
+            Next.js & TailwindCSS, MERN e-commerce website and MVP development.
+            I can provide you full support in the project development from
+            development to deployment on cloud platform like AWS.
           </Parragraph>
 
           <HeroCTA />
@@ -66,25 +71,25 @@ const Hero: FC = () => {
         </h4>
         <div className="mt-4 flex flex-col space-y-4">
           <Hightlight
-            title="NFT Marketplace"
-            subTitle="Web3, Solidity, Typescript"
+            icon={<IconGlobe />}
+            title="Solana Raffle"
+            subTitle="Web3, Solana, React,Typescript"
             tag="@nftmarketplace"
-            route={
-              'https://github.com/shubhamkashyapdev/nft-marketplace-solidity-typescript'
-            }
+            route={'https://raffle-shubhamkashyapdev.vercel.app/'}
           >
-            Next.js NFt Marketplace built with ethere.js and metamask. The smart
-            contract is developed in solidity using the truffle framework. The
-            project has a production grade setup with typescript and
-            tailwindCSS, and custom react hooks.
+            Solana Raffle is a full-stack web application with a Next.js,
+            TailwindCSS, and Mantine UI frontend, coupled with a Node.js,
+            Express.js, and MongoDB backend. The application enables users to
+            participate in raffles by making SOL token payments and integrates
+            with the Phantom Wallet for seamless transactions and an enhanced
+            user experience.
           </Hightlight>
           <Hightlight
+            icon={<IconGlobe />}
             title="Solana Minesweeper"
-            subTitle="Anchor, Solana, Typescript"
+            subTitle="Anchor, Solana, React, Typescript"
             tag="@solanaminesweeper"
-            route={
-              'https://github.com/shubhamkashyapdev/solana-minesweeper-frontend'
-            }
+            route={'https://solana-minesweeper-game.pages.dev'}
           >
             Solana minesweeper game built with Next.js, solana wallet adapter
             and PiXi.js 2d animation library. The project uses the solana wallet

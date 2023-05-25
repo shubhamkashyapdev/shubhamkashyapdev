@@ -24,8 +24,8 @@ const ImageGridBlock: FC<ImageGridBlockType> = ({ imageGrid }) => {
         >
           <Image
             src={item.image.url}
-            width={370}
-            height={400}
+            width={1000}
+            height={1000}
             alt="notionlink project"
             objectFit="cover"
             className="rounded-md"

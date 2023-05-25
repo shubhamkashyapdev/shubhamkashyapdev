@@ -12,8 +12,10 @@ const About: FC<AboutType> = ({ tags }) => {
   return (
     <>
       <section className="my-20">
-        <h2 className="text-color text-3xl font-bold">About</h2>
-        <h3 className="text-gradient mb-4 text-3xl font-bold">
+        <h2 className="text-base uppercase tracking-widest text-primary-300">
+          About
+        </h2>
+        <h3 className="text-gradient mb-4 text-4xl font-bold">
           Shubham Kashyap
         </h3>
         <article className="flex flex-col md:flex-row md:gap-10">

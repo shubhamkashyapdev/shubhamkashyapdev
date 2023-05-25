@@ -69,14 +69,6 @@ export const technologies = [
   },
   {
     category: TechStacks.FRONTEND,
-    label: 'HTML5',
-  },
-  {
-    category: TechStacks.FRONTEND,
-    label: 'CSS3',
-  },
-  {
-    category: TechStacks.FRONTEND,
     label: 'SCSS',
   },
   {
@@ -89,11 +81,11 @@ export const technologies = [
   },
   {
     category: TechStacks.FRONTEND,
-    label: 'Next.js',
+    label: 'Angular',
   },
   {
     category: TechStacks.FRONTEND,
-    label: 'Styled Components',
+    label: 'Next.js',
   },
   {
     category: TechStacks.FRONTEND,
@@ -113,24 +105,11 @@ export const technologies = [
   },
   {
     category: TechStacks.FRONTEND,
-    label: 'Expo',
-  },
-  {
-    category: TechStacks.FRONTEND,
-    label: 'Nativebase',
-  },
-  {
-    category: TechStacks.FRONTEND,
-    label: 'SWR',
+    label: 'Ionic',
   },
   {
     category: TechStacks.FRONTEND,
     label: 'Reach Query',
-  },
-
-  {
-    category: TechStacks.FRONTEND,
-    label: 'Framer Motion',
   },
   {
     category: TechStacks.FRONTEND,
@@ -146,11 +125,19 @@ export const technologies = [
   },
   {
     category: TechStacks.INFRASTRUCTURE,
+    label: 'GIT & Github',
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
+    label: 'Github Actions',
+  },
+  {
+    category: TechStacks.INFRASTRUCTURE,
     label: 'Docker',
   },
   {
     category: TechStacks.INFRASTRUCTURE,
-    label: 'GIT & Github',
+    label: 'Docker Swarm',
   },
   {
     category: TechStacks.INFRASTRUCTURE,

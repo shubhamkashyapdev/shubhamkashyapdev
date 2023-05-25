@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import React from 'react';
-import { BrandGithub } from 'tabler-icons-react';
 
 import { Parragraph } from '@/components/common';
 import type { IChildren } from '@/types/common.types';
@@ -10,6 +9,7 @@ type HightlightCardProps = {
   subTitle: string;
   tag: string;
   route: string;
+  icon: React.ReactNode;
 } & IChildren;
 
 const Highlight: FC<HightlightCardProps> = ({
@@ -18,6 +18,7 @@ const Highlight: FC<HightlightCardProps> = ({
   children,
   tag,
   route,
+  icon,
 }) => {
   return (
     <div className="card-border w-full rounded-sm border-[1.5px] p-6 py-4 shadow-sm duration-150 ease-in-out hover:shadow-md dark:border-gray-700 dark:bg-primary-700/80 dark:shadow-gray-700">
@@ -37,7 +38,7 @@ const Highlight: FC<HightlightCardProps> = ({
         className="flex items-center pt-2 text-sm text-gray-700 hover:text-primary-300  dark:text-gray-300"
         rel="noreferrer"
       >
-        <BrandGithub /> {tag}
+        {icon} {tag}
       </a>
     </div>
   );
