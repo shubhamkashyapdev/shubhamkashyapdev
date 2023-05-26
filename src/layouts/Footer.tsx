@@ -37,10 +37,6 @@ const navLinks: NavItemProps[] = [
 
 const socialLinks: SocialIconProps[] = [
   {
-    route: 'https://twitter.com/Shubham56940033',
-    icon: <BrandTwitter />,
-  },
-  {
     route: 'https://www.linkedin.com/in/shubham-kashyap-018448203/',
     icon: <BrandLinkedin />,
   },
@@ -52,6 +48,10 @@ const socialLinks: SocialIconProps[] = [
     route:
       'https://www.upwork.com/freelancers/~016892b2e096ca585d?referrer_url_path=%2Fab%2Fprofiles%2Fsearch%2Fdetails%2F~016892b2e096ca585d%2Fprofile',
     icon: <BrandUpwork />,
+  },
+  {
+    route: 'https://twitter.com/Shubham56940033',
+    icon: <BrandTwitter />,
   },
 ];
 

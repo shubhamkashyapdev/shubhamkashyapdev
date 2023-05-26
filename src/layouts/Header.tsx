@@ -1,6 +1,11 @@
 import type { FC } from 'react';
 import React from 'react';
-import { BrandLinkedin, BrandTwitter } from 'tabler-icons-react';
+import {
+  BrandGithub,
+  BrandLinkedin,
+  BrandTwitter,
+  BrandUpwork,
+} from 'tabler-icons-react';
 
 import { ToggleButton } from '@/components/common';
 import { Navbar } from '@/layouts';
@@ -33,12 +38,21 @@ const navLinks = [
 
 const socialLinks: SocialIconProps[] = [
   {
-    route: 'https://www.twitter.com',
-    icon: <BrandTwitter />,
+    route: 'https://www.linkedin.com/in/shubham-kashyap-018448203/',
+    icon: <BrandLinkedin />,
   },
   {
-    route: 'https://www.linkedin.com',
-    icon: <BrandLinkedin />,
+    route: 'https://github.com/shubhamkashyapdev',
+    icon: <BrandGithub />,
+  },
+  {
+    route:
+      'https://www.upwork.com/freelancers/~016892b2e096ca585d?referrer_url_path=%2Fab%2Fprofiles%2Fsearch%2Fdetails%2F~016892b2e096ca585d%2Fprofile',
+    icon: <BrandUpwork />,
+  },
+  {
+    route: 'https://twitter.com/Shubham56940033',
+    icon: <BrandTwitter />,
   },
 ];
 

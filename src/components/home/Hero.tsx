@@ -20,35 +20,43 @@ const Hero: FC = () => {
               options={{ loop: true, deleteSpeed: 750 }}
               onInit={(typewirter) => {
                 typewirter
-                  .typeString('MERN / React Native Developer')
+                  .typeString('MERN / MEAN Developer')
                   .pauseFor(2400)
                   .deleteAll()
-                  .typeString('Angular / Ionic Developer')
+                  .typeString('Mobile App Developer')
                   .pauseFor(2500)
                   .deleteAll()
-                  .typeString('Full Stack Next.js With TailwindCSS')
+                  .typeString('Next.js Developer')
                   .pauseFor(2500)
                   .deleteAll()
-                  .typeString('AWS / CI-CD & Docker Experience')
+                  .typeString('AWS & Docker Experience')
                   .pauseFor(2500)
                   .start();
               }}
             />
           </h4>
           <Parragraph className="centered mt-6">
-            I am a full stack MERN developer with 3+ years of experience in web
-            development and i have worked on projects from website design with
-            Next.js & TailwindCSS, MERN e-commerce website and MVP development.
-            I can provide you full support in the project development from
-            development to deployment on cloud platform like AWS.
+            I am a <strong>freelance</strong> full stack MERN developer with 3+
+            years of experience in web development and i have worked on projects
+            from website design with Next.js & TailwindCSS, MERN e-commerce
+            website, <strong>mobile app development</strong>, blockchain
+            application to <strong>MVP development</strong>. I can provide you
+            full support from ideation, documentation, application development
+            to deployment. If you have a project idea that {"you'd"} like to
+            transform into a product, please {"don't"} hesitate to{' '}
+            <a className="link" href="mailto:shubhamkashyapdev@gmail.com">
+              reach out to me.
+            </a>
           </Parragraph>
 
           <HeroCTA />
           {/* resume cta */}
           <div className="mt-4 flex items-center justify-center space-x-4 text-sm font-medium text-gray-800 dark:text-gray-600 md:justify-start">
             <a
-              href=""
+              href="https://drive.google.com/file/d/1I_7yhlObc4anfo7r5Y4pRaW3-ft_sPw4/view?usp=sharing"
+              target="_blank"
               className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300"
+              rel="noreferrer"
             >
               <FileAnalytics />
               Resume

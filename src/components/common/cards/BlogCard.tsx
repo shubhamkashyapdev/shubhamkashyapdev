@@ -1,6 +1,7 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
 /* eslint-disable react/no-unescaped-entities */
+import dayjs from 'dayjs';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
@@ -110,7 +111,7 @@ const BlogCard: FC<BlogCardType> = ({
           </div>
           <p className="mt-4 mb-2 text-sm text-gray-600 dark:text-gray-300">
             <span className="font-bold text-gray-800 dark:text-gray-100">
-              {createdAt}
+              {dayjs(createdAt).format('MMM DD, YYYY')}
             </span>
           </p>
           <p className="text-sm text-gray-700 dark:text-gray-300">
