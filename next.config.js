@@ -12,6 +12,11 @@ module.exports = withBundleAnalyzer({
   basePath: '',
   reactStrictMode: true,
   images: {
-    domains: ['shorturl.at', 'res.cloudinary.com', 'localhost'],
+    domains: [
+      'shorturl.at',
+      'res.cloudinary.com',
+      'localhost',
+      'tailwindui.com',
+    ],
   },
 });

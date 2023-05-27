@@ -11,7 +11,7 @@ type BoilerplateType = {
 
 const Blogs: FC<BoilerplateType> = ({ boilerplates }) => {
   return (
-    <section className="section">
+    <section className="">
       <SectionTitle>Starter Templates</SectionTitle>
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {boilerplates?.map((item, index) => (

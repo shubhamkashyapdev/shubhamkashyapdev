@@ -13,7 +13,7 @@ type CodeSnippetProps = {
 
 const CodeSnippetsSection: FC<CodeSnippetProps> = ({ snippets }) => {
   return (
-    <section className="section">
+    <section className="">
       <SectionTitle>Library of code snippets</SectionTitle>
       <CodeSnippetCards snippets={snippets} />
       <SeeMoreButton route="/library">See more snippets</SeeMoreButton>

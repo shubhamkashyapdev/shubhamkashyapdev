@@ -17,7 +17,11 @@ export enum TechStacks {
   INFRASTRUCTURE,
 }
 
-export type TechStackItem = { category: TechStacks; label: string };
+export type TechStackItem = {
+  category: TechStacks;
+  label: string;
+  icon?: string;
+};
 export type NavItemProps = {
   route: string;
   label: string;

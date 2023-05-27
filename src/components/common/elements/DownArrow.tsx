@@ -6,7 +6,7 @@ import { fadeDown } from '@/components/common/animation/variants';
 
 const DownArrow = () => {
   return (
-    <Link href="#problemSolver">
+    <Link href="#technologyStack">
       <motion.a
         variants={fadeDown}
         initial="initial"

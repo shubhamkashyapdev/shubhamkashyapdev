@@ -6,8 +6,10 @@ import {
   CodeSnippets,
   FeaturedProjects,
   ProblemSolver,
+  TechnologyStack,
   TechStack,
 } from '@/components/common';
+import Divider from '@/components/common/elements/Divider';
 import Blogs from '@/components/common/sections/Blogs';
 import { getDataForHomePage } from '@/graphql/Main';
 import { Meta } from '@/layouts/Meta';
@@ -43,11 +45,23 @@ const Index: NextPage<IndexType> = ({
       }
     >
       <Hero />
+      <Divider
+        className="mt-40 mb-32"
+        id="technologyStack"
+        title="Technology Stack"
+      />
+      <TechnologyStack />
+      <Divider title="Problem Solver" />
       <ProblemSolver />
+      <Divider title="Technologies Used" />
       <TechStack />
+      <Divider title="Starter Templates" />
       <Boilerplates boilerplates={boilerplates} />
+      <Divider title="Blogs" />
       <Blogs blogs={blogs} />
+      <Divider title="Projects" />
       <FeaturedProjects projects={projects} />
+      <Divider title="Code Snippets" />
       <CodeSnippets snippets={snippets} />
     </Main>
   );

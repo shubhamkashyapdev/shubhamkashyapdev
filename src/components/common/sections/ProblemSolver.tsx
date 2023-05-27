@@ -17,9 +17,9 @@ const ProblemSolver = () => {
   return (
     <section
       id="problemSolver"
-      className="section flex flex-col md:flex-row md:space-x-10"
+      className=" flex flex-col md:flex-row md:space-x-10"
     >
-      <div className="relative order-2 mt-6 flex flex-[4] items-center justify-evenly md:order-1">
+      <div className="relative order-2  flex flex-[4] items-center justify-evenly md:order-1">
         {/* box 1 */}
         {experiences.map((item, index) => (
           <div

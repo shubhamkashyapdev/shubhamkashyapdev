@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
 
 import { FadeUpDown } from '@/components/common';
@@ -39,9 +40,9 @@ const TechStack = () => {
     handleFilterItems(activeTech);
   }, []);
   return (
-    <section className="section centered px-2">
+    <section className=" centered px-2">
       <FadeUpDown>
-        <SectionTitle>Technology Stack</SectionTitle>
+        <SectionTitle>Technologies i use</SectionTitle>
       </FadeUpDown>
       {/* tech stack nav */}
       <nav className="mt-8 flex flex-wrap items-center justify-center gap-4  text-base font-medium text-gray-900  dark:text-gray-300 md:justify-start md:gap-6 md:space-x-8 md:text-lg">
@@ -81,8 +82,17 @@ const TechStack = () => {
               delay: 0.1 + index * 0.01,
             }}
             key={`technology-item-${item.label}-${item.category}`}
-            className="h-fit w-fit rounded-md bg-gray-800 px-2 py-1 text-sm text-white drop-shadow-md dark:bg-gray-800 dark:shadow-gray-300"
+            className="flex h-fit w-fit justify-center gap-2 rounded-md bg-gray-800 px-2 py-1 text-sm text-white drop-shadow-md dark:bg-gray-800 dark:shadow-gray-300"
           >
+            <Image
+              src={
+                item.icon ||
+                'https://res.cloudinary.com/hexdev/image/upload/v1685003333/shubhamwebdesign/lgy8frebiwkyppiwaozn.svg'
+              }
+              alt="abc"
+              height={20}
+              width={20}
+            />{' '}
             {item.label}
           </motion.span>
         ))}

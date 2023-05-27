@@ -27,5 +27,6 @@ export { default as Clients } from './sections/Clients';
 export { default as CodeSnippets } from './sections/CodeSnippets';
 export { default as FeaturedProjects } from './sections/FeaturedProjects';
 export { default as ProblemSolver } from './sections/ProblemSolver';
+export { default as TechnologyStack } from './sections/TechnologyStack';
 export { default as TechStack } from './sections/TechStack';
 export { default as Work } from './sections/Work';

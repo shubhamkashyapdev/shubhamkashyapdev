@@ -35,10 +35,10 @@ const Highlight: FC<HightlightCardProps> = ({
       <a
         href={route}
         target="_blank"
-        className="flex items-center pt-2 text-sm text-gray-700 hover:text-primary-300  dark:text-gray-300"
+        className="flex items-center pt-2 text-sm text-gray-700    dark:text-gray-300"
         rel="noreferrer"
       >
-        {icon} {tag}
+        {icon} <span className="hover:text-primary-200">{tag}</span>
       </a>
     </div>
   );

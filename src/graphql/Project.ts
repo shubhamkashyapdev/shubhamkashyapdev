@@ -59,6 +59,8 @@ query($id: String!) {
     tagline
     subTagline
     createdAt
+    repoURL
+    liveSiteURL
     featuredImage {
       id
       url

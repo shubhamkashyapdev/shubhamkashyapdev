@@ -57,7 +57,7 @@ const socialLinks: SocialIconProps[] = [
 
 const Footer: FC = () => {
   return (
-    <footer className="mt-36 mb-4">
+    <footer className="mt-60 mb-4">
       <hr className="h-[2px] bg-primary-700 dark:bg-gray-800" />
       <Navbar
         navLinks={navLinks}
