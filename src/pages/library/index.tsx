@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Parragraph } from '@/components/common';
 import { SearchBar, Topic } from '@/components/common/elements';
-import PageTitle from '@/components/common/elements/PageTitle';
+import PageTitle from '@/components/common/elements/MainTitle';
 import { CodeSnippetCards } from '@/components/common/Library';
 import { getSnippetsForLibrary } from '@/graphql/Library';
 import { Meta } from '@/layouts/Meta';

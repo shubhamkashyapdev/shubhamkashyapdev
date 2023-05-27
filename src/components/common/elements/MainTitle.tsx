@@ -1,15 +1,12 @@
 import type { FC } from 'react';
 import React from 'react';
 
-type PageTitleType = {
+type TitleType = {
   className?: string;
   children?: string;
 };
 
-const PageTitle: FC<PageTitleType> = ({
-  children = 'Page Title',
-  className,
-}) => {
+const Title: FC<TitleType> = ({ children = 'Page Title', className }) => {
   return (
     <h1 className="text-3xl font-bold md:text-5xl" data-fade="0">
       <span
@@ -21,4 +18,4 @@ const PageTitle: FC<PageTitleType> = ({
   );
 };
 
-export default PageTitle;
+export default Title;

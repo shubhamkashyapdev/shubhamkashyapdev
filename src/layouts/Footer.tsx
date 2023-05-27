@@ -66,7 +66,7 @@ const Footer: FC = () => {
       />
       <div className="text-center">
         <Parragraph className="text-lg font-bold text-primary-700 dark:text-gray-300">
-          Reach me out
+          Reach out to me
         </Parragraph>
         <div className="mt-2 flex justify-center">
           <SocialIcons socialLinks={socialLinks} />

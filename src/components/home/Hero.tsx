@@ -36,14 +36,14 @@ const Hero: FC = () => {
             />
           </h4>
           <Parragraph className="centered mt-6">
-            I am a <strong>freelance</strong> full stack MERN developer with 3+
-            years of experience in web development and i have worked on projects
-            from website design with Next.js & TailwindCSS, MERN e-commerce
-            website, <strong>mobile app development</strong>, blockchain
-            application to <strong>MVP development</strong>. I can provide you
-            full support from ideation, documentation, application development
-            to deployment. If you have a project idea that {"you'd"} like to
-            transform into a product, please {"don't"} hesitate to{' '}
+            I am a full stack web & mobile developer with 3+ years of experience
+            and i have worked on projects from website design with Next.js &
+            TailwindCSS, MERN e-commerce website,{' '}
+            <strong>mobile app development</strong>, blockchain application to{' '}
+            <strong>MVP development</strong>. I can provide you full support
+            from ideation, documentation, application development to deployment.
+            If you have a project idea that {"you'd"} like to transform into a
+            product, please {"don't"} hesitate to{' '}
             <a className="link" href="mailto:shubhamkashyapdev@gmail.com">
               reach out to me.
             </a>

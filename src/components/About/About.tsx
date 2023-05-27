@@ -12,10 +12,10 @@ const About: FC<AboutType> = ({ tags }) => {
   return (
     <>
       <section className="my-20">
-        <h2 className="text-base uppercase tracking-widest text-primary-300">
+        <h2 className="text-lg uppercase tracking-widest text-primary-300">
           About
         </h2>
-        <h3 className="text-gradient mb-4 text-4xl font-bold">
+        <h3 className="text-gradient mb-4 text-5xl font-bold">
           Shubham Kashyap
         </h3>
         <article className="flex flex-col md:flex-row md:gap-10">
@@ -31,11 +31,7 @@ const About: FC<AboutType> = ({ tags }) => {
           </span>
           <div className="mt-8 md:order-1 md:mt-0 md:w-[70%]">
             <p className="text-color">
-              {`Hello! I'm Shubham. I started learning web development around May
-              2020, which is the start of the pandemic. I have nothing much to
-              do so I decided to learn web development from a udemy course, then
-              started watching a bunch of youtube videos to explore more about
-              web development especially full stack javascript development.`}
+              {`I began my web development journey in May 2020, right at the start of the pandemic. I decided to learn web development through a Udemy course and started exploring more about full stack JavaScript development by watching lots of YouTube videos. It has been an exciting and fulfilling experience as I've continued to grow my skills in web development.`}
             </p>
             <p className="text-color my-4">
               I chose MERN stack as my web development stack and larning from

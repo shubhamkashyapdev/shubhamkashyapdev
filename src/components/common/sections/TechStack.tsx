@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { FadeUpDown, PrimaryHeading } from '@/components/common';
+import { FadeUpDown } from '@/components/common';
+import SectionTitle from '@/components/common/elements/MainTitle';
 import type { TechStackItem } from '@/types/component.types';
 import { TechStacks } from '@/types/component.types';
 import { technologies, technologiesLabels } from '@/utils/techstack';
@@ -40,7 +41,7 @@ const TechStack = () => {
   return (
     <section className="section centered px-2">
       <FadeUpDown>
-        <PrimaryHeading>Technology Stack</PrimaryHeading>
+        <SectionTitle>Technology Stack</SectionTitle>
       </FadeUpDown>
       {/* tech stack nav */}
       <nav className="mt-8 flex flex-wrap items-center justify-center gap-4  text-base font-medium text-gray-900  dark:text-gray-300 md:justify-start md:gap-6 md:space-x-8 md:text-lg">

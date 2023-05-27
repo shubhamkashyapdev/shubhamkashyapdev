@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import { BlogCard, PrimaryHeading, SeeMoreButton } from '@/components/common';
+import { BlogCard, SeeMoreButton } from '@/components/common';
+import SectionTitle from '@/components/common/elements/MainTitle';
 import type { BlogCardType } from '@/types/component.types';
 
 type BlogsType = {
@@ -11,7 +12,7 @@ type BlogsType = {
 const Blogs: FC<BlogsType> = ({ blogs }) => {
   return (
     <section className="section">
-      <PrimaryHeading>Featured Posts</PrimaryHeading>
+      <SectionTitle>Featured Posts</SectionTitle>
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {blogs?.map((item, index) => (
           <BlogCard key={`blogs-${index}`} {...item} />
