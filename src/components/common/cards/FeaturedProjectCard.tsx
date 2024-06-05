@@ -1,7 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import type { FC } from 'react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 import type { ProjectCardType } from '@/types/component.types';
@@ -12,7 +13,7 @@ type ProjectCardComponentType = {
   project: ProjectCardType;
 };
 
-const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
+const ProjectCard = ({ project }: ProjectCardComponentType) => {
   const router = useRouter();
   const handleNavigate = () => {
     router.push(`/projects/${project.id}`);
@@ -54,11 +55,12 @@ const ProjectCard: FC<ProjectCardComponentType> = ({ project }) => {
             alt="project image"
           />
         </div>
-        <Link href={`/projects/${project.id}`}>
-          <a className="group relative mt-6 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white">
-            View Project
-            <span className="animated-border"></span>
-          </a>
+        <Link
+          href={`/projects/${project.id}`}
+          className="group relative mt-6 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white"
+        >
+          View Project
+          <span className="animated-border"></span>
         </Link>
       </div>
     </div>

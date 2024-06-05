@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 import {
   BrandGithub,
@@ -8,8 +7,9 @@ import {
   Copyright,
 } from 'tabler-icons-react';
 
-import { Parragraph } from '@/components/common';
-import { Navbar, SocialIcons } from '@/layouts';
+import Parragraph from '@/components/common/typography/Parragraph';
+import Navbar from '@/layouts/Navbar/Navbar';
+import SocialIcons from '@/layouts/Navbar/SocialIcons';
 import type { NavItemProps, SocialIconProps } from '@/types/component.types';
 
 const navLinks: NavItemProps[] = [
@@ -55,7 +55,7 @@ const socialLinks: SocialIconProps[] = [
   },
 ];
 
-const Footer: FC = () => {
+const Footer = () => {
   return (
     <footer className="mt-60 mb-4">
       <hr className="h-[2px] bg-primary-700 dark:bg-gray-800" />
@@ -75,9 +75,6 @@ const Footer: FC = () => {
           <div className="flex items-center space-x-1">
             <Copyright size={16} /> <span>shubhamkashyapdev</span>
           </div>
-          {/* <Link href="/">
-            <a className="font-medium">Please provide your feedback!</a>
-          </Link> */}
         </div>
       </div>
     </footer>

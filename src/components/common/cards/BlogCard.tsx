@@ -1,9 +1,11 @@
+'use client';
+
 /* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
 /* eslint-disable react/no-unescaped-entities */
 import dayjs from 'dayjs';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import React from 'react';
 

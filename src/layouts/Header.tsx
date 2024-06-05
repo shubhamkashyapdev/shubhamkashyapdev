@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 import {
   BrandGithub,
@@ -7,8 +6,8 @@ import {
   BrandUpwork,
 } from 'tabler-icons-react';
 
-import { ToggleButton } from '@/components/common';
-import { Navbar } from '@/layouts';
+import ToggleButton from '@/components/common/elements/ToggleButton';
+import Navbar from '@/layouts/Navbar/Navbar';
 import type { SocialIconProps } from '@/types/component.types';
 
 import SocialIcons from './Navbar/SocialIcons';
@@ -56,7 +55,7 @@ const socialLinks: SocialIconProps[] = [
   },
 ];
 
-const Header: FC = () => {
+const Header = () => {
   return (
     <div className="">
       <div className="flex flex-col items-center justify-between md:flex-row">

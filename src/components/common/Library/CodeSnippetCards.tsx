@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 
 import type { CodeSnippetCardType } from '@/types/component.types';
@@ -9,7 +8,7 @@ type CodeSnippetCardsType = {
   snippets: CodeSnippetCardType[];
 };
 
-const CodeSnippetCards: FC<CodeSnippetCardsType> = ({ snippets }) => {
+const CodeSnippetCards = ({ snippets }: CodeSnippetCardsType) => {
   return (
     <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
       {snippets.map((item: CodeSnippetCardType, index: number) => (

@@ -57,7 +57,12 @@
       "@/svg": [
         "./src/assets/images/svg"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": [
     "./out/**/*",
@@ -67,6 +72,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ]
 }

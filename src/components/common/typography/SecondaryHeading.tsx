@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 
 import type { IChildren } from '@/types/common.types';
@@ -9,11 +8,11 @@ type SecondaryHeadingProps = {
   size?: SecondaryHeadingSizes;
 } & IChildren;
 
-const SecondaryHeading: FC<SecondaryHeadingProps> = ({
+const SecondaryHeading = ({
   children,
   className,
   size,
-}) => {
+}: SecondaryHeadingProps) => {
   const sizeClasses =
     // eslint-disable-next-line no-nested-ternary
     size === SecondaryHeadingSizes.SM

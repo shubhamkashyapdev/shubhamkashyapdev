@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { Parragraph, PrimaryHeading, WorkCard } from '@/components/common';
+import WorkCard from '@/components/common/cards/WorkCard';
+import Parragraph from '@/components/common/typography/Parragraph';
+import PrimaryHeading from '@/components/common/typography/PrimaryHeading';
 
 const workCards = [
   {

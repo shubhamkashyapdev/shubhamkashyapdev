@@ -1,39 +1,23 @@
 import { IconGlobe } from '@tabler/icons';
-import type { FC } from 'react';
 import React from 'react';
 import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
-import TypewriterComponent from 'typewriter-effect';
 
-import { HeroCTA } from '@/components';
-import { DownArrow, Hightlight, Parragraph } from '@/components/common';
+import Hightlight from '@/components/common/cards/Highlight';
+import DownArrow from '@/components/common/elements/DownArrow';
+import TypewriterEffect from '@/components/common/elements/TypewriterEffect';
+import Parragraph from '@/components/common/typography/Parragraph';
+import HeroCTA from '@/components/home/HeroCTA';
 
-const Hero: FC = () => {
+const Hero = () => {
   return (
-    <div className="relative mt-6 mb-16 flex flex-col md:flex-row md:space-x-10">
+    <div className="relative mb-16 mt-6 flex flex-col md:flex-row md:space-x-10">
       <div className="flex flex-[6] items-center ">
         <div>
           <h1 className="text-shadow-md dark:text-gradient text-center text-[40px] font-bold leading-[1.1em] text-primary-700 antialiased sm:text-[50px] md:text-left xl:text-[60px]">
             Hello, i am <br /> Shubham Kashyap.
           </h1>
           <h4 className="text-shadow-sm mt-2 text-center text-xl font-semibold text-primary-700 dark:text-white md:text-left md:text-2xl">
-            <TypewriterComponent
-              options={{ loop: true, deleteSpeed: 750 }}
-              onInit={(typewirter) => {
-                typewirter
-                  .typeString('MERN / MEAN Developer')
-                  .pauseFor(2400)
-                  .deleteAll()
-                  .typeString('Mobile App Developer')
-                  .pauseFor(2500)
-                  .deleteAll()
-                  .typeString('Next.js Developer')
-                  .pauseFor(2500)
-                  .deleteAll()
-                  .typeString('AWS & Docker Experience')
-                  .pauseFor(2500)
-                  .start();
-              }}
-            />
+            <TypewriterEffect />
           </h4>
           <Parragraph className="centered mt-6">
             I am a full stack web & mobile developer with 3+ years of experience

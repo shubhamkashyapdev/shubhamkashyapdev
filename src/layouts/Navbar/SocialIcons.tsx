@@ -1,5 +1,6 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import type { FC } from 'react';
 import React from 'react';
 
 import { fadeDown } from '@/components/common/animation/variants';
@@ -9,7 +10,7 @@ type SocialIconsProps = {
   socialLinks: SocialIconProps[];
 };
 
-const SocialIcons: FC<SocialIconsProps> = ({ socialLinks }) => {
+const SocialIcons = ({ socialLinks }: SocialIconsProps) => {
   return (
     <div className="flex space-x-2">
       {socialLinks.map((item, index) => (

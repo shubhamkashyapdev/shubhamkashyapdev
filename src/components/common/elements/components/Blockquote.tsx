@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import { Parragraph } from '@/components/common';
+import Parragraph from '@/components/common/typography/Parragraph';
 
 type BlockquoteType = {
   subTagline: string;

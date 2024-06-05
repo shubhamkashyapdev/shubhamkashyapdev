@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Parragraph, SecondaryHeading } from '@/components/common';
+import Parragraph from '@/components/common/typography/Parragraph';
+import SecondaryHeading from '@/components/common/typography/SecondaryHeading';
 
 const experiences = [
   {

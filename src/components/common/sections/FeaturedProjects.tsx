@@ -1,15 +1,16 @@
-import type { FC } from 'react';
 import React from 'react';
 
-import { Parragraph, ProjectCard, SeeMoreButton } from '@/components/common';
+import ProjectCard from '@/components/common/cards/FeaturedProjectCard';
 import SectionTitle from '@/components/common/elements/MainTitle';
+import SeeMoreButton from '@/components/common/typography/buttons/SeeMore';
+import Parragraph from '@/components/common/typography/Parragraph';
 import type { ProjectCardType } from '@/types/component.types';
 
 type FeaturedProjectsType = {
   projects: ProjectCardType[];
 };
 
-const FeaturedProjects: FC<FeaturedProjectsType> = ({ projects }) => {
+const FeaturedProjects = ({ projects }: FeaturedProjectsType) => {
   return (
     <section className="">
       <SectionTitle className="">Featured Projects</SectionTitle>

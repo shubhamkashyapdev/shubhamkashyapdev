@@ -1,40 +1,25 @@
-import type { NextPage } from 'next';
-
 import { Hero } from '@/components';
-import {
-  Boilerplates,
-  CodeSnippets,
-  FeaturedProjects,
-  ProblemSolver,
-  TechnologyStack,
-  TechStack,
-} from '@/components/common';
 import Divider from '@/components/common/elements/Divider';
 import Blogs from '@/components/common/sections/Blogs';
+import Boilerplates from '@/components/common/sections/Boilerplates';
+import CodeSnippets from '@/components/common/sections/CodeSnippets';
+import FeaturedProjects from '@/components/common/sections/FeaturedProjects';
+import ProblemSolver from '@/components/common/sections/ProblemSolver';
+import TechnologyStack from '@/components/common/sections/TechnologyStack';
+import TechStack from '@/components/common/sections/TechStack';
 import { getDataForHomePage } from '@/graphql/Main';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
-import type {
-  BlogCardType,
-  BoilerplateCardType,
-  CodeSnippetCardType,
-  ProjectCardType,
-} from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
 
-type IndexType = {
-  snippets: CodeSnippetCardType[];
-  projects: ProjectCardType[];
-  blogs: BlogCardType[];
-  boilerplates: BoilerplateCardType[];
-};
-
-const Index: NextPage<IndexType> = ({
-  snippets,
-  projects,
-  blogs,
-  boilerplates,
-}) => {
+const HomePage = async () => {
+  const res = await axiosGraphQL.post(`/`, {
+    query: getDataForHomePage,
+  });
+  const snippets = res.data?.data?.Libraries?.docs;
+  const projects = res.data?.data?.Projects?.docs;
+  const blogs = res.data?.data?.Posts?.docs;
+  const boilerplates = res.data?.data?.Boilerplates?.docs;
   return (
     <Main
       meta={
@@ -67,23 +52,4 @@ const Index: NextPage<IndexType> = ({
   );
 };
 
-export const getServerSideProps = async () => {
-  const res = await axiosGraphQL.post(`/`, {
-    query: getDataForHomePage,
-  });
-  const snippets = res.data?.data?.Libraries?.docs;
-  const projects = res.data?.data?.Projects?.docs;
-  const blogs = res.data?.data?.Posts?.docs;
-  const boilerplates = res.data?.data?.Boilerplates?.docs;
-
-  return {
-    props: {
-      snippets,
-      projects,
-      blogs,
-      boilerplates,
-    },
-  };
-};
-
-export default Index;
+export default HomePage;

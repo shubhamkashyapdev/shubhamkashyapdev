@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 
 import type { NavItemProps } from '@/types/component.types';
@@ -11,7 +10,7 @@ type NavbarProps = {
   navClassName?: string;
 };
 
-const Navbar: FC<NavbarProps> = ({ navLinks, className, navClassName }) => {
+const Navbar = ({ navLinks, className, navClassName }: NavbarProps) => {
   return (
     <nav className={`flex justify-center text-primary-700 ${navClassName}`}>
       <ul className={`flex items-center space-x-3 ${className}`}>
