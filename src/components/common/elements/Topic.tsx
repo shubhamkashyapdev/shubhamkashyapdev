@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import { Label } from '@/components/common/elements';
+import Label from '@/components/common/elements/Label';
 
 type TopicType = {
   topics: string[];

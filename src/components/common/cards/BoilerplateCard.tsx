@@ -5,18 +5,17 @@
 'use client';
 
 import Image from 'next/image';
-import type { FC } from 'react';
 import React from 'react';
 
 import type { BoilerplateCardType } from '@/types/component.types';
 
-const BoilerplateCard: FC<BoilerplateCardType> = ({
+const BoilerplateCard = ({
   image,
   tags,
   title,
   description,
   githubURL,
-}) => {
+}: BoilerplateCardType) => {
   const handleNavigate = () => {
     window.open(githubURL, '_blank');
   };
@@ -30,7 +29,7 @@ const BoilerplateCard: FC<BoilerplateCardType> = ({
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={image.url}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${image.url}`}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"

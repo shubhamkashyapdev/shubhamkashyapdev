@@ -1,19 +1,25 @@
-import type { FC } from 'react';
 import React from 'react';
 
-import { Parragraph, ProjectCard } from '@/components/common';
-import { PageTitle } from '@/components/common/elements';
+import ProjectCard from '@/components/common/cards/FeaturedProjectCard';
+import PageTitle from '@/components/common/elements/MainTitle';
+import Parragraph from '@/components/common/typography/Parragraph';
 import { getAllProjectsForCards } from '@/graphql/Project';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import type { ProjectCardType } from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
 
-type ProjectsType = {
-  projects: ProjectCardType[];
-};
+async function getProjects() {
+  const projectsRes = await axiosGraphQL.post(`/`, {
+    query: getAllProjectsForCards,
+  });
+  const projects = projectsRes.data?.data?.Projects?.docs;
+  return projects;
+}
 
-const Projects: FC<ProjectsType> = ({ projects }) => {
+const Projects = async () => {
+  const projects: ProjectCardType[] = await getProjects();
+
   return (
     <Main
       meta={
@@ -34,18 +40,6 @@ const Projects: FC<ProjectsType> = ({ projects }) => {
       </section>
     </Main>
   );
-};
-
-export const getServerSideProps = async () => {
-  const projectsRes = await axiosGraphQL.post(`/`, {
-    query: getAllProjectsForCards,
-  });
-  const projects = projectsRes.data?.data?.Projects?.docs;
-  return {
-    props: {
-      projects,
-    },
-  };
 };
 
 export default Projects;

@@ -12,11 +12,19 @@ module.exports = withBundleAnalyzer({
   basePath: '',
   reactStrictMode: true,
   images: {
-    domains: [
-      'shorturl.at',
-      'res.cloudinary.com',
-      'localhost',
-      'tailwindui.com',
+    remotePatterns: [
+      {
+        hostname: 'backend.shubhamkashyap.in',
+        port: '',
+        pathname: '/**',
+        protocol: 'https',
+      },
+      {
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+        protocol: 'https',
+      },
     ],
   },
 });

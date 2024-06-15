@@ -1,24 +1,33 @@
-import type { GetServerSideProps } from 'next';
 import Image from 'next/image';
-import type { FC } from 'react';
-import React from 'react';
+import { notFound } from 'next/navigation';
 
 import {
   ParragraphBlock,
   PrimaryHeadingBlock,
 } from '@/components/common/blocks';
-import { Blocks, CardMeta } from '@/components/common/elements';
+import Blocks from '@/components/common/elements/Blocks';
+import CardMeta from '@/components/common/elements/CardMeta';
 import { getBlogDataForPage } from '@/graphql/Blogs';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
-import type { BlogCardType } from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
 
-type BlogType = {
-  blog: BlogCardType & any;
-};
+async function getBlog(id: string) {
+  const res = await axiosGraphQL.post(`/`, {
+    query: getBlogDataForPage,
+    variables: { id },
+  });
+  const blog = res?.data?.data?.Post;
+  return blog;
+}
 
-const Blog: FC<BlogType> = ({ blog }) => {
+const BlogPage = async ({ params }: { params: { id: string } }) => {
+  const blog = await getBlog(params.id);
+
+  if (!blog) {
+    notFound();
+  }
+
   return (
     <Main
       meta={
@@ -29,7 +38,7 @@ const Blog: FC<BlogType> = ({ blog }) => {
       }
     >
       <Image
-        src={blog?.featuredImage.url}
+        src={`${process.env.NEXT_PUBLIC_BASE_URL}${blog?.featured.image.url}`}
         height={700}
         width={1440}
         alt="notionlink project"
@@ -44,20 +53,4 @@ const Blog: FC<BlogType> = ({ blog }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { id } = query;
-  const res = await axiosGraphQL.post(`/`, {
-    query: getBlogDataForPage,
-    variables: {
-      id,
-    },
-  });
-  const data = res?.data?.data?.Post;
-  return {
-    props: {
-      blog: data,
-    },
-  };
-};
-
-export default Blog;
+export default BlogPage;

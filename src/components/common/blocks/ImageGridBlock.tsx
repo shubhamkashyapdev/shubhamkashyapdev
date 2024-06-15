@@ -23,7 +23,7 @@ const ImageGridBlock: FC<ImageGridBlockType> = ({ imageGrid }) => {
           key={`image-grid-${item.id} `}
         >
           <Image
-            src={item.image.url}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}${item.image.url}`}
             width={1000}
             height={1000}
             alt="notionlink project"

@@ -35,7 +35,7 @@ const BlogCard: FC<BlogCardType> = ({
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={featuredImage.url}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${featuredImage}`}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"
