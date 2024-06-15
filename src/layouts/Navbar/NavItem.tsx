@@ -1,8 +1,9 @@
+'use client';
+
 /* eslint-disable no-nested-ternary */
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import type { FC } from 'react';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 type NavItemProps = {
@@ -11,9 +12,8 @@ type NavItemProps = {
   index: number;
 };
 
-const NavItem: FC<NavItemProps> = ({ label, route, index }) => {
-  const router = useRouter();
-  const activeRoute = router.pathname;
+const NavItem = ({ label, route, index }: NavItemProps) => {
+  const activeRoute = usePathname();
   return (
     <motion.div
       className=" opacity-0"

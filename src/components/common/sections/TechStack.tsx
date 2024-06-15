@@ -1,8 +1,10 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { FadeUpDown } from '@/components/common';
+import FadeUpDown from '@/components/common/animation/FadeUpDown';
 import SectionTitle from '@/components/common/elements/MainTitle';
 import type { TechStackItem } from '@/types/component.types';
 import { TechStacks } from '@/types/component.types';

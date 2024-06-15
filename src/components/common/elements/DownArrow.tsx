@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
@@ -7,7 +9,7 @@ import { fadeDown } from '@/components/common/animation/variants';
 const DownArrow = () => {
   return (
     <Link href="#technologyStack">
-      <motion.a
+      <motion.span
         variants={fadeDown}
         initial="initial"
         animate="animate"
@@ -32,7 +34,7 @@ const DownArrow = () => {
             d="M112 268l144 144 144-144M256 392V100"
           ></path>
         </svg>
-      </motion.a>
+      </motion.span>
     </Link>
   );
 };

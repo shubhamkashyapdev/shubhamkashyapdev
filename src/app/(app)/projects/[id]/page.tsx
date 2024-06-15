@@ -1,24 +1,33 @@
-import type { GetServerSideProps } from 'next';
 import Image from 'next/image';
-import type { FC } from 'react';
-import React from 'react';
+import { notFound } from 'next/navigation';
 import { BrandGithub, Eye, Link, User } from 'tabler-icons-react';
 
 import {
   ParragraphBlock,
   PrimaryHeadingBlock,
 } from '@/components/common/blocks';
-import { Blocks } from '@/components/common/elements';
+import Blocks from '@/components/common/elements/Blocks';
 import { getProjectDataForPage } from '@/graphql/Project';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
-type ProjectType = {
-  project: any;
-};
+async function getProject(id: string) {
+  const res = await axiosGraphQL.post(`/`, {
+    query: getProjectDataForPage,
+    variables: { id },
+  });
+  const project = res?.data?.data?.Project;
+  return project;
+}
 
-const Project: FC<ProjectType> = ({ project }) => {
+const ProjectPage = async ({ params }: { params: { id: string } }) => {
+  const project = await getProject(params.id);
+
+  if (!project) {
+    notFound();
+  }
+
   return (
     <Main
       meta={
@@ -30,7 +39,7 @@ const Project: FC<ProjectType> = ({ project }) => {
     >
       <section>
         <Image
-          src={project?.featuredImage.url}
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}${project?.featured.image.url}`}
           height={700}
           width={1440}
           alt="notionlink project"
@@ -92,20 +101,4 @@ const Project: FC<ProjectType> = ({ project }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { id } = query;
-  const res = await axiosGraphQL.post(`/`, {
-    query: getProjectDataForPage,
-    variables: {
-      id,
-    },
-  });
-  const data = res?.data?.data?.Project;
-  return {
-    props: {
-      project: data,
-    },
-  };
-};
-
-export default Project;
+export default ProjectPage;

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import { BoilerplateCard } from '@/components/common';
+import BoilerplateCard from '@/components/common/cards/BoilerplateCard';
 import SectionTitle from '@/components/common/elements/MainTitle';
 import type { BoilerplateCardType } from '@/types/component.types';
 

@@ -2,7 +2,8 @@ import type { FC } from 'react';
 import React, { Fragment } from 'react';
 
 import { AppleSVG } from '@/assets/svg';
-import { Parragraph, PrimaryHeading } from '@/components/common';
+import Parragraph from '@/components/common/typography/Parragraph';
+import PrimaryHeading from '@/components/common/typography/PrimaryHeading';
 
 const clients = [
   {

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import type { FC } from 'react';
 import React from 'react';
 import { ArrowRight } from 'tabler-icons-react';
 
@@ -16,7 +15,7 @@ import BlockquoteBlock from '@/components/common/blocks/BlockquoteBlock';
 type BlocksType = {
   blocks: any;
 };
-const Blocks: FC<BlocksType> = ({ blocks }) => {
+const Blocks = ({ blocks }: BlocksType) => {
   return (
     <section className="mb-20 flex flex-col md:flex-row">
       <div className="w-full md:w-[70%]">

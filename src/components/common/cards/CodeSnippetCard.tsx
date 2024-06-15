@@ -1,9 +1,11 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import React from 'react';
 
-import { Parragraph } from '@/components/common';
-import { CardMeta } from '@/components/common/elements';
+import CardMeta from '@/components/common/elements/CardMeta';
+import Parragraph from '@/components/common/typography/Parragraph';
 import type { CodeSnippetCardType } from '@/types/component.types';
 
 const CodeSnippetCard: FC<CodeSnippetCardType> = ({

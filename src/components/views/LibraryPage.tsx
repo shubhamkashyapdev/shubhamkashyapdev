@@ -1,25 +1,22 @@
-import type { NextPage } from 'next';
+'use client';
+
 import React, { useEffect, useState } from 'react';
 
-import { Parragraph } from '@/components/common';
-import { SearchBar, Topic } from '@/components/common/elements';
 import PageTitle from '@/components/common/elements/MainTitle';
-import { CodeSnippetCards } from '@/components/common/Library';
-import { getSnippetsForLibrary } from '@/graphql/Library';
+import SearchBar from '@/components/common/elements/SearchBar';
+import Topic from '@/components/common/elements/Topic';
+import CodeSnippetCards from '@/components/common/Library/CodeSnippetCards';
+import Parragraph from '@/components/common/typography/Parragraph';
 import { Meta } from '@/layouts/Meta';
 import useLibraryStore from '@/store/libraryStore';
 import { Main } from '@/templates/Main';
 import type { CodeSnippetCardType, TagType } from '@/types/component.types';
-import { axiosGraphQL } from '@/utils/axios';
 
-type LibraryType = {
-  docs: CodeSnippetCardType[];
-};
-
-const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
+const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
   const { setSnippets, setFilteredSnippets, snippets, filteredSnippets } =
     useLibraryStore((state) => state);
   const [value, setValue] = useState<string>('');
+
   const getFilteredSnippets = () => {
     if (value === '') {
       return snippets;
@@ -53,7 +50,8 @@ const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
 
   useEffect(() => {
     setSnippets(docs);
-  }, []);
+  }, [docs]);
+
   return (
     <Main
       meta={
@@ -73,18 +71,6 @@ const LibraryPage: NextPage<LibraryType> = ({ docs }) => {
       <CodeSnippetCards snippets={filteredSnippets} />
     </Main>
   );
-};
-
-export const getServerSideProps = async () => {
-  const res = await axiosGraphQL.post(`/`, {
-    query: getSnippetsForLibrary,
-  });
-  const data = res.data?.data?.Libraries?.docs;
-  return {
-    props: {
-      docs: data,
-    },
-  };
 };
 
 export default LibraryPage;

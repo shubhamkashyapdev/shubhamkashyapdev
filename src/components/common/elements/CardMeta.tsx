@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import React from 'react';
 import { Heartbeat } from 'tabler-icons-react';
 
-import { Tags } from '@/components/common/elements';
+import Tags from '@/components/common/elements/Tags';
 import type { TagType } from '@/types/component.types';
 
 type CardMetaType = {

@@ -1,8 +1,9 @@
 import type { FC } from 'react';
 import React from 'react';
 
-import { BlogCard, SeeMoreButton } from '@/components/common';
+import BlogCard from '@/components/common/cards/BlogCard';
 import SectionTitle from '@/components/common/elements/MainTitle';
+import SeeMoreButton from '@/components/common/typography/buttons/SeeMore';
 import type { BlogCardType } from '@/types/component.types';
 
 type BlogsType = {

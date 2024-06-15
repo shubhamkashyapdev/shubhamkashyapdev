@@ -1,24 +1,23 @@
-import type { FC } from 'react';
+'use client';
+
 import React, { useEffect, useState } from 'react';
 
-import { BlogCard, Parragraph } from '@/components/common';
-import { PageTitle, SearchBar, Topic } from '@/components/common/elements';
-import { getAllBlogsForCards } from '@/graphql/Blogs';
+import BlogCard from '@/components/common/cards/BlogCard';
+import PageTitle from '@/components/common/elements/MainTitle';
+import SearchBar from '@/components/common/elements/SearchBar';
+import Topic from '@/components/common/elements/Topic';
+import Parragraph from '@/components/common/typography/Parragraph';
 import { Meta } from '@/layouts/Meta';
 import useBlogsStore from '@/store/blogsStore';
 import { Main } from '@/templates/Main';
 import type { BlogCardType, TagType } from '@/types/component.types';
-import { axiosGraphQL } from '@/utils/axios';
 
-type BlogsType = {
-  docs: BlogCardType[];
-};
-
-const Blogs: FC<BlogsType> = ({ docs }) => {
+const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
   const { filteredBlogs, setFilteredBlogs, blogs, setBlogs } = useBlogsStore(
     (state) => state
   );
   const [value, setValue] = useState<string>('');
+
   const getFilteredSnippets = () => {
     if (value === '') {
       return blogs;
@@ -50,6 +49,7 @@ const Blogs: FC<BlogsType> = ({ docs }) => {
     setBlogs(docs);
     setFilteredBlogs(docs);
   }, []);
+
   return (
     <Main
       meta={
@@ -72,18 +72,6 @@ const Blogs: FC<BlogsType> = ({ docs }) => {
       </section>
     </Main>
   );
-};
-
-export const getServerSideProps = async () => {
-  const projectsRes = await axiosGraphQL.post(`/`, {
-    query: getAllBlogsForCards,
-  });
-  const blogs = projectsRes.data?.data?.Posts?.docs;
-  return {
-    props: {
-      docs: blogs,
-    },
-  };
 };
 
 export default Blogs;

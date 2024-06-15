@@ -1,17 +1,15 @@
-import type { FC } from 'react';
 import React from 'react';
 
-import { SeeMoreButton } from '@/components/common';
 import SectionTitle from '@/components/common/elements/MainTitle';
+import CodeSnippetCards from '@/components/common/Library/CodeSnippetCards';
+import SeeMoreButton from '@/components/common/typography/buttons/SeeMore';
 import type { CodeSnippetCardType } from '@/types/component.types';
-
-import { CodeSnippetCards } from '../Library';
 
 type CodeSnippetProps = {
   snippets: CodeSnippetCardType[];
 };
 
-const CodeSnippetsSection: FC<CodeSnippetProps> = ({ snippets }) => {
+const CodeSnippetsSection = ({ snippets }: CodeSnippetProps) => {
   return (
     <section className="">
       <SectionTitle>Library of code snippets</SectionTitle>
