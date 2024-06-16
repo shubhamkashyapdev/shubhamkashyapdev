@@ -6,12 +6,11 @@
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import type { FC } from 'react';
 import React from 'react';
 
 import type { BlogCardType } from '@/types/component.types';
 
-const BlogCard: FC<BlogCardType> = ({
+const BlogCard = ({
   id,
   createdAt,
   excerpt,
@@ -20,7 +19,7 @@ const BlogCard: FC<BlogCardType> = ({
   allTags,
   title,
   viewes,
-}) => {
+}: BlogCardType) => {
   const router = useRouter();
   const handleNavigate = () => {
     router.push(`/blogs/${id}`);
@@ -35,7 +34,7 @@ const BlogCard: FC<BlogCardType> = ({
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}${featuredImage}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${featuredImage.url}`}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"

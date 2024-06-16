@@ -15,6 +15,7 @@ async function getBlogs() {
 
 const BlogsPage = async () => {
   const docs: BlogCardType[] = await getBlogs();
+  console.log(docs);
   return <Blogs docs={docs} />;
 };
 
