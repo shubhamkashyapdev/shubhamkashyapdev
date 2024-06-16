@@ -5,7 +5,7 @@ export const getSnippetsForHome = `{
      title
       views
       tagline
-      tags {
+      allTags {
         id
         title
         icon {
@@ -24,7 +24,7 @@ export const getSnippetsForLibrary = `{
      title
       views
       tagline
-      tags {
+      allTags {
         id
         title
         icon {
@@ -43,7 +43,7 @@ export const getSnippetDataForPage = `query($id: String!) {
     views
     tagline
     subTagline
-    tags {
+    allTags {
       id
       title
       icon {

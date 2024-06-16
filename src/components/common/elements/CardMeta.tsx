@@ -7,11 +7,11 @@ import type { TagType } from '@/types/component.types';
 
 type CardMetaType = {
   views: number;
-  tags: TagType[];
+  allTags: TagType[];
   className?: string;
 };
 
-const CardMeta: FC<CardMetaType> = ({ views, tags, className }) => {
+const CardMeta: FC<CardMetaType> = ({ views, allTags, className }) => {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <div className="flex items-center gap-3 text-sm text-gray-800 dark:text-gray-300">
@@ -22,7 +22,7 @@ const CardMeta: FC<CardMetaType> = ({ views, tags, className }) => {
       </div>
       <span className="mx-2 h-2 w-2 rounded-full bg-gray-700 dark:bg-gray-300"></span>
       <div className="flex items-center gap-3 text-sm">
-        <Tags tags={tags} />
+        <Tags tags={allTags} />
       </div>
     </div>
   );

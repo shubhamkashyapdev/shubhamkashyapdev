@@ -5,7 +5,7 @@ query {
       id
       title
       tagline
-      tags {
+      allTags {
         id
         title
         slug
@@ -32,7 +32,7 @@ query {
       id
       title
       tagline
-      tags {
+      allTags {
         id
         title
         slug

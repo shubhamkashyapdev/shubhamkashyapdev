@@ -51,7 +51,7 @@ export type BlogCardType = {
   title: string;
   readTime: number;
   viewes: number;
-  tags: TagType[];
+  allTags: TagType[];
   createdAt: string;
   excerpt: string;
   publishedDate: string;
@@ -61,7 +61,7 @@ export type CodeSnippetCardType = {
   id: string;
   title: string;
   views: number;
-  tags: TagType[];
+  allTags: TagType[];
   tagline: string;
 };
 
@@ -69,7 +69,7 @@ export type ProjectCardType = {
   id: string;
   title: string;
   tagline: string;
-  tags: TagType[];
+  allTags: TagType[];
   featuredImage: {
     id: string;
     url: string;
@@ -93,5 +93,5 @@ export type BoilerplateCardType = {
     id: string;
     url: string;
   };
-  tags: TagType[];
+  allTags: TagType[];
 };

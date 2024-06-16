@@ -5,10 +5,10 @@ import React from 'react';
 import type { TagType } from '@/types/component.types';
 
 type AboutType = {
-  tags: TagType[];
+  allTags: TagType[];
 };
 
-const About: FC<AboutType> = ({ tags }) => {
+const About: FC<AboutType> = ({ allTags }) => {
   return (
     <>
       <section className="my-20">
@@ -80,7 +80,7 @@ const About: FC<AboutType> = ({ tags }) => {
         </article>
       </section>
       <section className="flex flex-wrap justify-center gap-8">
-        {tags.map((item: TagType, index: number) => (
+        {allTags.map((item: TagType, index: number) => (
           <div
             key={`about-${item.title}-${index}`}
             className="relative grid h-20 w-20 place-content-center rounded-sm bg-white shadow-sm duration-150 ease-in-out hover:-translate-y-1 hover:shadow-lg"

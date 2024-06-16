@@ -8,10 +8,10 @@ import { Main } from '@/templates/Main';
 import type { TagType } from '@/types/component.types';
 
 type AboutPageProps = {
-  tags: TagType[];
+  allTags: TagType[];
 };
 
-const AboutPage = ({ tags }: AboutPageProps) => {
+const AboutPage = ({ allTags }: AboutPageProps) => {
   return (
     <Main
       meta={
@@ -21,7 +21,7 @@ const AboutPage = ({ tags }: AboutPageProps) => {
         />
       }
     >
-      <About tags={tags} />
+      <About allTags={allTags} />
     </Main>
   );
 };

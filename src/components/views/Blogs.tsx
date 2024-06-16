@@ -31,8 +31,8 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
   const handleClick = (topic: string) => {
     setFilteredBlogs(
       blogs.filter((item: BlogCardType) => {
-        const { tags } = item;
-        const topicExists = tags.find((tag: TagType) => tag.title === topic);
+        const { allTags } = item;
+        const topicExists = allTags.find((tag: TagType) => tag.title === topic);
         if (topicExists) {
           return item;
         }

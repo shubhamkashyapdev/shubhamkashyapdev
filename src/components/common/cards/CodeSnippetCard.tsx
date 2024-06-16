@@ -11,7 +11,7 @@ import type { CodeSnippetCardType } from '@/types/component.types';
 const CodeSnippetCard: FC<CodeSnippetCardType> = ({
   tagline,
   views,
-  tags,
+  allTags,
   title,
   id,
 }) => {
@@ -25,7 +25,7 @@ const CodeSnippetCard: FC<CodeSnippetCardType> = ({
         <h3 className="text-base font-semibold text-gray-800 dark:text-gray-300">
           {title}
         </h3>
-        <CardMeta views={views} tags={tags} />
+        <CardMeta views={views} allTags={allTags} />
         <Parragraph className="mt-2 text-[0.85rem]">{tagline}</Parragraph>
       </div>
     </div>

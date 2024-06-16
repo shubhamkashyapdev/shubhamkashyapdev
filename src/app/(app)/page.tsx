@@ -17,7 +17,7 @@ const HomePage = async () => {
     query: getDataForHomePage,
   });
   const snippets = res.data?.data?.Libraries?.docs;
-  const projects = res.data?.data?.Projects?.docs;
+  const projects = res.data?.data?.Projects?.docs || [];
   const blogs = res.data?.data?.Posts?.docs;
   const boilerplates = res.data?.data?.Boilerplates?.docs;
   return (

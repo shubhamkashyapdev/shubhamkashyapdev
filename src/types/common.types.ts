@@ -48,6 +48,6 @@ export type LibrarySnippetPageType = {
   tagline: string;
   views: number;
   subTagline: string;
-  tags: TagType[];
+  allTags: TagType[];
   blocks: LibaryBlocksType;
 };

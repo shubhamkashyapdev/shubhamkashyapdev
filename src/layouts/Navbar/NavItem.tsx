@@ -22,9 +22,9 @@ const NavItem = ({ label, route, index }: NavItemProps) => {
       transition={{ ease: 'easeInOut', duration: 0.4 + index * 0.1 }}
     >
       {route.startsWith('/') ? (
-        <Link href={route} passHref key={`nav-item-${label}-${route}-${index}`}>
-          <li className="group relative cursor-pointer">
-            <a
+        <Link href={route} key={`nav-item-${label}-${route}-${index}`}>
+          <div className="group relative cursor-pointer">
+            <div
               className={`${
                 route === '/'
                   ? ''
@@ -34,9 +34,9 @@ const NavItem = ({ label, route, index }: NavItemProps) => {
               } text-base font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
             >
               {label}
-            </a>
+            </div>
             <span className="animated-border"></span>
-          </li>
+          </div>
         </Link>
       ) : (
         <a

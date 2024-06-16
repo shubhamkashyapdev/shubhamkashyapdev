@@ -47,7 +47,7 @@ const BlogPage = async ({ params }: { params: { id: string } }) => {
       <ParragraphBlock className="mt-1 max-w-[70ch]">
         {blog?.excerpt}
       </ParragraphBlock>
-      <CardMeta className="mt-2" tags={blog.tags} views={blog.views} />
+      <CardMeta className="mt-2" allTags={blog.allTags} views={blog.views} />
       <Blocks blocks={blog.blocks} />
     </Main>
   );

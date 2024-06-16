@@ -11,7 +11,7 @@ query  {
           url
         }
         views
-        tags {
+        allTags {
           id
           title 
           icon {
@@ -39,7 +39,7 @@ query  {
         url
       }
       views
-      tags {
+      allTags {
         id
         title 
         icon {
@@ -67,7 +67,7 @@ query($id: String!)  {
         url
       }
       views
-      tags {
+      allTags {
         id
         title 
         icon {

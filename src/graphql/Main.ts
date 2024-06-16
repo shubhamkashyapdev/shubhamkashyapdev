@@ -6,7 +6,7 @@ query {
      title
       views
       tagline
-      tags {
+      allTags {
         id
         title
         icon {
@@ -21,7 +21,7 @@ query {
       id
       title
       tagline
-      tags {
+      allTags {
         id
         title
         slug
@@ -52,7 +52,7 @@ query {
         url
       }
       views
-      tags {
+      allTags {
         id
         title 
         icon {
@@ -78,7 +78,7 @@ query {
        id 
        url
      }
-     tags {
+     allTags {
        id 
        title
        icon {

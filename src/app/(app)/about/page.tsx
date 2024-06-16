@@ -11,9 +11,9 @@ async function getTags() {
 }
 
 const Page = async () => {
-  const tags = await getTags();
+  const allTags = await getTags();
 
-  return <AboutPage tags={tags} />;
+  return <AboutPage allTags={allTags} />;
 };
 
 export default Page;

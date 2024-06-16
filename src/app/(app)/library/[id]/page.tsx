@@ -48,7 +48,7 @@ const CodeSnippetPage = async ({ params }: CodeSnippetPageType) => {
       <CardMeta
         className="mt-2"
         views={snippet.views || 0}
-        tags={snippet.tags}
+        allTags={snippet.allTags}
       />
       <hr className="mb-6 mt-4 h-[1.5px] w-full border-gray-300 dark:border-gray-700" />
       <Blockquote subTagline="Absolute Import is a great way to clean up your imports" />

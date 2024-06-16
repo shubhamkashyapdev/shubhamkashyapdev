@@ -34,8 +34,8 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
     }
     setFilteredSnippets(
       snippets.filter((item: CodeSnippetCardType) => {
-        const { tags } = item;
-        const topicExists = tags.find((tag: TagType) => tag.title === topic);
+        const { allTags } = item;
+        const topicExists = allTags.find((tag: TagType) => tag.title === topic);
         if (topicExists) {
           return item;
         }

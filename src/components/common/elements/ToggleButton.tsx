@@ -33,7 +33,6 @@ const ToggleButton: FC = () => {
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
           <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
