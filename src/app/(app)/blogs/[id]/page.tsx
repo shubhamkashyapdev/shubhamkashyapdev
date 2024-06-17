@@ -38,7 +38,9 @@ const BlogPage = async ({ params }: { params: { id: string } }) => {
       }
     >
       <Image
-        src={`${process.env.NEXT_PUBLIC_BASE_URL}${blog?.featuredImage?.url}`}
+        src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+          blog?.featuredImage?.url || '/'
+        }`}
         height={700}
         width={1440}
         alt="notionlink project"

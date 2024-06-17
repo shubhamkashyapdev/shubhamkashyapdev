@@ -50,7 +50,7 @@ const Clients: FC = () => {
         </Parragraph>
       </div>
       <div className="mt-8 flex flex-1 flex-wrap gap-1 gap-y-6 md:mt-2">
-        {clients.map((item, index) => (
+        {clients?.map((item, index) => (
           <Fragment key={`client-logo-${index}`}>
             <div className="flex min-w-[140px] flex-1 flex-col items-center">
               {item.logo}

@@ -9,7 +9,7 @@ async function getBlogs() {
   const projectsRes = await axiosGraphQL.post(`/`, {
     query: getAllBlogsForCards,
   });
-  const blogs = projectsRes.data?.data?.Posts?.docs;
+  const blogs = projectsRes.data?.data?.Posts?.docs || [];
   return blogs;
 }
 

@@ -20,7 +20,7 @@ const HomePage = async () => {
   const projects = res.data?.data?.Projects?.docs || [];
   const blogs = res.data?.data?.Posts?.docs || [];
   const boilerplates = res.data?.data?.Boilerplates?.docs || [];
-  console.log(snippets, projects, blogs, boilerplates);
+
   return (
     <Main
       meta={

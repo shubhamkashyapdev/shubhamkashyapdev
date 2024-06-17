@@ -8,14 +8,14 @@ type TopicType = {
   handleClick: (topic: string) => void;
 };
 
-const Topic: FC<TopicType> = ({ handleClick, topics }) => {
+const Topic: FC<TopicType> = ({ handleClick, topics = [] }) => {
   return (
     <div
       className="mt-2 flex flex-wrap items-baseline justify-start gap-2 text-sm text-gray-600 dark:text-gray-300"
       data-fade="3"
     >
       <span className="font-medium">Choose topic:</span>
-      {topics.map((item: string, index: number) => (
+      {topics?.map((item: string, index: number) => (
         <>
           {item === '' ? (
             <Label

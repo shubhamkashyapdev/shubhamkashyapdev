@@ -15,11 +15,11 @@ import BlockquoteBlock from '@/components/common/blocks/BlockquoteBlock';
 type BlocksType = {
   blocks: any;
 };
-const Blocks = ({ blocks }: BlocksType) => {
+const Blocks = ({ blocks = [] }: BlocksType) => {
   return (
     <section className="mb-20 flex flex-col md:flex-row">
       <div className="w-full md:w-[70%]">
-        {blocks.map((item: any, blockIndex: number) => {
+        {blocks?.map((item: any, blockIndex: number) => {
           if (item.blockType === 'primary-heading') {
             return (
               <PrimaryHeadingBlock
@@ -112,7 +112,7 @@ const Blocks = ({ blocks }: BlocksType) => {
                       </ul>
                     );
                   }
-                  // @ts-ignore
+
                   return items.children.map((parra: any, index: number) => (
                     <div
                       key={`block-parragraph-${index}-${item.id}`}

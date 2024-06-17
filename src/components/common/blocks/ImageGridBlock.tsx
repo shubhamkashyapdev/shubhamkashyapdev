@@ -14,10 +14,10 @@ type ImageGridBlockType = {
   imageGrid: ImageType[];
 };
 
-const ImageGridBlock: FC<ImageGridBlockType> = ({ imageGrid }) => {
+const ImageGridBlock: FC<ImageGridBlockType> = ({ imageGrid = [] }) => {
   return (
     <div className="mt-6 grid grid-cols-2 gap-4">
-      {imageGrid.map((item) => (
+      {imageGrid?.map((item) => (
         <div
           className="flex flex-col items-center space-y-2 rounded-md p-2 shadow-md"
           key={`image-grid-${item.id} `}

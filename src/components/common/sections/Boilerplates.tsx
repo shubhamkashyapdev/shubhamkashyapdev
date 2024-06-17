@@ -9,7 +9,7 @@ type BoilerplateType = {
   boilerplates: BoilerplateCardType[];
 };
 
-const Blogs: FC<BoilerplateType> = ({ boilerplates }) => {
+const Blogs: FC<BoilerplateType> = ({ boilerplates = [] }) => {
   return (
     <section className="">
       <SectionTitle>Starter Templates</SectionTitle>

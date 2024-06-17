@@ -10,7 +10,7 @@ type BlogsType = {
   blogs: BlogCardType[];
 };
 
-const Blogs: FC<BlogsType> = ({ blogs }) => {
+const Blogs: FC<BlogsType> = ({ blogs = [] }) => {
   return (
     <section className="">
       <SectionTitle>Featured Posts</SectionTitle>

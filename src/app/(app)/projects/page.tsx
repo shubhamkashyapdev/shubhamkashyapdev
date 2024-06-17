@@ -34,7 +34,7 @@ const Projects = async () => {
         Showcase of my work on FullStack development.
       </Parragraph>
       <section className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {projects.map((item) => (
+        {projects?.map((item) => (
           <ProjectCard key={item.id} project={item} />
         ))}
       </section>

@@ -8,10 +8,10 @@ type TagsProps = {
   tags: TagType[];
 };
 
-const Tags: FC<TagsProps> = ({ tags }) => {
+const Tags: FC<TagsProps> = ({ tags = [] }) => {
   return (
     <div className="flex gap-2">
-      {tags.map((item, index) => (
+      {tags?.map((item, index) => (
         <span
           key={item.id}
           className="relative h-[25px] w-[25px] rounded-sm dark:bg-white"

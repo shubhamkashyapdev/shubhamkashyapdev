@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardComponentType) => {
         </Parragraph>
         {/* tags - icons */}
         <div className="mt-2 flex gap-2">
-          {project.allTags.map((item) => (
+          {project?.allTags?.map((item) => (
             <Image
               className="dark:rounded-sm dark:bg-white"
               key={item?.icon ? item.icon.id : ''}

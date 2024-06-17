@@ -66,7 +66,7 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
       <SearchBar value={value} setValue={setValue} />
       <Topic handleClick={handleClick} topics={['Next.js', 'React.js']} />
       <section className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {filteredBlogs.map((item: BlogCardType) => (
+        {filteredBlogs?.map((item: BlogCardType) => (
           <BlogCard key={item.id} {...item} />
         ))}
       </section>
