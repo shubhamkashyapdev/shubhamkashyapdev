@@ -39,7 +39,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1671897436/shubhamwebdesign/l9usfw3pdytkshoj6f0q.svg"
+                  src="https://backend.shubhamkashyap.in/media/react-javascript-js-framework-facebook-svgrepo-com.svg"
                   alt="React"
                 />
                 React.js
@@ -49,7 +49,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1685179096/shubhamwebdesign/vjdctqjd7azxbor6t4hn.svg"
+                  src="https://backend.shubhamkashyap.in/media/next-js-svgrepo-com%20(1).svg"
                   alt="Nextjs"
                 />
                 Next.js
@@ -59,7 +59,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1685003242/shubhamwebdesign/z7tsijc58m8fdtqdbjku.svg"
+                  src="https://backend.shubhamkashyap.in/media/angular-svgrepo-com.svg"
                   alt="Angular"
                 />
                 Angular
@@ -69,7 +69,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1671897256/shubhamwebdesign/thgnx2x4k4s0q7xbkswt.svg"
+                  src="https://backend.shubhamkashyap.in/media/node-js-svgrepo-com.svg"
                   alt="Nodejs"
                 />
                 Node.js
@@ -79,7 +79,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1671897065/shubhamwebdesign/gcuyrfev52bqdo8wyzor.svg"
+                  src="https://backend.shubhamkashyap.in/media/mongo-svgrepo-com.svg"
                   alt="MongoDB"
                 />
                 MongoDB
@@ -89,7 +89,7 @@ const TechnologyStack = () => {
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://res.cloudinary.com/hexdev/image/upload/v1685003409/shubhamwebdesign/qwpza8whbleiqqwr0bfa.svg"
+                  src="https://backend.shubhamkashyap.in/media/aws-svgrepo-com.svg"
                   alt="AWS"
                 />
                 AWS

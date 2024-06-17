@@ -19,17 +19,17 @@ const About: FC<AboutType> = ({ allTags = [] }) => {
           Shubham Kashyap
         </h3>
         <article className="flex flex-col md:flex-row md:gap-10">
-          <span className="md:order-2 md:w-[30%] md:px-4">
+          <span className="md:order-2 md:w-[40%] md:px-4">
             <Image
-              src="https://res.cloudinary.com/hexdev/image/upload/v1670609144/shubhamwebdesign/mebggyy7ai5t7t0jcg31.jpg"
+              src="https://backend.shubhamkashyap.in/media/Profile_pic.jpg"
               height={280}
               width={250}
               objectFit="cover"
-              className=""
+              className="w-full"
               alt=""
             />
           </span>
-          <div className="mt-8 md:order-1 md:mt-0 md:w-[70%]">
+          <div className="mt-8 md:order-1 md:mt-0 md:w-[60%]">
             <p className="text-color">
               {`I began my web development journey in May 2020, right at the start of the pandemic. I decided to learn web development through a Udemy course and started exploring more about full stack JavaScript development by watching lots of YouTube videos. It has been an exciting and fulfilling experience as I've continued to grow my skills in web development.`}
             </p>
@@ -86,7 +86,9 @@ const About: FC<AboutType> = ({ allTags = [] }) => {
             className="relative grid h-20 w-20 place-content-center rounded-sm bg-white shadow-sm duration-150 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
-              src={item.icon?.url || ''}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+                item.icon?.url || '/'
+              }`}
               alt={item.title}
               height={65}
               width={65}
