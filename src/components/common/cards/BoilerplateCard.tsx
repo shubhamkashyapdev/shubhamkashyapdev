@@ -29,7 +29,7 @@ const BoilerplateCard = ({
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}${image.url}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${image?.url}`}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"
