@@ -8,7 +8,6 @@ import {
 } from '@/components/common/blocks';
 import Blocks from '@/components/common/elements/Blocks';
 import { getProjectDataForPage } from '@/graphql/Project';
-import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
@@ -29,14 +28,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <Main
-      meta={
-        <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
-        />
-      }
-    >
+    <Main>
       <section>
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_URL}${

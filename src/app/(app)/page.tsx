@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { Hero } from '@/components';
 import Divider from '@/components/common/elements/Divider';
 import Blogs from '@/components/common/sections/Blogs';
@@ -7,29 +9,36 @@ import FeaturedProjects from '@/components/common/sections/FeaturedProjects';
 import ProblemSolver from '@/components/common/sections/ProblemSolver';
 import TechnologyStack from '@/components/common/sections/TechnologyStack';
 import TechStack from '@/components/common/sections/TechStack';
-import { getDataForHomePage } from '@/graphql/Main';
-import { Meta } from '@/layouts/Meta';
+import {
+  getBoilerplatesForHomePage,
+  getLibrariesForHomePage,
+  getPostsForHomePage,
+  getProjectsForHomePage,
+} from '@/graphql/Main';
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
+export const metadata: Metadata = {
+  title: 'Shubham Kashyap Portfolio',
+  description:
+    'Full stack javascript developer - exploring the world of Genrative AI and ChatBot applications',
+};
+
 const HomePage = async () => {
-  const res = await axiosGraphQL.post(`/`, {
-    query: getDataForHomePage,
-  });
-  const snippets = res.data?.data?.Libraries?.docs || [];
-  const projects = res.data?.data?.Projects?.docs || [];
-  const blogs = res.data?.data?.Posts?.docs || [];
-  const boilerplates = res.data?.data?.Boilerplates?.docs || [];
+  const [librariesRes, projectsRes, postsRes, boilerplatesRes] =
+    await Promise.all([
+      axiosGraphQL.post('/', { query: getLibrariesForHomePage }),
+      axiosGraphQL.post('/', { query: getProjectsForHomePage }),
+      axiosGraphQL.post('/', { query: getPostsForHomePage }),
+      axiosGraphQL.post('/', { query: getBoilerplatesForHomePage }),
+    ]);
+  const snippets = librariesRes?.data?.data.Libraries?.docs || [];
+  const projects = projectsRes?.data?.data.Projects?.docs || [];
+  const blogs = postsRes?.data?.data.Posts?.docs || [];
+  const boilerplates = boilerplatesRes?.data?.data.Boilerplates?.docs || [];
 
   return (
-    <Main
-      meta={
-        <Meta
-          title="Shubham Kashyap"
-          description="Frelancer web developer and website designer with 3+ year of industry experience"
-        />
-      }
-    >
+    <Main>
       <Hero />
       <Divider
         className="mt-40 mb-32"

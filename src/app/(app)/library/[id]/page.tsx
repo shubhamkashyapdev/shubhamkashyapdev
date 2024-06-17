@@ -8,7 +8,6 @@ import Blockquote from '@/components/common/elements/components/Blockquote';
 import PageTitle from '@/components/common/elements/MainTitle';
 import Parragraph from '@/components/common/typography/Parragraph';
 import { getSnippetDataForPage } from '@/graphql/Library';
-import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
@@ -42,7 +41,7 @@ const CodeSnippetPage = async ({ params }: CodeSnippetPageType) => {
   }
 
   return (
-    <Main meta={<Meta title={snippet.title} description={snippet.tagline} />}>
+    <Main>
       <PageTitle>{snippet.title}</PageTitle>
       <Parragraph className="mt-1">{snippet.tagline}</Parragraph>
       <CardMeta

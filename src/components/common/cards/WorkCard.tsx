@@ -30,7 +30,7 @@ const WorkCard: FC<WorkCardProps> = ({ label, route, image, excerpt }) => {
           {label}
         </h6>
         <h4 className="mt-[8px] text-[1.05rem] leading-[1.2em] text-gray-800 dark:text-gray-300">
-          {`${excerpt}`.substring(0, 90)}
+          {`${excerpt}`?.substring(0, 90)}
         </h4>
         <Link href={route}>
           <a className="bottom-2 mt-4 inline-block w-fit rounded-md bg-gray-800 py-1 px-2 text-left text-sm text-gray-300 opacity-0 shadow-sm duration-150 ease-in-out hover:scale-95 group-hover:bottom-0 group-hover:opacity-100 group-hover:delay-100 dark:shadow-sm dark:shadow-gray-800 dark:hover:shadow-md">

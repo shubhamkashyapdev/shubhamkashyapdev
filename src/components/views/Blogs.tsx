@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import React, { useEffect, useState } from 'react';
 
 import BlogCard from '@/components/common/cards/BlogCard';
@@ -7,10 +8,14 @@ import PageTitle from '@/components/common/elements/MainTitle';
 import SearchBar from '@/components/common/elements/SearchBar';
 import Topic from '@/components/common/elements/Topic';
 import Parragraph from '@/components/common/typography/Parragraph';
-import { Meta } from '@/layouts/Meta';
 import useBlogsStore from '@/store/blogsStore';
 import { Main } from '@/templates/Main';
 import type { BlogCardType, TagType } from '@/types/component.types';
+
+export const metadata: Metadata = {
+  title: 'Blogs posts on shubham kashyap portfolio website',
+  description: '',
+};
 
 const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
   const { filteredBlogs, setFilteredBlogs, blogs, setBlogs } = useBlogsStore(
@@ -51,14 +56,7 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
   }, []);
 
   return (
-    <Main
-      meta={
-        <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
-        />
-      }
-    >
+    <Main>
       <PageTitle>Blogs</PageTitle>
       <Parragraph className="mt-0 text-[1.15rem]">
         Thoughts, Solutions, Concepts on Full Stack Development
@@ -66,8 +64,8 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
       <SearchBar value={value} setValue={setValue} />
       <Topic handleClick={handleClick} topics={['Next.js', 'React.js']} />
       <section className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {filteredBlogs?.map((item: BlogCardType) => (
-          <BlogCard key={item.id} {...item} />
+        {filteredBlogs?.map((item: BlogCardType, index: number) => (
+          <BlogCard key={`post-${item.id}-${index}`} {...item} />
         ))}
       </section>
     </Main>

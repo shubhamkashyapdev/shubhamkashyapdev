@@ -27,12 +27,12 @@ const BlogCard = ({
   return (
     <div
       onClick={handleNavigate}
-      className="card-border w-full scale-100 cursor-pointer overflow-hidden rounded-md  bg-white  transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100  dark:bg-primary-700"
+      className="card-border w-full scale-100 cursor-pointer overflow-hidden rounded-md bg-white transition duration-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 dark:bg-primary-700"
     >
       <div className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300">
         <div className="relative h-[150px]">
           {/* image */}
-          <div className="h-full w-full ">
+          <div className="h-full w-full">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_URL}${
                 featuredImage?.url || '/'
@@ -47,7 +47,7 @@ const BlogCard = ({
           <div className="absolute bottom-0 mt-2 flex w-full flex-wrap justify-end gap-y-1 gap-x-2 px-4 py-2 text-sm text-black dark:text-gray-100">
             {allTags?.map((item, index) => (
               <button
-                key={`blog-card-tag-${item.title}-${index}`}
+                key={`blog-card-tag-${item?.id}-${index}`}
                 className="inline-block rounded-md bg-gray-100 bg-opacity-80 px-1.5 py-0.5 font-medium text-gray-700 transition-colors hover:text-black focus:outline-none focus-visible:ring focus-visible:ring-primary-300 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-300 dark:bg-gray-700 dark:!bg-opacity-60 dark:text-gray-200 dark:hover:text-white dark:disabled:bg-gray-600 dark:disabled:text-gray-500"
               >
                 {item.title}
@@ -57,8 +57,8 @@ const BlogCard = ({
         </div>
         <div className="p-4 pb-6">
           <h4 className="text-gray-800 dark:text-gray-100">
-            {title.substring(0, 55)}
-            {title.length > 55 ? '...' : ''}
+            {title?.substring(0, 55)}
+            {title?.length > 55 ? '...' : ''}
           </h4>
           <div className="mt-2 flex items-center justify-start gap-2 text-sm font-medium text-gray-600 dark:text-gray-300">
             <div className="flex items-center gap-1">
@@ -70,7 +70,6 @@ const BlogCard = ({
                 className="inline-block text-base"
                 height="1em"
                 width="1em"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"

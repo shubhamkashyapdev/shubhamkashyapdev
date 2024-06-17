@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import React from 'react';
 import { Heartbeat } from 'tabler-icons-react';
 
@@ -11,7 +10,7 @@ type CardMetaType = {
   className?: string;
 };
 
-const CardMeta: FC<CardMetaType> = ({ views, allTags, className }) => {
+const CardMeta = ({ views, allTags, className }: CardMetaType) => {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <div className="flex items-center gap-3 text-sm text-gray-800 dark:text-gray-300">

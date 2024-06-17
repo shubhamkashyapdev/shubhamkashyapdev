@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import type { FC } from 'react';
 import React from 'react';
 
 import type { TagType } from '@/types/component.types';
@@ -8,7 +7,7 @@ type TagsProps = {
   tags: TagType[];
 };
 
-const Tags: FC<TagsProps> = ({ tags = [] }) => {
+const Tags = ({ tags = [] }: TagsProps) => {
   return (
     <div className="flex gap-2">
       {tags?.map((item, index) => (
@@ -19,7 +18,7 @@ const Tags: FC<TagsProps> = ({ tags = [] }) => {
           <Image
             className="dark:rounded-sm "
             key={`tag-icon-${item?.icon}-${index}`}
-            src={item?.icon ? item.icon.url : ''}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.icon?.url || '/'}`}
             layout="fill"
             objectFit="contain"
             alt={`${item.title} SVG Icon`}

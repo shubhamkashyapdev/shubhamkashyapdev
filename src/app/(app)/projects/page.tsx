@@ -4,7 +4,6 @@ import ProjectCard from '@/components/common/cards/FeaturedProjectCard';
 import PageTitle from '@/components/common/elements/MainTitle';
 import Parragraph from '@/components/common/typography/Parragraph';
 import { getAllProjectsForCards } from '@/graphql/Project';
-import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import type { ProjectCardType } from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
@@ -21,14 +20,7 @@ const Projects = async () => {
   const projects: ProjectCardType[] = await getProjects();
 
   return (
-    <Main
-      meta={
-        <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
-        />
-      }
-    >
+    <Main>
       <PageTitle>Projects</PageTitle>
       <Parragraph className="mt-0 text-[1.15rem]">
         Showcase of my work on FullStack development.

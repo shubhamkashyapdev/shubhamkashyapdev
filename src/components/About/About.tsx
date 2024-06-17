@@ -22,8 +22,8 @@ const About: FC<AboutType> = ({ allTags = [] }) => {
           <span className="md:order-2 md:w-[40%] md:px-4">
             <Image
               src="https://backend.shubhamkashyap.in/media/Profile_pic.jpg"
-              height={280}
-              width={250}
+              height={500}
+              width={500}
               objectFit="cover"
               className="w-full"
               alt=""

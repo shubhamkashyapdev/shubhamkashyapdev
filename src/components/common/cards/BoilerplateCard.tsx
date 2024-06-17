@@ -50,13 +50,13 @@ const BoilerplateCard = ({
         </div>
         <div className="p-4 pb-6">
           <h4 className="text-xl font-bold text-gray-800 dark:text-gray-100">
-            {title.substring(0, 55)}
-            {title.length > 55 ? '...' : ''}
+            {title?.substring(0, 55)}
+            {title?.length > 55 ? '...' : ''}
           </h4>
 
           <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-            {description.substring(0, 120)}
-            {description.length > 120 ? '...' : ''}
+            {description?.substring(0, 120)}
+            {description?.length > 120 ? '...' : ''}
           </p>
         </div>
       </div>

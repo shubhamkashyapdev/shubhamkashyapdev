@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Label from '@/components/common/elements/Label';
 
@@ -16,21 +16,13 @@ const Topic: FC<TopicType> = ({ handleClick, topics = [] }) => {
     >
       <span className="font-medium">Choose topic:</span>
       {topics?.map((item: string, index: number) => (
-        <>
+        <Fragment key={`topic-${item}-${index}`}>
           {item === '' ? (
-            <Label
-              key={`code-snippet-${item}-${index}`}
-              handleClick={() => handleClick('')}
-              topic={'All'}
-            />
+            <Label handleClick={() => handleClick('')} topic={'All'} />
           ) : (
-            <Label
-              key={`code-snippet-${item}-${index}`}
-              handleClick={() => handleClick(item)}
-              topic={item}
-            />
+            <Label handleClick={() => handleClick(item)} topic={item} />
           )}
-        </>
+        </Fragment>
       ))}
 
       <div id="skip-tags" className="hidden"></div>
