@@ -8,7 +8,7 @@ async function getSnippets() {
   const res = await axiosGraphQL.post(`/`, {
     query: getSnippetsForLibrary,
   });
-  const data = res.data?.data?.Libraries?.docs;
+  const data = res.data?.data?.Libraries?.docs || [];
   return data;
 }
 

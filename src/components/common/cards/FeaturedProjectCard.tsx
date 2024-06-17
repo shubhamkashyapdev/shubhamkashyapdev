@@ -48,7 +48,9 @@ const ProjectCard = ({ project }: ProjectCardComponentType) => {
         <div className="mt-4 h-[150px] w-full">
           <Image
             className="rounded-md"
-            src={`${process.env.NEXT_PUBLIC_BASE_URL}${project?.featuredImage.url}`}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+              project?.featuredImage?.url || '/'
+            }`}
             height={170}
             width={350}
             objectFit="cover"

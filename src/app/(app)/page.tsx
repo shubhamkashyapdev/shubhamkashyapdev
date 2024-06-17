@@ -16,11 +16,11 @@ const HomePage = async () => {
   const res = await axiosGraphQL.post(`/`, {
     query: getDataForHomePage,
   });
-  const snippets = res.data?.data?.Libraries?.docs;
+  const snippets = res.data?.data?.Libraries?.docs || [];
   const projects = res.data?.data?.Projects?.docs || [];
-  const blogs = res.data?.data?.Posts?.docs;
-  const boilerplates = res.data?.data?.Boilerplates?.docs;
-
+  const blogs = res.data?.data?.Posts?.docs || [];
+  const boilerplates = res.data?.data?.Boilerplates?.docs || [];
+  console.log(snippets, projects, blogs, boilerplates);
   return (
     <Main
       meta={

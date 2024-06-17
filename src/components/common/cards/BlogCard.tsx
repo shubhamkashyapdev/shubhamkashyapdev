@@ -34,7 +34,9 @@ const BlogCard = ({
           {/* image */}
           <div className="h-full w-full ">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}${featuredImage.url}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+                featuredImage?.url || '/'
+              }`}
               className="rounded-t-lg"
               layout="fill"
               objectFit="cover"

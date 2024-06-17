@@ -13,7 +13,7 @@ async function getProjects() {
   const projectsRes = await axiosGraphQL.post(`/`, {
     query: getAllProjectsForCards,
   });
-  const projects = projectsRes.data?.data?.Projects?.docs;
+  const projects = projectsRes.data?.data?.Projects?.docs || [];
   return projects;
 }
 

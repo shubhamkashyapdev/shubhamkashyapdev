@@ -39,7 +39,9 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
     >
       <section>
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_URL}${project?.featuredImage?.url}`}
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+            project?.featuredImage?.url || '/'
+          }`}
           height={700}
           width={1440}
           alt="notionlink project"

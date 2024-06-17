@@ -6,7 +6,7 @@ async function getTags() {
   const res = await axiosGraphQL.post(`/`, {
     query: getAllTags,
   });
-  const tags = res.data?.data?.Tags.docs;
+  const tags = res.data?.data?.Tags.docs || [];
   return tags;
 }
 
