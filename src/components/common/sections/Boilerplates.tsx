@@ -14,9 +14,11 @@ const Blogs: FC<BoilerplateType> = ({ boilerplates = [] }) => {
     <section className="">
       <SectionTitle>Starter Templates</SectionTitle>
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {boilerplates?.map((item, index) => (
-          <BoilerplateCard key={`blogs-${index}-${item.id}`} {...item} />
-        ))}
+        {boilerplates?.length
+          ? boilerplates?.map((item, index) => (
+              <BoilerplateCard key={`blogs-${index}-${item?.id}`} {...item} />
+            ))
+          : null}
       </div>
     </section>
   );
