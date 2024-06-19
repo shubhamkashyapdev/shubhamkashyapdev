@@ -18,6 +18,8 @@ import {
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'Shubham Kashyap Portfolio',
   description:
@@ -27,7 +29,9 @@ export const metadata: Metadata = {
 const HomePage = async () => {
   const [librariesRes, projectsRes, postsRes, boilerplatesRes] =
     await Promise.all([
-      axiosGraphQL.post('/', { query: getLibrariesForHomePage }),
+      axiosGraphQL.post('/', {
+        query: getLibrariesForHomePage,
+      }),
       axiosGraphQL.post('/', { query: getProjectsForHomePage }),
       axiosGraphQL.post('/', { query: getPostsForHomePage }),
       axiosGraphQL.post('/', { query: getBoilerplatesForHomePage }),

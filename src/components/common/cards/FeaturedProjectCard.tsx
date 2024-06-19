@@ -37,7 +37,9 @@ const ProjectCard = ({ project }: ProjectCardComponentType) => {
             <Image
               className="dark:rounded-sm dark:bg-white"
               key={item?.icon ? item.icon.id : ''}
-              src={item?.icon ? item.icon.url : ''}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${
+                item?.icon?.url || '/'
+              }`}
               height={20}
               width={20}
               objectFit="cover"

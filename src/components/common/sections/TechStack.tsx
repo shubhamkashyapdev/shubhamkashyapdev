@@ -86,15 +86,9 @@ const TechStack = () => {
             key={`technology-item-${item.label}-${item.category}`}
             className="flex h-fit w-fit justify-center gap-2 rounded-md bg-gray-800 px-2 py-1 text-sm text-white drop-shadow-md dark:bg-gray-800 dark:shadow-gray-300"
           >
-            <Image
-              src={
-                item.icon ||
-                'https://res.cloudinary.com/hexdev/image/upload/v1685003333/shubhamwebdesign/lgy8frebiwkyppiwaozn.svg'
-              }
-              alt="abc"
-              height={20}
-              width={20}
-            />{' '}
+            {item.icon ? (
+              <Image src={item.icon} alt="abc" height={20} width={20} />
+            ) : null}{' '}
             {item.label}
           </motion.span>
         ))}

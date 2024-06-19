@@ -8,6 +8,8 @@ import { Main } from '@/templates/Main';
 import type { ProjectCardType } from '@/types/component.types';
 import { axiosGraphQL } from '@/utils/axios';
 
+export const revalidate = 3600;
+
 async function getProjects() {
   const projectsRes = await axiosGraphQL.post(`/`, {
     query: getAllProjectsForCards,
