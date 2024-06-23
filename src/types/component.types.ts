@@ -50,7 +50,7 @@ export type BlogCardType = {
   slug: string;
   title: string;
   readTime: number;
-  viewes: number;
+  views: number;
   allTags: TagType[];
   createdAt: string;
   excerpt: string;
@@ -59,6 +59,7 @@ export type BlogCardType = {
 
 export type CodeSnippetCardType = {
   id: string;
+  slug: string;
   title: string;
   views: number;
   allTags: TagType[];

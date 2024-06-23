@@ -38,7 +38,7 @@ const HomePage = async () => {
     ]);
   const snippets = librariesRes?.data?.data.Libraries?.docs || [];
   const projects = projectsRes?.data?.data.Projects?.docs || [];
-  const blogs = postsRes?.data?.data.Posts?.docs || [];
+  const blogs = postsRes?.data?.data?.Posts?.docs || [];
   const boilerplates = boilerplatesRes?.data?.data.Boilerplates?.docs || [];
 
   return (

@@ -1,16 +1,14 @@
-import Link from 'next/link';
 import React from 'react';
-import { ArrowRight } from 'tabler-icons-react';
 
 import {
   CodeBlock,
   FeaturesListBlock,
   ImageBlock,
   ImageGridBlock,
-  ParragraphBlock,
   PrimaryHeadingBlock,
 } from '@/components/common/blocks';
 import BlockquoteBlock from '@/components/common/blocks/BlockquoteBlock';
+import RichText from '@/components/elements/RichText';
 
 type BlocksType = {
   blocks: any;
@@ -91,63 +89,7 @@ const Blocks = ({ blocks = [] }: BlocksType) => {
               <React.Fragment
                 key={`block-${item.blockType}-${item?.id}-${blockIndex}`}
               >
-                {item.parragraph.map((items: any, pIndex: number) => {
-                  if (items.type === 'ul') {
-                    return (
-                      <ul
-                        className="my-4 flex flex-col gap-1"
-                        key={`ul-${item.id}-${pIndex}`}
-                      >
-                        {items.children.map((pItem: any, index: number) =>
-                          pItem.children.map((subItem: { text: string }) => (
-                            <li
-                              className="text-color flex gap-6"
-                              key={`sub-item-${index}-${pIndex}-${item.id}`}
-                            >
-                              <span className="">{index + 1}.</span>
-                              <span>{subItem.text}</span>
-                            </li>
-                          ))
-                        )}
-                      </ul>
-                    );
-                  }
-
-                  return items.children.map((parra: any, index: number) => (
-                    <div
-                      key={`block-parragraph-${index}-${item.id}`}
-                      className="flex space-x-4"
-                    >
-                      {parra?.text ? (
-                        <ParragraphBlock
-                          key={`block-parragraph-item-${item.id}-${index}`}
-                          className={`${
-                            pIndex > 0 ? 'mt-2' : 'mt-1'
-                          } flex space-x-4`}
-                        >
-                          {parra.text}
-                        </ParragraphBlock>
-                      ) : null}
-                      <span>
-                        {parra?.type &&
-                        parra?.type === 'link' &&
-                        parra?.children[0]?.text ? (
-                          <div className="flex space-x-4">
-                            <ArrowRight className="text-color" />
-                            <Link
-                              href={parra?.url}
-                              target={parra.newTab ? '_blank' : '_self'}
-                            >
-                              <a className="text-color border-b-2 border-transparent hover:border-b-2 hover:border-primary-300">
-                                {parra?.children[0]?.text}
-                              </a>
-                            </Link>
-                          </div>
-                        ) : null}
-                      </span>
-                    </div>
-                  ));
-                })}
+                <RichText content={item.parragraph}></RichText>
               </React.Fragment>
             );
           }

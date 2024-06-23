@@ -20,7 +20,8 @@ export const getSnippetsForHome = `{
 export const getSnippetsForLibrary = `{
   Libraries {
     docs {
-      id
+     id
+     slug
      title
       views
       tagline
@@ -36,9 +37,12 @@ export const getSnippetsForLibrary = `{
   }
 }`;
 
-export const getSnippetDataForPage = `query($id: String!) {
-  Library(id: $id) {
-    id
+export const getSnippetDataForPage = `
+  query($slug: String!) {
+  Libraries(limit: 1, where:{ slug:{ equals: $slug}}) {
+   docs {
+     id
+    slug
     title
     views
     tagline
@@ -76,4 +80,7 @@ export const getSnippetDataForPage = `query($id: String!) {
     }
     }
   }
-}`;
+  }
+}
+
+`;

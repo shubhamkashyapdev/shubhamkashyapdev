@@ -11,18 +11,18 @@ import React from 'react';
 import type { BlogCardType } from '@/types/component.types';
 
 const BlogCard = ({
-  id,
+  slug,
   createdAt,
   excerpt,
   featuredImage,
   readTime,
   allTags = [],
   title,
-  viewes,
+  views,
 }: BlogCardType) => {
   const router = useRouter();
   const handleNavigate = () => {
-    router.push(`/blogs/${id}`);
+    router.push(`/blogs/${slug}`);
   };
   return (
     <div
@@ -107,7 +107,7 @@ const BlogCard = ({
                 ></path>
               </svg>
               <span className="bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
-                {viewes} views
+                {views || 0} views
               </span>
             </div>
           </div>

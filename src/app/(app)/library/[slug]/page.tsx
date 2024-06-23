@@ -13,15 +13,15 @@ import { axiosGraphQL } from '@/utils/axios';
 
 type CodeSnippetPageType = {
   params: {
-    id: string;
+    slug: string;
   };
 };
-async function getSnippet(id: string) {
+async function getSnippet(slug: string) {
   const res = await axiosGraphQL.post(`/`, {
     query: getSnippetDataForPage,
-    variables: { id },
+    variables: { slug },
   });
-  const data = res?.data?.data?.Library;
+  const data = res?.data?.data?.Libraries?.docs[0];
   return data;
 }
 
@@ -34,7 +34,7 @@ export async function generateMetadata() {
 }
 
 const CodeSnippetPage = async ({ params }: CodeSnippetPageType) => {
-  const snippet = await getSnippet(params.id);
+  const snippet = await getSnippet(params.slug);
 
   if (!snippet) {
     notFound();

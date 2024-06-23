@@ -41,7 +41,7 @@ query {
       }
     }
   }
-  Posts(limit:6) {
+  Posts(limit:6, where: { status: {equals: published} }) {
     docs {
       id
       title
@@ -97,6 +97,7 @@ query {
   Libraries(limit: 8) {
     docs {
       id
+      slug
       title
       views
       tagline
@@ -144,7 +145,7 @@ query {
 `;
 export const getPostsForHomePage = `
 query {
-  Posts(limit: 6) {
+  Posts(limit: 6, where: { status: {equals: published} }) {
     docs {
       id
       title

@@ -11,19 +11,23 @@ import { getBlogDataForPage } from '@/graphql/Blogs';
 import { Main } from '@/templates/Main';
 import { axiosGraphQL } from '@/utils/axios';
 
-async function getBlog(id: string) {
+async function getBlog(slug: string) {
   const res = await axiosGraphQL.post(`/`, {
     query: getBlogDataForPage,
-    variables: { id },
+    variables: { slug },
   });
-  const blog = res?.data?.data?.Post;
+
+  const blog = res?.data?.data?.Posts.docs[0];
   return blog;
 }
 
-const BlogPage = async ({ params }: { params: { id: string } }) => {
-  const blog = await getBlog(params.id);
+const BlogPage = async ({ params }: { params: { slug: string } }) => {
+  const blog = await getBlog(params.slug);
 
   if (!blog) {
+    notFound();
+  }
+  if (blog.status !== 'published') {
     notFound();
   }
 

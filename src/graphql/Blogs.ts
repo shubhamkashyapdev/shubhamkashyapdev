@@ -1,6 +1,6 @@
 export const getBlogsForHome = `
 query  {
-    Posts(limit:6) {
+    Posts(limit:6, where: { status: {equals: published} }) {
       docs {
         id
         title
@@ -28,7 +28,7 @@ query  {
 `;
 export const getAllBlogsForCards = `
 query  {
-  Posts(limit:6) {
+  Posts(limit:6, where: { status: {equals: published} }) {
     docs {
       id
       title
@@ -56,12 +56,14 @@ query  {
 `;
 
 export const getBlogDataForPage = `
-query($id: String!)  {
-  Post(id: $id) {
-        id
+query($slug: String!)  {
+  Posts(limit:1, where:{slug: {equals: $slug}}) {
+      docs {
+      id
       title
       slug
       readTime
+      status
       featuredImage {
         id
         url
@@ -136,5 +138,6 @@ query($id: String!)  {
          }
         }
     }
+      }
   }
 `;

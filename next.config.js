@@ -20,6 +20,10 @@ module.exports = withBundleAnalyzer({
         protocol: 'https',
       },
       {
+        hostname: 'localhost',
+        port: '5005',
+      },
+      {
         hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**',
