@@ -14,7 +14,9 @@ const Topic: FC<TopicType> = ({ handleClick, topics = [] }) => {
       className="mt-2 flex flex-wrap items-baseline justify-start gap-2 text-sm text-gray-600 dark:text-gray-300"
       data-fade="3"
     >
-      <span className="font-medium">Choose topic:</span>
+      <span className="font-medium text-gray-900 dark:text-white">
+        Choose topic:
+      </span>
       {topics?.map((item: string, index: number) => (
         <Fragment key={`topic-${item}-${index}`}>
           {item === '' ? (

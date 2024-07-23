@@ -1,0 +1,12 @@
+/* Typewriter.module.css */
+.darkText {
+  color: white;
+}
+
+.lightText {
+  color: black;
+}
+
+.typewriterWrapper {
+  /* Additional wrapper styles if needed */
+}

@@ -1,12 +1,24 @@
 'use client';
 
+import { useTheme } from 'next-themes';
 import React from 'react';
 import TypewriterComponent from 'typewriter-effect';
 
+import Styles from './Typewriter.module.css';
+
 const TypewriterEffect = () => {
+  const { theme } = useTheme();
+
+  // Function to determine text color based on theme
+  const getTextClassName = () =>
+    theme === 'dark' ? Styles.darkText : Styles.lightText;
   return (
     <TypewriterComponent
-      options={{ loop: true, deleteSpeed: 750 }}
+      options={{
+        loop: true,
+        deleteSpeed: 750,
+        wrapperClassName: `${Styles.typewriterWrapper} ${getTextClassName()}`,
+      }}
       onInit={(typewirter) => {
         typewirter
           .typeString('MERN Developer')

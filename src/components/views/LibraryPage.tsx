@@ -22,7 +22,8 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
     }
     const filteredCodeSnippets = snippets!.filter(
       (item: CodeSnippetCardType) =>
-        item.tagline.includes(value) || item.title.includes(value)
+        item.tagline.toLowerCase().includes(value.toLowerCase()) ||
+        item.title.toLowerCase().includes(value.toLowerCase())
     );
     return filteredCodeSnippets;
   };

@@ -29,9 +29,9 @@ const NavItem = ({ label, route, index }: NavItemProps) => {
                 route === '/'
                   ? ''
                   : activeRoute.includes(route)
-                  ? 'bg-primary-300/75 dark:text-primary-300'
+                  ? 'text-primary-300/75 dark:text-primary-300'
                   : ''
-              } text-base font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
+              } text-base font-medium text-gray-900 antialiased drop-shadow-sm ease-in-out hover:text-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
             >
               {label}
             </div>
@@ -42,7 +42,7 @@ const NavItem = ({ label, route, index }: NavItemProps) => {
         <a
           href={route}
           target="_blank"
-          className={` text-base font-medium antialiased drop-shadow-sm ease-in-out hover:bg-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
+          className={`font-medium text-gray-900 antialiased drop-shadow-sm ease-in-out hover:text-primary-300/75 dark:bg-transparent dark:text-gray-200 hover:dark:text-primary-300 focus:dark:text-primary-300`}
           rel="noreferrer"
         >
           {label}

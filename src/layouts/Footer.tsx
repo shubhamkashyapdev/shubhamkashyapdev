@@ -1,3 +1,6 @@
+'use client';
+
+import { useTheme } from 'next-themes';
 import React from 'react';
 import {
   BrandGithub,
@@ -56,6 +59,7 @@ const socialLinks: SocialIconProps[] = [
 ];
 
 const Footer = () => {
+  const { theme } = useTheme();
   return (
     <footer className="mt-60 mb-4">
       <hr className="h-[2px] bg-primary-700 dark:bg-gray-800" />
@@ -73,7 +77,10 @@ const Footer = () => {
         </div>
         <div className="mt-6 flex flex-col items-center justify-center space-x-2 text-base text-gray-900 dark:text-gray-200 md:flex-row">
           <div className="flex items-center space-x-1">
-            <Copyright size={16} /> <span>shubhamkashyapdev</span>
+            <Copyright size={16} color={theme === 'dark' ? 'white' : 'black'} />{' '}
+            <span className="text-gray-900 dark:text-white">
+              shubhamkashyapdev
+            </span>
           </div>
         </div>
       </div>
