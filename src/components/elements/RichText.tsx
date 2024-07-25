@@ -104,7 +104,11 @@ const RichText: React.FC<RichTextProps> = ({ content }) => {
         textContent = (
           <CodeBlock code={node.text} language="jsx" showLineNumbers={false} />
         );
-      return <React.Fragment key={index}>{textContent}</React.Fragment>;
+      return (
+        <div className="text-gray-900 dark:text-gray-300" key={index}>
+          {textContent}
+        </div>
+      );
     }
 
     switch (node.type) {

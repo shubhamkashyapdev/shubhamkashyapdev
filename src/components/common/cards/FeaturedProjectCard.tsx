@@ -61,7 +61,7 @@ const ProjectCard = ({ project }: ProjectCardComponentType) => {
         </div>
         <Link
           href={`/projects/${project.id}`}
-          className="group relative mt-6 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white"
+          className="group relative mt-12 text-base font-semibold text-gray-700 hover:text-primary-700 dark:text-gray-300 hover:dark:text-white"
         >
           View Project
           <span className="animated-border"></span>

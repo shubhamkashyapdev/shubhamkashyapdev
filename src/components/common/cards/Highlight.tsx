@@ -38,7 +38,10 @@ const Highlight: FC<HightlightCardProps> = ({
         className="flex items-center pt-2 text-sm text-gray-700    dark:text-gray-300"
         rel="noreferrer"
       >
-        {icon} <span className="hover:text-primary-200">{tag}</span>
+        {icon}{' '}
+        <span className="text-gray-700 hover:text-primary-200 dark:text-white">
+          {tag}
+        </span>
       </a>
     </div>
   );

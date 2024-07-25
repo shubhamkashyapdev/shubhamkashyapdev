@@ -22,7 +22,8 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
     }
     const filteredCodeSnippets = snippets!.filter(
       (item: CodeSnippetCardType) =>
-        item.tagline.includes(value) || item.title.includes(value)
+        item.tagline.toLowerCase().includes(value.toLowerCase()) ||
+        item.title.toLowerCase().includes(value.toLowerCase())
     );
     return filteredCodeSnippets;
   };
@@ -30,17 +31,13 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
   const handleClick = (topic: string) => {
     if (topic === '') {
       setFilteredSnippets(snippets);
-    }
-    setFilteredSnippets(
-      snippets.filter((item: CodeSnippetCardType) => {
+    } else {
+      const filtered = snippets.filter((item: CodeSnippetCardType) => {
         const { allTags } = item;
-        const topicExists = allTags.find((tag: TagType) => tag.title === topic);
-        if (topicExists) {
-          return item;
-        }
-        return null;
-      })
-    );
+        return allTags.some((tag: TagType) => tag.title === topic);
+      });
+      setFilteredSnippets(filtered);
+    }
   };
 
   useEffect(() => {
@@ -60,7 +57,13 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
       </Parragraph>
       <SearchBar value={value} setValue={setValue} />
       <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} />
-      <CodeSnippetCards snippets={filteredSnippets} />
+      {filteredSnippets.length > 0 ? (
+        <CodeSnippetCards snippets={filteredSnippets} />
+      ) : (
+        <p className="text-gray-600 dark:text-gray-300 flex justify-center w-full">
+          No match found!
+        </p>
+      )}
     </Main>
   );
 };

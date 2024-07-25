@@ -28,7 +28,7 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
       return blogs;
     }
     const filteredCodeSnippets = blogs!.filter((item: BlogCardType) =>
-      item.title.includes(value)
+      item.title.toLowerCase().includes(value.toLowerCase())
     );
     return filteredCodeSnippets;
   };

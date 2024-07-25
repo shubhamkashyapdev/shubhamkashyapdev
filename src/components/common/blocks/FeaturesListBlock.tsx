@@ -18,7 +18,9 @@ const FeaturesListBlock: FC<FeaturesListBlockType> = ({ features = [] }) => {
           key={`feature-${index}`}
           className="relative flex items-center text-[18px] before:absolute before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-gray-500 dark:text-gray-300 dark:before:bg-gray-700"
         >
-          <span className="ml-6">{item.featureText}</span>
+          <span className="ml-6 text-gray-900 dark:text-gray-300">
+            {item.featureText}
+          </span>
         </li>
       ))}
     </ul>

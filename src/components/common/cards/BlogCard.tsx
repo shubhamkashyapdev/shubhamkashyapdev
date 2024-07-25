@@ -3,9 +3,11 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
 /* eslint-disable react/no-unescaped-entities */
+import { IconClockHour10, IconEye } from '@tabler/icons-react';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useTheme } from 'next-themes';
 import React from 'react';
 
 import type { BlogCardType } from '@/types/component.types';
@@ -21,6 +23,7 @@ const BlogCard = ({
   views,
 }: BlogCardType) => {
   const router = useRouter();
+  const { theme } = useTheme();
   const handleNavigate = () => {
     router.push(`/blogs/${slug}`);
   };
@@ -62,51 +65,22 @@ const BlogCard = ({
           </h4>
           <div className="mt-2 flex items-center justify-start gap-2 text-sm font-medium text-gray-600 dark:text-gray-300">
             <div className="flex items-center gap-1">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="inline-block text-base"
-                height="1em"
-                width="1em"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-              <span className="bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
+              <IconClockHour10
+                stroke={2}
+                size={15}
+                color={theme === 'dark' ? 'white' : 'black'}
+              />
+              <span className="bg-gradient-to-tr  text-gray-900 dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
                 {readTime} min read
               </span>
             </div>
             <div className="flex items-center gap-1">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="inline-block text-base"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                ></path>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                ></path>
-              </svg>
-              <span className="bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
+              <IconEye
+                stroke={2}
+                size={18}
+                color={theme === 'dark' ? 'white' : 'black'}
+              />
+              <span className="bg-gradient-to-tr text-gray-900 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
                 {views || 0} views
               </span>
             </div>

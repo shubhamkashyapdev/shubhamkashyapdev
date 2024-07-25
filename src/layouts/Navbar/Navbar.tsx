@@ -13,7 +13,7 @@ type NavbarProps = {
 const Navbar = ({ navLinks, className, navClassName }: NavbarProps) => {
   return (
     <nav className={`flex justify-center text-primary-700 ${navClassName}`}>
-      <ul className={`flex items-center space-x-3 ${className}`}>
+      <ul className={`flex items-center space-x-3  ${className}`}>
         {navLinks.map((item, index) => (
           <NavItem
             key={`navlink-${item.route}-${item.label}-${index}`}

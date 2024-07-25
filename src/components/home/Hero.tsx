@@ -1,6 +1,9 @@
+'use client';
+
 import { IconGlobe } from '@tabler/icons';
+import { useTheme } from 'next-themes';
 import React from 'react';
-import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
+import { BrandGithub } from 'tabler-icons-react';
 
 import Hightlight from '@/components/common/cards/Highlight';
 import DownArrow from '@/components/common/elements/DownArrow';
@@ -9,6 +12,7 @@ import Parragraph from '@/components/common/typography/Parragraph';
 import HeroCTA from '@/components/home/HeroCTA';
 
 const Hero = () => {
+  const { theme } = useTheme();
   return (
     <div className="relative mb-16 mt-6 flex flex-col md:flex-row md:space-x-10">
       <div className="flex flex-[6] items-center ">
@@ -16,18 +20,24 @@ const Hero = () => {
           <h1 className="text-shadow-md dark:text-gradient text-center text-[40px] font-bold leading-[1.1em] text-primary-700 antialiased sm:text-[50px] md:text-left xl:text-[60px]">
             Hello, i am <br /> Shubham Kashyap.
           </h1>
-          <h4 className="text-shadow-sm mt-2 text-center text-xl font-semibold text-primary-700 dark:text-white md:text-left md:text-2xl">
+          <h4 className="text-shadow-sm mt-2 text-center text-xl font-semibold md:text-left md:text-2xl">
             <TypewriterEffect />
           </h4>
           <Parragraph className="centered mt-6">
             I am a full stack web & mobile developer with 3+ years of experience
             and i have worked on projects from website design with Next.js &
             TailwindCSS, MERN e-commerce website,{' '}
-            <strong>mobile app development</strong>, blockchain application to{' '}
-            <strong>MVP development</strong>. I can provide you full support
-            from ideation, documentation, application development to deployment.
-            If you have a project idea that {"you'd"} like to transform into a
-            product, please {"don't"} hesitate to{' '}
+            <strong className="text-gray-800 dark:text-gray-200">
+              mobile app development
+            </strong>
+            , blockchain application to{' '}
+            <strong className="text-gray-800 dark:text-gray-200">
+              MVP development
+            </strong>
+            . I can provide you full support from ideation, documentation,
+            application development to deployment. If you have a project idea
+            that {"you'd"} like to transform into a product, please {"don't"}{' '}
+            hesitate to{' '}
             <a className="link" href="mailto:shubhamkashyapdev@gmail.com">
               reach out to me.
             </a>
@@ -37,33 +47,24 @@ const Hero = () => {
           {/* resume cta */}
           <div className="mt-4 flex items-center justify-center space-x-4 text-sm font-medium text-gray-800 dark:text-gray-600 md:justify-start">
             <a
-              href="https://drive.google.com/file/d/1I_7yhlObc4anfo7r5Y4pRaW3-ft_sPw4/view?usp=sharing"
-              target="_blank"
-              className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300"
-              rel="noreferrer"
-            >
-              <FileAnalytics />
-              Resume
-            </a>
-
-            <a
               href="https://github.com/shubhamkashyapdev"
               target="_blank"
               className="flex cursor-pointer items-center space-x-2 hover:text-primary-300"
               rel="noreferrer"
             >
-              <BrandGithub /> @shubhamkashyapdev
+              <BrandGithub color={theme === 'dark' ? 'white' : 'black'} />{' '}
+              @shubhamkashyapdev
             </a>
           </div>
         </div>
       </div>
       <div className="mt-16 flex-1  md:mt-8 md:flex-[5]">
-        <h4 className="text-shadow-sm text-gradient w-fit border-primary-700 text-lg font-semibold uppercase  tracking-wide">
+        <h4 className="text-shadow-sm text-gradient w-fit border-primary-700 text-lg font-semibold uppercase tracking-wide">
           Highlights
         </h4>
         <div className="mt-4 flex flex-col space-y-4">
           <Hightlight
-            icon={<IconGlobe />}
+            icon={<IconGlobe color={theme === 'dark' ? 'white' : 'black'} />}
             title="Solana Raffle"
             subTitle="Web3, Solana, React,Typescript"
             tag="@nftmarketplace"
@@ -77,7 +78,7 @@ const Hero = () => {
             user experience.
           </Hightlight>
           <Hightlight
-            icon={<IconGlobe />}
+            icon={<IconGlobe color={theme === 'dark' ? 'white' : 'black'} />}
             title="Solana Minesweeper"
             subTitle="Anchor, Solana, React, Typescript"
             tag="@solanaminesweeper"

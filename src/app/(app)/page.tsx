@@ -23,7 +23,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Shubham Kashyap Portfolio',
   description:
-    'Full stack javascript developer - exploring the world of Genrative AI and ChatBot applications',
+    'Full stack javascript developer - exploring the world of Generative AI and ChatBot applications',
 };
 
 const HomePage = async () => {
