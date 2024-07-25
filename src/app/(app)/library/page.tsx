@@ -14,7 +14,6 @@ async function getSnippets() {
 
 const Page = async () => {
   const docs = await getSnippets();
-
   return <LibraryPage docs={docs} />;
 };
 

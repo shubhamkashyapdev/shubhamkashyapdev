@@ -3,7 +3,7 @@
 import { IconGlobe } from '@tabler/icons';
 import { useTheme } from 'next-themes';
 import React from 'react';
-import { BrandGithub, FileAnalytics } from 'tabler-icons-react';
+import { BrandGithub } from 'tabler-icons-react';
 
 import Hightlight from '@/components/common/cards/Highlight';
 import DownArrow from '@/components/common/elements/DownArrow';
@@ -46,16 +46,6 @@ const Hero = () => {
           <HeroCTA />
           {/* resume cta */}
           <div className="mt-4 flex items-center justify-center space-x-4 text-sm font-medium text-gray-800 dark:text-gray-600 md:justify-start">
-            <a
-              href="https://drive.google.com/file/d/1I_7yhlObc4anfo7r5Y4pRaW3-ft_sPw4/view?usp=sharing"
-              target="_blank"
-              className="flex  cursor-pointer items-center space-x-2 hover:text-primary-300"
-              rel="noreferrer"
-            >
-              <FileAnalytics color={theme === 'dark' ? 'white' : 'black'} />
-              Resume
-            </a>
-
             <a
               href="https://github.com/shubhamkashyapdev"
               target="_blank"
