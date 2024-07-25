@@ -70,7 +70,7 @@ const BlogCard = ({
                 size={15}
                 color={theme === 'dark' ? 'white' : 'black'}
               />
-              <span className="bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
+              <span className="bg-gradient-to-tr  text-gray-900 dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
                 {readTime} min read
               </span>
             </div>
@@ -80,7 +80,7 @@ const BlogCard = ({
                 size={18}
                 color={theme === 'dark' ? 'white' : 'black'}
               />
-              <span className="bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
+              <span className="bg-gradient-to-tr text-gray-900 transition-colors dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent">
                 {views || 0} views
               </span>
             </div>
