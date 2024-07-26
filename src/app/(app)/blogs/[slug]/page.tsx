@@ -27,9 +27,9 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
   if (!blog) {
     notFound();
   }
-  if (blog.status !== 'published') {
-    notFound();
-  }
+   if (blog.status !== 'published') {
+     notFound();
+   }
 
   return (
     <Main>

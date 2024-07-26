@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { BrandGithub, Eye, Link, User } from 'tabler-icons-react';
+import { BrandGithub, Link, User } from 'tabler-icons-react';
 
 import {
   ParragraphBlock,
@@ -46,10 +46,6 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
         <ParragraphBlock className="mt-1">{project?.tagline}</ParragraphBlock>
         {/* Page Meta */}
         <div className="mt-4 grid max-w-[600px] grid-cols-1 gap-2 md:grid-cols-4">
-          <div className="flex gap-2 text-gray-700 dark:text-gray-300 ">
-            <Eye />
-            592 Views
-          </div>
           {/* Project Type */}
           <div className="text-color flex gap-2">
             <User />

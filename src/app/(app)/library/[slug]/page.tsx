@@ -4,7 +4,6 @@ import React from 'react';
 
 import Blocks from '@/components/common/elements/Blocks';
 import CardMeta from '@/components/common/elements/CardMeta';
-import Blockquote from '@/components/common/elements/components/Blockquote';
 import PageTitle from '@/components/common/elements/MainTitle';
 import Parragraph from '@/components/common/typography/Parragraph';
 import { getSnippetDataForPage } from '@/graphql/Library';
@@ -50,7 +49,6 @@ const CodeSnippetPage = async ({ params }: CodeSnippetPageType) => {
         allTags={snippet.allTags}
       />
       <hr className="mb-6 mt-4 h-[1.5px] w-full border-gray-300 dark:border-gray-700" />
-      <Blockquote subTagline="Absolute Import is a great way to clean up your imports" />
       {/* Blocks */}
       <Blocks blocks={snippet.blocks} />
     </Main>

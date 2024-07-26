@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 import PageTitle from '@/components/common/elements/MainTitle';
 import SearchBar from '@/components/common/elements/SearchBar';
-import Topic from '@/components/common/elements/Topic';
+// import Topic from '@/components/common/elements/Topic';
 import CodeSnippetCards from '@/components/common/Library/CodeSnippetCards';
 import Parragraph from '@/components/common/typography/Parragraph';
 import useLibraryStore from '@/store/libraryStore';
@@ -56,6 +56,7 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
         to reuse!
       </Parragraph>
       <SearchBar value={value} setValue={setValue} />
+<<<<<<< Updated upstream
       <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} />
       {filteredSnippets.length > 0 ? (
         <CodeSnippetCards snippets={filteredSnippets} />
@@ -64,6 +65,10 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
           No match found!
         </p>
       )}
+=======
+      {/* <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} /> */}
+      <CodeSnippetCards snippets={filteredSnippets} />
+>>>>>>> Stashed changes
     </Main>
   );
 };
