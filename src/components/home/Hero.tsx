@@ -24,8 +24,8 @@ const Hero = () => {
             <TypewriterEffect />
           </h4>
           <Parragraph className="centered mt-6">
-            I am a full stack web & mobile developer with 3+ years of experience
-            and i have worked on projects from website design with Next.js &
+            I am a full stack web & mobile developer with 4+ years of experience
+            and I have worked on projects from website design with Next.js &
             TailwindCSS, MERN e-commerce website,{' '}
             <strong className="text-gray-800 dark:text-gray-200">
               mobile app development
@@ -87,7 +87,7 @@ const Hero = () => {
             Solana minesweeper game built with Next.js, solana wallet adapter
             and PiXi.js 2d animation library. The project uses the solana wallet
             adapter to handle the on chain transactions and the backend in built
-            on Node.js + Express + Typescript and uses the socket.IO to handle
+            on Node.js + Express + Typescript and uses the Socket.IO to handle
             the real time interactions.
           </Hightlight>
         </div>

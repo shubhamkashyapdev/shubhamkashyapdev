@@ -53,22 +53,12 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
       <PageTitle>Library</PageTitle>
       <Parragraph className="mt-1">
         Some collection of code snippets that I put for easy access, feel free
-        to reuse!
+        to reuse them!
       </Parragraph>
       <SearchBar value={value} setValue={setValue} />
-<<<<<<< Updated upstream
-      <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} />
-      {filteredSnippets.length > 0 ? (
-        <CodeSnippetCards snippets={filteredSnippets} />
-      ) : (
-        <p className="text-gray-600 dark:text-gray-300 flex justify-center w-full">
-          No match found!
-        </p>
-      )}
-=======
       {/* <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} /> */}
       <CodeSnippetCards snippets={filteredSnippets} />
->>>>>>> Stashed changes
+
     </Main>
   );
 };

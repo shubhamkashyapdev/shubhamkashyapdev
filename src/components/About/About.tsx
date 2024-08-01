@@ -31,11 +31,11 @@ const About: FC<AboutType> = ({ allTags = [] }) => {
           </span>
           <div className="mt-8 md:order-1 md:mt-0 md:w-[60%]">
             <p className="text-color">
-              {`I began my web development journey in May 2020, right at the start of the pandemic. I decided to learn web development through a Udemy course and started exploring more about full stack JavaScript development by watching lots of YouTube videos. It has been an exciting and fulfilling experience as I've continued to grow my skills in web development.`}
+              {`I began my Web Development journey in May 2020, right at the start of the pandemic. I decided to learn Web Development through a Udemy course and started exploring more about full stack JavaScript development by watching lots of YouTube videos. It has been an exciting and fulfilling experience as I've continued to grow my skills in Web Development.`}
             </p>
             <p className="text-color my-4">
-              I chose MERN stack as my web development stack and larning from
-              some great instructor like{' '}
+              I chose MERN stack as my Web Development stack and learning from
+              some great instructors like{' '}
               <a
                 className="link"
                 href="https://www.traversymedia.com/"

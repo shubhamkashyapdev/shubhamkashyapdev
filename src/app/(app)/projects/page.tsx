@@ -25,7 +25,7 @@ const Projects = async () => {
     <Main>
       <PageTitle>Projects</PageTitle>
       <Parragraph className="mt-0 text-[1.15rem]">
-        Showcase of my work on FullStack development.
+        Showcase of my work on Full Stack development.
       </Parragraph>
       <section className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {projects?.map((item) => (

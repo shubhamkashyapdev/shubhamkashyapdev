@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import BlogCard from '@/components/common/cards/BlogCard';
 import PageTitle from '@/components/common/elements/MainTitle';
 import SearchBar from '@/components/common/elements/SearchBar';
-import Topic from '@/components/common/elements/Topic';
+// import Topic from '@/components/common/elements/Topic';
 import Parragraph from '@/components/common/typography/Parragraph';
 import useBlogsStore from '@/store/blogsStore';
 import { Main } from '@/templates/Main';
@@ -62,7 +62,7 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
         Thoughts, Solutions, Concepts on Full Stack Development
       </Parragraph>
       <SearchBar value={value} setValue={setValue} />
-      <Topic handleClick={handleClick} topics={['Next.js', 'React.js']} />
+      {/* <Topic handleClick={handleClick} topics={['Next.js', 'React.js']} /> */}
       <section className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
         {filteredBlogs?.map((item: BlogCardType, index: number) => (
           <BlogCard key={`post-${item.id}-${index}`} {...item} />

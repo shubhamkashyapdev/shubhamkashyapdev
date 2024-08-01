@@ -5,11 +5,11 @@ import SecondaryHeading from '@/components/common/typography/SecondaryHeading';
 
 const experiences = [
   {
-    title: '3+',
+    title: '4+',
     subTitle: 'Years of experience',
   },
   {
-    title: '20+',
+    title: '40+',
     subTitle: 'Projects completed',
   },
 ];

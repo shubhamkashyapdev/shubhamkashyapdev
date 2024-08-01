@@ -44,7 +44,7 @@ const TechStack = () => {
   return (
     <section className=" centered px-2">
       <FadeUpDown>
-        <SectionTitle>Technologies i use</SectionTitle>
+        <SectionTitle>Technologies I use</SectionTitle>
       </FadeUpDown>
       {/* tech stack nav */}
       <nav className="mt-8 flex flex-wrap items-center justify-center gap-4  text-base font-medium text-gray-900  dark:text-gray-300 md:justify-start md:gap-6 md:space-x-8 md:text-lg">
