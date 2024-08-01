@@ -34,7 +34,7 @@ const TechnologyStack = () => {
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-              <div className="col-span-1 flex flex-col items-center justify-center text-black bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}
@@ -44,7 +44,7 @@ const TechnologyStack = () => {
                 />
                 React.js
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}
@@ -54,7 +54,7 @@ const TechnologyStack = () => {
                 />
                 Next.js
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}
@@ -64,7 +64,7 @@ const TechnologyStack = () => {
                 />
                 Angular
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black  justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center  bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}
@@ -74,7 +74,7 @@ const TechnologyStack = () => {
                 />
                 Node.js
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}
@@ -84,7 +84,7 @@ const TechnologyStack = () => {
                 />
                 MongoDB
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center bg-gray-50 p-4 text-black">
                 <Image
                   height={75}
                   width={75}

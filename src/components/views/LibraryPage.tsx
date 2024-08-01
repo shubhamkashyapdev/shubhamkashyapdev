@@ -9,7 +9,7 @@ import CodeSnippetCards from '@/components/common/Library/CodeSnippetCards';
 import Parragraph from '@/components/common/typography/Parragraph';
 import useLibraryStore from '@/store/libraryStore';
 import { Main } from '@/templates/Main';
-import type { CodeSnippetCardType, TagType } from '@/types/component.types';
+import type { CodeSnippetCardType } from '@/types/component.types';
 
 const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
   const { setSnippets, setFilteredSnippets, snippets, filteredSnippets } =
@@ -28,17 +28,17 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
     return filteredCodeSnippets;
   };
 
-  const handleClick = (topic: string) => {
-    if (topic === '') {
-      setFilteredSnippets(snippets);
-    } else {
-      const filtered = snippets.filter((item: CodeSnippetCardType) => {
-        const { allTags } = item;
-        return allTags.some((tag: TagType) => tag.title === topic);
-      });
-      setFilteredSnippets(filtered);
-    }
-  };
+  // const handleClick = (topic: string) => {
+  //   if (topic === '') {
+  //     setFilteredSnippets(snippets);
+  //   } else {
+  //     const filtered = snippets.filter((item: CodeSnippetCardType) => {
+  //       const { allTags } = item;
+  //       return allTags.some((tag: TagType) => tag.title === topic);
+  //     });
+  //     setFilteredSnippets(filtered);
+  //   }
+  // };
 
   useEffect(() => {
     setFilteredSnippets(getFilteredSnippets());
@@ -58,7 +58,6 @@ const LibraryPage = ({ docs }: { docs: CodeSnippetCardType[] }) => {
       <SearchBar value={value} setValue={setValue} />
       {/* <Topic handleClick={handleClick} topics={['', 'Next.js', 'React.js']} /> */}
       <CodeSnippetCards snippets={filteredSnippets} />
-
     </Main>
   );
 };

@@ -10,7 +10,7 @@ import SearchBar from '@/components/common/elements/SearchBar';
 import Parragraph from '@/components/common/typography/Parragraph';
 import useBlogsStore from '@/store/blogsStore';
 import { Main } from '@/templates/Main';
-import type { BlogCardType, TagType } from '@/types/component.types';
+import type { BlogCardType } from '@/types/component.types';
 
 export const metadata: Metadata = {
   title: 'Blogs posts on shubham kashyap portfolio website',
@@ -33,18 +33,18 @@ const Blogs = ({ docs }: { docs: BlogCardType[] }) => {
     return filteredCodeSnippets;
   };
 
-  const handleClick = (topic: string) => {
-    setFilteredBlogs(
-      blogs.filter((item: BlogCardType) => {
-        const { allTags } = item;
-        const topicExists = allTags.find((tag: TagType) => tag.title === topic);
-        if (topicExists) {
-          return item;
-        }
-        return null;
-      })
-    );
-  };
+  // const handleClick = (topic: string) => {
+  //   setFilteredBlogs(
+  //     blogs.filter((item: BlogCardType) => {
+  //       const { allTags } = item;
+  //       const topicExists = allTags.find((tag: TagType) => tag.title === topic);
+  //       if (topicExists) {
+  //         return item;
+  //       }
+  //       return null;
+  //     })
+  //   );
+  // };
 
   useEffect(() => {
     setFilteredBlogs(getFilteredSnippets());
