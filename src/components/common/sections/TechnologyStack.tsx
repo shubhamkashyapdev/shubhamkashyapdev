@@ -10,7 +10,7 @@ const TechnologyStack = () => {
     <div>
       <div
         style={{ boxShadow: '0px 0px 10px 4px rgba(255,255,255,0.3)' }}
-        className=" border-2 bg-white  dark:border-primary-700 dark:bg-primary-700"
+        className=" border-2 bg-white  dark:border-primary-800 dark:bg-primary-700"
       >
         <div className="mx-auto max-w-7xl py-8 px-6 lg:py-12 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
@@ -34,65 +34,92 @@ const TechnologyStack = () => {
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-              <div className="col-span-1 flex flex-col items-center justify-center text-black bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center  bg-gray-50 dark:bg-primary-800 p-4">
                 <Image
                   height={75}
                   width={75}
-                  className="max-h-12"
-                  src="https://backend.shubhamkashyap.in/media/react-javascript-js-framework-facebook-svgrepo-com.svg"
-                  alt="React"
-                />
-                React.js
-              </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
-                <Image
-                  height={75}
-                  width={75}
-                  className="max-h-12"
+                  className="max-h-12 dark:hidden"
                   src="https://backend.shubhamkashyap.in/media/next-js-svgrepo-com%20(1).svg"
-                  alt="Nextjs"
+                  alt="Next.js"
                 />
-                Next.js
+                <Image
+                  height={75}
+                  width={75}
+                  className="max-h-12 hidden dark:block"
+                  src="https://backend.shubhamkashyap.in/media/next-js-white-icon.svg"
+                  alt="Next.js"
+                />
+                <span className="mt-4 text-black dark:text-white text-xs">
+                  Next.js
+                </span>
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+
+              <div className="col-span-1 flex flex-col items-center  justify-center  bg-gray-50 dark:bg-primary-800 p-4">
                 <Image
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://backend.shubhamkashyap.in/media/angular-svgrepo-com.svg"
-                  alt="Angular"
+                  src="https://backend.shubhamkashyap.in/media/shadcn-ui.svg"
+                  alt="Shadcn"
                 />
-                Angular
+                <span className="mt-4 text-black dark:text-white text-xs">
+                  ShadCN
+                </span>
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black  justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center   bg-gray-50 dark:bg-primary-800 p-4">
+                <Image
+                  height={75}
+                  width={75}
+                  className="max-h-12 object-contain"
+                  src="https://backend.shubhamkashyap.in/media/react-query-logo.svg"
+                  alt="Tanstack Query"
+                />
+                <span className="mt-4  text-black dark:text-white text-xs">
+                  Tanstack Query
+                </span>
+              </div>
+              <div className="col-span-1 flex flex-col items-center  justify-center  bg-gray-50 dark:bg-primary-800 p-4">
                 <Image
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://backend.shubhamkashyap.in/media/node-js-svgrepo-com.svg"
-                  alt="Nodejs"
+                  src="https://backend.shubhamkashyap.in/media/light-prisma-svgrepo-com.svg"
+                  alt="Prisma"
                 />
-                Node.js
+                <span className="mt-4 text-black dark:text-white text-xs">
+                  Prisma
+                </span>
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center   bg-gray-50 dark:bg-primary-800 p-4">
                 <Image
                   height={75}
                   width={75}
                   className="max-h-12"
-                  src="https://backend.shubhamkashyap.in/media/mongo-svgrepo-com.svg"
-                  alt="MongoDB"
+                  src="https://backend.shubhamkashyap.in/media/Stripe.svg"
+                  alt="Stripe"
                 />
-                MongoDB
+                <span className="mt-4 text-black dark:text-white text-xs">
+                  Stripe
+                </span>
               </div>
-              <div className="col-span-1 flex flex-col items-center text-black justify-center bg-gray-50 p-4">
+              <div className="col-span-1 flex flex-col items-center justify-center  bg-gray-50 dark:bg-primary-800 p-4">
                 <Image
                   height={75}
                   width={75}
-                  className="max-h-12"
-                  src="https://backend.shubhamkashyap.in/media/aws-svgrepo-com.svg"
-                  alt="AWS"
+                  className="max-h-12 dark:hidden"
+                  src="https://backend.shubhamkashyap.in/media/vercel-logo.svg"
+                  alt="Vercel"
                 />
-                AWS
+                <Image
+                  height={75}
+                  width={75}
+                  className="max-h-12 hidden dark:block"
+                  src="https://backend.shubhamkashyap.in/media/vercel-white-logo.svg"
+                  alt="Vercel"
+                />
+                <span className="mt-4 text-black dark:text-white text-xs">
+                  Vercel
+                </span>
               </div>
             </div>
           </div>
