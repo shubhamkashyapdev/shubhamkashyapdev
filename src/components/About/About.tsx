@@ -19,15 +19,16 @@ const About: FC<AboutType> = ({ allTags = [] }) => {
           Shubham Kashyap
         </h3>
         <article className="flex flex-col md:flex-row md:gap-10">
-          <span className="md:order-2 md:w-[40%] md:px-4">
-            <Image
-              src="https://backend.shubhamkashyap.in/media/Image.jpg"
-              height={500}
-              width={500}
-              objectFit="cover"
-              className="w-full"
-              alt=""
-            />
+          <span className="md:order-2 md:w-[70%] md:px-4">
+            <div className="relative h-0 pb-[100%]">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/eTsxWVNA6v8"
+                title="Introduction"
+                className="absolute top-0 left-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </span>
           <div className="mt-8 md:order-1 md:mt-0 md:w-[60%]">
             <p className="text-color">
